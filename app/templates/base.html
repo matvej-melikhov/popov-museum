@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="Музей А. С. Попова">
+    <meta property="og:site_name" content="Музей-квартира А. С. Попова">
+    <meta property="og:url" content="https://popov-museum.ru">
+    <meta property="og:description" content="Первоисточник информации о музее Александра Степановича Попова в СПбГЭТУ ЛЭТИ.">
+
+    <link rel="icon" href="{{ url_for('index') }}static/img/icon.png">
+    <link rel="stylesheet" href="{{ url_for('index') }}static/css/main.css"> <!-- общие стили -->
+    {% block style %}{% endblock style %}
+    <script src="https://kit.fontawesome.com/0ad5947fc3.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    
+    <header class="header"></header>
+    
+    {% block content %}{% endblock %}
+    
+    <footer class="footer"></footer>
+
+</body>
+</html>

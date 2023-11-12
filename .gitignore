@@ -1,0 +1,6 @@
+env/
+venv/
+.idea/
+*.md
+*.config
+*.log

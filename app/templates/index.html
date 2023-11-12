@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block title %}Название страницы{% endblock title %}
+
+
+{% block style %}
+    <!-- Подключаем стили: your_file нужно изменить -->
+    <link rel="stylesheet" href="{{url_for('index')}}static/css/your_file.css">
+{% endblock style %}
+
+
+{% block content %}
+
+<!-- Контент страницы без <body> -->
+
+{% endblock %}

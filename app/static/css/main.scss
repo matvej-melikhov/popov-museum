@@ -1,0 +1,83 @@
+@import "fonts.scss"; // шрифт Styrene
+
+$gold: #DF9F4F; // ярко-золотой
+$primary: #BB8D54; // бледно-золотой для заголовков
+$secondary: #0E2441; // темно-синий
+$pr-dark: #98672B; // primary-dark - темное золото для основного текста
+
+$gold-gr: linear-gradient(97deg, #F1B33C 0%, #F1A13C 100%); // золотой градиент
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Lora, serif;
+}
+
+html { font-size: 10px; } // для работы rem
+
+//скроллбар
+body::-webkit-scrollbar { width: 8px; }
+body::-webkit-scrollbar-track { background: #efe3ff; }
+body::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    width: 4px;
+    border: 2px solid #efe3ff;
+}
+
+
+.title {
+    font-family: Styrene, sans-serif;
+    font-size: 4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $secondary;
+}
+
+.minititle {
+    font-family: Styrene, sans-serif;
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: $secondary;
+}
+
+.text {
+    font-family: Lora, serif;
+    font-size: 2.4px;
+    font-weight: 400;
+    line-height: 140%;
+    color: $secondary;
+}
+
+.pr { color: $primary; }
+
+.pr-dark { color: $pr-dark; }
+
+.pr-btn {
+    padding: 3rem 9rem;
+    border-radius: 5px;
+    background: $gold-gr;
+    color: #fff;
+}
+
+.btn {
+    padding: 2rem 4rem;
+    border-radius: 5px;
+    border: 1px solid $secondary;
+    color: $secondary;
+}
+
+.img { border-radius: 5px; }
+
+.ref { // внешние ссылки
+    color: $primary;
+    text-decoration: underline;
+    
+}
+
+
+
+
+

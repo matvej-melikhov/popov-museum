@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "Styrene";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Styrene"), url("../font/StyreneAWeb-Thin.woff") format("woff"), url("../font/StyreneAWeb-Thin.ttf") format("ttf"), url("../font/StyreneAWeb-Thin.eot") format("eot");
+}
+@font-face {
+  font-family: "Styrene";
+  font-style: normal;
+  font-weight: 200;
+  src: local("Styrene"), url("../font/StyreneAWeb-Light.woff") format("woff"), url("../font/StyreneAWeb-Light.ttf") format("ttf"), url("../font/StyreneAWeb-Light.eot") format("eot");
+}
+@font-face {
+  font-family: "Styrene";
+  font-style: 400;
+  font-weight: regular;
+  src: local("Styrene"), url("../font/StyreneAWeb-Regular.woff") format("woff"), url("../font/StyreneAWeb-Regular.ttf") format("ttf"), url("../font/StyreneAWeb-Regular.eot") format("eot");
+}
+@font-face {
+  font-family: "Styrene";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Styrene"), url("../font/StyreneAWeb-Medium.woff") format("woff"), url("../font/StyreneAWeb-Medium.ttf") format("ttf"), url("../font/StyreneAWeb-Medium.eot") format("eot");
+}
+@font-face {
+  font-family: "Styrene";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Styrene"), url("../font/StyreneAWeb-Bold.woff") format("woff"), url("../font/StyreneAWeb-Bold.ttf") format("ttf"), url("../font/StyreneAWeb-Bold.eot") format("eot");
+}
+@font-face {
+  font-family: "Styrene";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Styrene"), url("../font/StyreneAWeb-Black.woff") format("woff"), url("../font/StyreneAWeb-Black.ttf") format("ttf"), url("../font/StyreneAWeb-Black.eot") format("eot");
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: Lora, serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #efe3ff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #BB8D54;
+  width: 4px;
+  border: 2px solid #efe3ff;
+}
+
+.title {
+  font-family: Styrene, sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #0E2441;
+}
+
+.minititle {
+  font-family: Styrene, sans-serif;
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: #0E2441;
+}
+
+.text {
+  font-family: Lora, serif;
+  font-size: 2.4px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #0E2441;
+}
+
+.pr {
+  color: #BB8D54;
+}
+
+.pr-dark {
+  color: #98672B;
+}
+
+.pr-btn {
+  padding: 3rem 9rem;
+  border-radius: 5px;
+  background: linear-gradient(97deg, #F1B33C 0%, #F1A13C 100%);
+  color: #fff;
+}
+
+.btn {
+  padding: 2rem 4rem;
+  border-radius: 5px;
+  border: 1px solid #0E2441;
+  color: #0E2441;
+}
+
+.img {
+  border-radius: 5px;
+}
+
+.ref {
+  color: #BB8D54;
+  text-decoration: underline;
+}
