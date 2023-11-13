@@ -4,3 +4,5 @@ venv/
 *.md
 *.config
 *.log
+app/__pycache__/
+__pycache__/
