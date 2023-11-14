@@ -34,6 +34,7 @@
   font-weight: 900;
   src: local("Styrene"), url("../font/StyreneAWeb-Black.woff") format("woff"), url("../font/StyreneAWeb-Black.ttf") format("ttf"), url("../font/StyreneAWeb-Black.eot") format("eot");
 }
+/* padding for container block */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -57,7 +58,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #BB8D54;
+  background-color: #DF9F4F;
   width: 4px;
   border: 2px solid #efe3ff;
 }
@@ -79,7 +80,7 @@ body::-webkit-scrollbar-thumb {
 
 .text {
   font-family: Lora, serif;
-  font-size: 2.4px;
+  font-size: 2.4rem;
   font-weight: 400;
   line-height: 140%;
   color: #0E2441;
@@ -114,4 +115,50 @@ body::-webkit-scrollbar-thumb {
 .ref {
   color: #BB8D54;
   text-decoration: underline;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0px 5rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  height: 90px;
+  width: 100%;
+  padding: 10px 0px;
+  background: #fff;
+  border-bottom: 1px solid #DBDEE2;
+  border-radius: 0px 0px 10px 10px;
+}
+.header__inner {
+  height: 100%;
+}
+.header__img {
+  height: 100%;
+}
+
+.main {
+  margin-top: calc(90px + 8rem);
+  margin-bottom: 8rem;
+  min-height: calc(100vh - 16rem - 90px - 70px);
+}
+
+.footer {
+  height: 70px;
+  width: 100%;
+  padding: 10px 0px;
+  background: #fff;
+  border-top: 1px solid #DBDEE2;
+  border-radius: 0px 0px 10px 10px;
+}
+.footer__inner {
+  height: 100%;
+}
+.footer__img {
+  height: 100%;
 }
