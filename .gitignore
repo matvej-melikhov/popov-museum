@@ -6,3 +6,6 @@ venv/
 *.log
 app/__pycache__/
 __pycache__/
+vars.css
+sizes.css
+fonts.css
