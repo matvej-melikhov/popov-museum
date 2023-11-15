@@ -6,12 +6,13 @@
 
 {% block style %}
     <!-- Подключаем стили: your_file нужно изменить -->
-    <link rel="stylesheet" href="{{url_for('index')}}static/css/your_file.css">
+    <link rel="stylesheet" href="{{url_for('index')}}static/css/apartment_museum-styles.css">
 {% endblock style %}
 
 
 {% block content %}
 
 <!-- Контент страницы без <body> -->
-
+    <div class="main__apartment_museum-title">Музей-квартира А. С. Попова в ЛЭТИ</div>
+    <div class="main__apartment_museum-img-flat"><img src="img/flat.jpg" alt=""></div>
 {% endblock %}
