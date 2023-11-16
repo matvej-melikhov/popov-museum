@@ -34,3 +34,17 @@
   font-weight: 900;
   src: local("Styrene"), url("../font/StyreneAWeb-Black.woff") format("woff"), url("../font/StyreneAWeb-Black.ttf") format("ttf"), url("../font/StyreneAWeb-Black.eot") format("eot");
 }
+.title {
+  padding-bottom: 5rem;
+}
+
+.apartment-museum__img-and-text-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 1.5rem;
+}
+
+.apartment-museum__text-1 {
+  padding-left: 3.4rem;
+}
