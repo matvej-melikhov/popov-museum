@@ -69,6 +69,10 @@ body::-webkit-scrollbar-thumb {
   font-weight: 500;
   text-transform: uppercase;
   color: #0E2441;
+  margin-bottom: 4rem;
+}
+.title > span {
+  font-family: inherit;
 }
 
 .minititle {
@@ -76,6 +80,10 @@ body::-webkit-scrollbar-thumb {
   font-size: 3.2rem;
   font-weight: 500;
   color: #0E2441;
+  margin-bottom: 2.5rem;
+}
+.minititle > span {
+  font-family: inherit;
 }
 
 .text {
@@ -84,6 +92,10 @@ body::-webkit-scrollbar-thumb {
   font-weight: 400;
   line-height: 140%;
   color: #0E2441;
+  margin-bottom: 1.5rem;
+}
+.text > span {
+  font-family: inherit;
 }
 
 .pr {
