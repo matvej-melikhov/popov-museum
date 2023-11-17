@@ -2,6 +2,7 @@ env/
 venv/
 .idea/
 *.md
+*.bat
 *.config
 *.log
 app/__pycache__/
