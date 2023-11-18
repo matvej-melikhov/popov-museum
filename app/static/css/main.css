@@ -111,6 +111,10 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background: linear-gradient(97deg, #F1B33C 0%, #F1A13C 100%);
   color: #fff;
+  font-family: Styrene, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
 }
 
 .btn {
@@ -118,6 +122,9 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
   border: 1px solid #0E2441;
   color: #0E2441;
+  font-family: Styrene, sans-serif;
+  font-weight: 400;
+  text-align: center;
 }
 
 .img {
