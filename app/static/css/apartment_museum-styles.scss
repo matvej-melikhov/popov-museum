@@ -6,5 +6,18 @@
     padding-right: 3.4rem;
 }
 
+.button{
+    .button__inner{
+        color: #FFF;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+    }
+    border: 0.1rem solid #F1A13C;
+    width: 156rem;
+    height: 7.4rem;
+    border-radius: 0.5rem;
+    background: $gold-gr;
+}
 
 

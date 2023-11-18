@@ -38,3 +38,17 @@
   float: left;
   padding-right: 3.4rem;
 }
+
+.button {
+  border: 0.1rem solid #F1A13C;
+  width: 156rem;
+  height: 7.4rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(97deg, #F1B33C 0%, #F1A13C 100%);
+}
+.button .button__inner {
+  color: #FFF;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+}
