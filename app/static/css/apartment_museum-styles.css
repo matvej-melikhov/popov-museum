@@ -61,22 +61,38 @@
   padding-bottom: 2.5rem;
 }
 
-.apartment-museum__contacts__blocks {
-  margin: 1rem;
-}
-.apartment-museum__contacts__blocks .apartment-museum__contacts__blocks__Larisa {
+.apartment-museum__contacts-blocks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.apartment-museum__contacts-blocks-Larisa {
   padding: 2rem 3rem;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 1rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  width: 77.5rem;
   border-radius: 5px;
   background: rgba(0, 52, 119, 0.05);
+}
+.apartment-museum__contacts-blocks-time {
+  padding: 2rem 3rem;
+  margin-bottom: 1rem;
   width: 77.5rem;
+  border-radius: 5px;
+  background: rgba(0, 52, 119, 0.05);
+}
+.apartment-museum__contacts-blocks-num {
+  padding: 2rem 3rem;
+  margin-right: 1rem;
+  width: 77.5rem;
+  border-radius: 5px;
+  background: rgba(0, 52, 119, 0.05);
+}
+.apartment-museum__contacts-blocks-mail {
+  padding: 2rem 3rem;
+  width: 77.5rem;
+  border-radius: 5px;
+  background: rgba(0, 52, 119, 0.05);
 }

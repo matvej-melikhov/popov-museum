@@ -24,12 +24,38 @@
     padding-bottom: 2.5rem;
 }
 
-.apartment-museum__contacts__blocks{
+.apartment-museum__contacts-blocks{
     display: flex;
-    flex-direction: row;
-    &contacts__blocks__Larisa{
-    align-items: flex-start;
-    border-radius: 5px;
-    background: rgba(0, 52, 119, 0.05);
-   }
+    flex-wrap: wrap;
+    &-Larisa{
+        padding: 2rem 3rem;
+        margin-right:  1rem;
+        margin-bottom: 1rem;
+        width: 77.5rem;
+        border-radius: 5px;
+        background: rgba(0, 52, 119, 0.05);
+    }
+
+    &-time{
+        padding: 2rem 3rem;
+        margin-bottom: 1rem;
+        width: 77.5rem;
+        border-radius: 5px;
+        background: rgba(0, 52, 119, 0.05);
+    }
+
+    &-num{
+        padding: 2rem 3rem;
+        margin-right:  1rem;
+        width: 77.5rem;
+        border-radius: 5px;
+        background: rgba(0, 52, 119, 0.05);
+    }
+
+    &-mail{
+        padding: 2rem 3rem;
+        width: 77.5rem;
+        border-radius: 5px;
+        background: rgba(0, 52, 119, 0.05);
+    }
 }
