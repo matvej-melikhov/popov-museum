@@ -70,6 +70,10 @@ body::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background: $gold-gr;
     color: #fff;
+    font-family: Styrene, sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
 }
 
 .btn {
@@ -77,6 +81,9 @@ body::-webkit-scrollbar-thumb {
     border-radius: 5px;
     border: 1px solid $secondary;
     color: $secondary;
+    font-family: Styrene, sans-serif;
+    font-weight: 400;
+    text-align: center;
 }
 
 .img { border-radius: 5px; }
