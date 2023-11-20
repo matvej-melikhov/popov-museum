@@ -93,6 +93,7 @@ body::-webkit-scrollbar-thumb {
   line-height: 140%;
   color: #0E2441;
   margin-bottom: 1.5rem;
+  text-align: justify;
 }
 .text > span {
   font-family: inherit;
@@ -165,6 +166,10 @@ body::-webkit-scrollbar-thumb {
   margin-top: calc(90px + 8rem);
   margin-bottom: 8rem;
   min-height: calc(100vh - 16rem - 90px - 70px);
+}
+
+.section {
+  padding: 6.5rem 0;
 }
 
 .footer {
