@@ -36,7 +36,6 @@
 }
 .apartment-museum__img-flat {
   float: left;
-  padding-right: 3.4rem;
 }
 
 .apartment-museum__registration-button {
@@ -51,48 +50,19 @@
   font-weight: 400;
 }
 
-.apartment-museum__title-map {
-  padding-top: 6.5rem;
-  padding-bottom: 2.5rem;
-}
-
-.apartment-museum__contacts {
-  padding-top: 6.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .apartment-museum__contacts-blocks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.apartment-museum__contacts-blocks-Larisa {
+.apartment-museum__contacts-blocks-element {
   padding: 2rem 3rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  width: 74.5rem;
-  border-radius: 5px;
-  background: rgba(0, 52, 119, 0.05);
-}
-.apartment-museum__contacts-blocks-time {
-  padding: 2rem 3rem;
-  margin-bottom: 1rem;
-  width: 74.5rem;
-  border-radius: 5px;
-  background: rgba(0, 52, 119, 0.05);
-}
-.apartment-museum__contacts-blocks-num {
-  padding: 2rem 3rem;
-  margin-right: 1rem;
-  width: 74.5rem;
-  border-radius: 5px;
-  background: rgba(0, 52, 119, 0.05);
-}
-.apartment-museum__contacts-blocks-mail {
-  padding: 2rem 3rem;
-  width: 74.5rem;
+  width: 49.5%;
   border-radius: 5px;
   background: rgba(0, 52, 119, 0.05);
 }
