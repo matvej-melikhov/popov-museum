@@ -66,3 +66,9 @@
   border-radius: 5px;
   background: rgba(0, 52, 119, 0.05);
 }
+
+@media (width: 400px) {
+  .apartment-museum__contacts-blocks-element {
+    width: 100%;
+  }
+}
