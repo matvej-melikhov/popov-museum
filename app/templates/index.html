@@ -5,14 +5,61 @@
 
 
 {% block style %}
-    <!-- Подключаем стили: your_file нужно изменить -->
-    <link rel="stylesheet" href="{{url_for('index')}}static/css/index-style.css">
+<!-- Подключаем стили: your_file нужно изменить -->
+<link rel="stylesheet" href="{{url_for('index')}}static/css/index-style.css">
 {% endblock style %}
 
 
 {% block content %}
 
-<!-- Контент страницы без <body> -->
-    
+<section class="main-section">
+
+    <div class="text-block">
+
+        <div class="text-block__sponsors title">При поддержке кафедры истории ЛЭТИ</div>
+
+        <div class="title text-block__title title">История <span class="gold-text">великого физика</span> — А.&nbspС.&nbspПопова</div>
+
+        <div class="text text text-block__text text">Я — русский человек и все свои знания, весь свой труд, все свои достижения имею
+            право отдавать только моей Родине. &lt...&gt Как счастлив я, что не за рубежом, а в России открыто новое
+                средство связи.</div>
+
+        <div class="text-block__buttons">
+            <a class="text-block__buttons__history text-block__buttons__button pr-btn" href="#">История</a>
+            <a class="text-block__buttons__museum text-block__buttons__button btn" href="#">Музей «Квартира А.&nbspС.&nbspПопова» → </a>
+        </div>
+
+    </div>
+
+    <div class="image-block">
+        <div class="image-block__image">
+            <img class="image-block__image__popov-image img" src="../static/img/popov-main.png" alt="фотография А. С. Попова">
+        </div>
+    </div>
+
+</section>
+
+<section class="bio-section">
+
+    <div class="links-block">
+        <div class="links-block__title title">А.&nbspС.&nbspПопов <span class="gold-text">Биография</span></div>
+        <div class="links-block__text text"><p>Навигация по разделам:</p></div>
+        <div class="links-block__links">
+            <a class="link" href="#"><i class="fa-regular fa-link" style="color: #252525;"></i>  Детство и юность</a>
+            <a class="link" href="#"><i class="fa-regular fa-link" style="color: #252525;"></i>  Начало научной карьеры</a>
+            <a class="link" href="#"><i class="fa-regular fa-link" style="color: #252525;"></i>  Создание радио</a>
+            <a class="link" href="#"><i class="fa-regular fa-link" style="color: #252525;"></i>  Первый директор Электротехнического института</a>
+            <a class="link" href="#"><i class="fa-regular fa-link" style="color: #252525;"></i>  Последние годы жизни в ЛЭТИ</a>
+            <a class="link" href="#"><i class="fa-regular fa-link" style="color: #252525;"></i>  Наследие</a>
+
+        </div>
+    </div>
+
+    <div class="text-block text">
+        
+    </div>
+
+</section>
+
 
 {% endblock %}
