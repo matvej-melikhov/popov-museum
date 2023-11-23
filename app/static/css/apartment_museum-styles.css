@@ -36,6 +36,9 @@
 }
 .apartment-museum__img-flat {
   float: left;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
 
 .apartment-museum__registration-button {
@@ -67,8 +70,23 @@
   background: rgba(0, 52, 119, 0.05);
 }
 
+.fa-solid {
+  padding-right: 1.5rem;
+}
+
+.minisection {
+  padding-top: 6.5rem;
+}
+
 @media (width: 400px) {
   .apartment-museum__contacts-blocks-element {
     width: 100%;
+  }
+  .apartment-museum__img-flat {
+    width: 30rem;
+    height: 20rem;
+  }
+  .fa-solid {
+    float: left;
   }
 }
