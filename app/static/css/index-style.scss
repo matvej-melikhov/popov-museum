@@ -13,6 +13,10 @@
     color: $gold
 }
 
+.pr-gold-text {
+    color: $pr-dark;
+}
+
 .text-block {
 
     & {
@@ -102,10 +106,14 @@
 //--------------------------------------------//
 
 .bio-section {
-    padding: 8rem 0 8rem 0;
+    padding: 8rem 0 0 0;
 }
 
 .links-block {
+
+    & {
+        margin-bottom: 8rem;
+    }
 
     &__text {
         color: #343434;
@@ -139,7 +147,7 @@
         line-height: 171.99%;
     }
 
-    &__links:last-child{
+    &__links:last-child {
         margin-bottom: 0;
     }
 
@@ -147,4 +155,37 @@
         font-family: FontAwesome;
         margin-right: 0.5rem;
     }
+}
+
+//-------------------------------------//
+
+.main-text-block {
+
+    &__title {
+        font-size: 4rem;
+    }
+
+    &__text>.right {
+        float: right;
+        margin-left: 2rem;
+    }
+
+    &__text>.left {
+        float: left;
+        margin-right: 2rem;
+    }
+
+    &__text .wrapper-text{
+        color: $secondary;
+        font-family: Lora;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 141.4%;
+        text-align: justify;
+        hyphens: auto;
+    }
+
+
+
 }

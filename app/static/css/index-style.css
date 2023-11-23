@@ -227,6 +227,10 @@ body::-webkit-scrollbar-thumb {
   color: #DF9F4F;
 }
 
+.pr-gold-text {
+  color: #98672B;
+}
+
 .text-block {
   padding-top: 40px;
   display: -webkit-box;
@@ -325,9 +329,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .bio-section {
-  padding: 8rem 0 8rem 0;
+  padding: 8rem 0 0 0;
 }
 
+.links-block {
+  margin-bottom: 8rem;
+}
 .links-block__text {
   color: #343434;
   font-family: Styrene A LC;
@@ -375,4 +382,28 @@ body::-webkit-scrollbar-thumb {
 .links-block__links .fa-link {
   font-family: FontAwesome;
   margin-right: 0.5rem;
+}
+
+.main-text-block__title {
+  font-size: 4rem;
+}
+.main-text-block__text > .right {
+  float: right;
+  margin-left: 2rem;
+}
+.main-text-block__text > .left {
+  float: left;
+  margin-right: 2rem;
+}
+.main-text-block__text .wrapper-text {
+  color: #0E2441;
+  font-family: Lora;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 141.4%;
+  text-align: justify;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
