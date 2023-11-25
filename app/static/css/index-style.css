@@ -387,13 +387,42 @@ body::-webkit-scrollbar-thumb {
 .main-text-block__title {
   font-size: 4rem;
 }
-.main-text-block__text > .right {
+.main-text-block__text .image-container-right {
+  position: relative;
   float: right;
   margin-left: 2rem;
+  max-height: 286px;
 }
-.main-text-block__text > .left {
+.main-text-block__text .image-container-left {
+  position: relative;
   float: left;
   margin-right: 2rem;
+  max-height: 292px;
+}
+.main-text-block__text .main-picture {
+  display: inline;
+}
+.main-text-block__text .photo-description {
+  position: absolute;
+  bottom: 0;
+  padding: 0.7rem 2rem;
+  border-radius: 0 0 5px 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.67);
+  color: white;
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 141.4%;
+  font-size: 1.6rem;
+  width: 100%;
+}
+.main-text-block__text .photo-description-right {
+  right: 0;
+}
+.main-text-block__text .photo-description-left {
+  left: 0;
 }
 .main-text-block__text .wrapper-text {
   color: #0E2441;

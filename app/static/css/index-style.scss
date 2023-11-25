@@ -3,6 +3,11 @@
 @import "sizes.scss";
 @import "main.scss";
 
+$right-photo-height: 286px;
+
+$left-photo-height: 292px;
+
+
 .main-section {
     display: flex;
     position: relative;
@@ -165,17 +170,51 @@
         font-size: 4rem;
     }
 
-    &__text>.right {
+    &__text .image-container-right {
+        position: relative;
         float: right;
         margin-left: 2rem;
+        max-height: $right-photo-height;
     }
 
-    &__text>.left {
+    &__text .image-container-left {
+        position: relative;
         float: left;
         margin-right: 2rem;
+        max-height: $left-photo-height;
     }
 
-    &__text .wrapper-text{
+    &__text .main-picture {
+        display: inline;
+    }
+
+    &__text .photo-description {
+        position: absolute;
+        bottom: 0;
+        padding: 0.7rem 2rem;
+        border-radius: 0 0 5px 5px;
+        box-sizing: border-box;
+        background: rgba(0, 0, 0, 0.67);
+        color: white;
+        font-family: Lora;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 141.4%;
+        font-size: 1.6rem;
+        width: 100%;
+        
+    }
+
+    &__text .photo-description-right {
+        right: 0;
+    }
+
+    &__text .photo-description-left {
+        left: 0;
+
+    }
+
+    &__text .wrapper-text {
         color: $secondary;
         font-family: Lora;
         font-size: 24px;
