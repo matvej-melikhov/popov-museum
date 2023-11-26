@@ -83,6 +83,7 @@
     border-radius: 5px;
     background: rgba(0, 52, 119, 0);
     padding: 3.5rem 3rem;
+    padding-left: 0;
     outline: none;
     cursor: pointer;
 }
@@ -221,16 +222,6 @@
         }
 }
 
-.time > option {
-    font-family: Styrene, sans-serif;
-    font-size: 2rem;
-    font-weight: 400;
-    color: rgba(14, 36, 65, 0.80);
-}
-
-.time::-ms-expand{
-    display: none;
-}
 
 ::-webkit-calendar-picker-indicator{
     position: absolute;
@@ -248,3 +239,21 @@
 ::-webkit-datetime-edit-text {
     padding: 0 0.3rem;
 }
+
+#textarea{
+    padding: 3rem 2.5rem;
+    height: 8.8rem;
+    overflow-y: scroll;
+}
+
+#textarea::-webkit-scrollbar { width: 5px; }
+#textarea::-webkit-scrollbar-track {
+    background: #efe3ff; 
+    border-radius: 5px;
+}
+#textarea::-webkit-scrollbar-thumb {
+    background-color: $gold;
+    width: 2px;
+    border-radius: 5px;
+}
+
