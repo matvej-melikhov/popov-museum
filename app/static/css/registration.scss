@@ -269,7 +269,6 @@
 
         // .form__input1
         &__input {
-            font-size: 1.5rem;
 
             &_1{
                 width: 100%;
@@ -297,33 +296,12 @@
         // background-color: red;
     }
 
-    .date {
-        font-size: 1.5rem;
-    }
-
     #textarea{
         height: 20rem;
-    }
-
-    .dropdown {
-
-        // .dropdown_button
-
-        &__button {
-            font-size: 1.5rem;
-        }
     }
 }
 
 @media (max-width: 400px) {
-    .title{
-        font-size: 3rem;
-    }
-
-    .form-text{
-        font-size: 1.5rem;
-    }
-
     .pr-btn {
         padding: 3rem 3rem;
     }
