@@ -3,3 +3,62 @@
 @import "vars.scss";
 @import "main.scss";
 
+.form {
+
+		// .form__section
+
+		&__section {
+            margin-bottom: 2.2rem;
+            // background-color: red;
+		}
+
+        &__section:nth-child(4) {
+            margin-bottom: 5rem;
+        }
+
+		// .form__section-fields
+
+		&__section-fields {
+            display: flex;
+            // flex-wrap: nowrap;
+            justify-content: space-between;
+            // background-color: red;
+		}
+
+        // .form__input1
+        &__input {
+            display: flex;
+            align-items: center;
+            font-family: Styrene, sans-serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: $secondary;
+            padding: 3rem 2.5rem;
+            border: none;
+            border-radius: 5px;
+            background: rgba(0, 52, 119, 0.05);
+
+            &_1{
+                width: 100%;
+            }
+
+            &_2{
+                width: 49.5%;
+            }
+        }
+
+        // .form__button
+        &__button{
+            width: 100%;
+            border: none;
+        }
+}
+
+.form-text {
+    font-family: Styrene, sans-serif;
+    color: $secondary;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 141%;
+    margin-bottom: 1.5rem;
+}

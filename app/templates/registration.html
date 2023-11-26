@@ -11,7 +11,47 @@
 
 
 {% block content %}
-
-<!-- Контент страницы без <body> -->
-
+<h2 class="title">запись в <span class="pr">музей-комната</span> А. С. попова</h2>
+<form action="#" method="post" enctype="multipart/form-data" class="form">
+	<div class="form__section">
+		<p class="form-text">Дата и время посещения</p>
+		<div class="form__section-fields">
+			<input type="date" name="date" class="form__input form__input_2">
+			<select name="time" class="form__input form__input_2">
+				<option value="">11:00-11:30</option>
+				<option value="">11:30-12:00</option>
+				<option value="">12:00-12:30</option>
+				<option value="">12:30-13:00</option>
+				<option value="">13:00-13:30</option>
+				<option value="" selected>13:30-14:00</option>
+				<option value="">14:00-14:30</option>
+				<option value="">14:30-15:00</option>
+				<option value="">15:00-15:30</option>
+				<option value="">15:30-16:00</option>
+				<option value="">16:00-16:30</option>
+			</select>
+		</div>
+	</div>
+	<div class="form__section">
+		<p class="form-text">Фамилия, имя и отчество</p>
+		<div class="form__section-fields">
+			<input type="text" name="name" placeholder="Иванов Иван Иванович" class="form__input form__input_1">
+		</div>
+	</div>
+	<div class="form__section">
+		<p class="form-text">Номер телефона и эл. почта (для получения билета)</p>
+		<div class="form__section-fields">
+			<input type="tel" name="number" placeholder="Номер телефона" class="form__input form__input_2">
+			<input type="email" name="email" placeholder="example@yandex.ru" class="form__input form__input_2">
+		</div>
+	</div>
+	<div class="form__section">
+		<p class="form-text">Откуда узнали про музей</p>
+		<div class="form__section-fields">
+			<input type="text" name="name" placeholder="Например, от одногруппников в общем чате" class="form__input form__input_1">
+		</div>
+	</div>
+	<p class="form-text">Нажимая кнопку «Записаться», Вы даете согласие на хранение и обработку ваших персональных данных.</p>
+	<button class="form__button pr-btn">Записаться</button>
+</form>
 {% endblock %}
