@@ -233,6 +233,7 @@ body::-webkit-scrollbar-thumb {
 
 .text-block {
   padding-top: 40px;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,15 +327,14 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   top: -2.6rem;
   right: -6.6rem;
+  z-index: 0;
 }
 
-.bio-section {
+.links-section {
+  margin-bottom: 8rem;
   padding: 8rem 0 0 0;
 }
 
-.links-block {
-  margin-bottom: 8rem;
-}
 .links-block__text {
   color: #343434;
   font-family: Styrene A LC;
@@ -435,4 +435,12 @@ body::-webkit-scrollbar-thumb {
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
+}
+
+.scientific-career-section,
+.creation-of-radio-section,
+.first-director-section,
+.last-years-section,
+.heritage-section {
+  padding: 8rem 0 0 0;
 }

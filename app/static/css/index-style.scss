@@ -26,6 +26,7 @@ $left-photo-height: 292px;
 
     & {
         padding-top: 40px;
+        z-index: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -105,21 +106,19 @@ $left-photo-height: 292px;
         position: absolute;
         top: -2.6rem;
         right: -6.6rem;
+        z-index: 0;
     }
 }
 
 //--------------------------------------------//
 
-.bio-section {
+.links-section{
+    margin-bottom: 8rem;
     padding: 8rem 0 0 0;
 }
 
 .links-block {
-
-    & {
-        margin-bottom: 8rem;
-    }
-
+    
     &__text {
         color: #343434;
         font-family: Styrene A LC;
@@ -128,14 +127,14 @@ $left-photo-height: 292px;
         line-height: 150%;
         margin-bottom: 2.5rem;
     }
-
+    
     &__links {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-
-
+    
+    
     &__links>.link {
         display: flex;
         padding: 15px 27px;
@@ -151,11 +150,11 @@ $left-photo-height: 292px;
         font-weight: 400;
         line-height: 171.99%;
     }
-
+    
     &__links:last-child {
         margin-bottom: 0;
     }
-
+    
     &__links .fa-link {
         font-family: FontAwesome;
         margin-right: 0.5rem;
@@ -163,9 +162,11 @@ $left-photo-height: 292px;
 }
 
 //-------------------------------------//
+.bio-section {
+}
 
 .main-text-block {
-
+    
     &__title {
         font-size: 4rem;
     }
@@ -225,6 +226,70 @@ $left-photo-height: 292px;
         hyphens: auto;
     }
 
-
-
 }
+
+.scientific-career-section,
+.creation-of-radio-section,
+.first-director-section,
+.last-years-section,
+.heritage-section{
+    padding: 8rem 0 0 0;
+}
+
+// @media(max-width: 1440px){
+//     .main-section {
+//         flex-direction: column;
+//     }
+
+//     .text-block {
+
+//         & {
+//             width: 100%;
+//             align-items: center;
+//         }
+    
+//         &__sponsors {
+//             text-align: center;
+//         }
+    
+//         &__title, &__text {
+//             text-align: center;
+//             width: 100%;
+//             height: fit-content;
+//         }
+
+//     }
+
+//     .image-block {
+//         &__image {
+//             width: 80%;
+//             position: absolute;
+//             top: 0;
+//             right: 0;
+//             z-index: 0;
+//         }
+//     }
+// }
+
+// @media(max-width: 1024px){
+//     .text-block__buttons {
+
+//         & {
+//             display: flex;
+//             flex-direction: column;
+//             margin-bottom: 12rem;
+//         }
+
+//         &__button {
+//             align-items: center;
+//             border-radius: 5px;
+//             margin-bottom: 1.5rem;
+//             width: 100%;
+//         }
+
+//         &__button:last-child{
+//             margin-bottom: 0;
+//         }
+
+//     }
+// }
