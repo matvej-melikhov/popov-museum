@@ -112,13 +112,13 @@ $left-photo-height: 292px;
 
 //--------------------------------------------//
 
-.links-section{
+.links-section {
     margin-bottom: 8rem;
     padding: 8rem 0 0 0;
 }
 
 .links-block {
-    
+
     &__text {
         color: #343434;
         font-family: Styrene A LC;
@@ -127,14 +127,14 @@ $left-photo-height: 292px;
         line-height: 150%;
         margin-bottom: 2.5rem;
     }
-    
+
     &__links {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    
-    
+
+
     &__links>.link {
         display: flex;
         padding: 15px 27px;
@@ -150,89 +150,77 @@ $left-photo-height: 292px;
         font-weight: 400;
         line-height: 171.99%;
     }
-    
+
     &__links:last-child {
         margin-bottom: 0;
     }
-    
-    &__links .fa-link {
-        font-family: FontAwesome;
-        margin-right: 0.5rem;
-    }
+
+}
+
+.fa-link {
+    font-family: FontAwesome;
+    margin-right: 0.5rem;
 }
 
 //-------------------------------------//
-.bio-section {
-}
 
 .main-text-block {
-    
+
     &__title {
         font-size: 4rem;
     }
+}
 
-    &__text .image-container-right {
-        position: relative;
-        float: right;
-        margin-left: 2rem;
-        max-height: $right-photo-height;
-    }
+.image-container {
+    position: relative;
+    height: $right-photo-height;
+}
 
-    &__text .image-container-left {
-        position: relative;
-        float: left;
-        margin-right: 2rem;
-        max-height: $left-photo-height;
-    }
+.image-right {
+    float: right;
+    margin-left: 2rem;
+}
 
-    &__text .main-picture {
-        display: inline;
-    }
+.image-left {
+    float: left;
+    margin-right: 2rem;
+}
 
-    &__text .photo-description {
-        position: absolute;
-        bottom: 0;
-        padding: 0.7rem 2rem;
-        border-radius: 0 0 5px 5px;
-        box-sizing: border-box;
-        background: rgba(0, 0, 0, 0.67);
-        color: white;
-        font-family: Lora;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 141.4%;
-        font-size: 1.6rem;
-        width: 100%;
-        
-    }
+.main-picture {
+    display: inline;
+    height: $right-photo-height;
+}
 
-    &__text .photo-description-right {
-        right: 0;
-    }
-
-    &__text .photo-description-left {
-        left: 0;
-
-    }
-
-    &__text .wrapper-text {
-        color: $secondary;
-        font-family: Lora;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 141.4%;
-        text-align: justify;
-        hyphens: auto;
-    }
+.photo-description {
+    position: absolute;
+    bottom: 0;
+    padding: 0.7rem 2rem;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.67);
+    color: white;
+    font-family: Styrene, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 141.4%;
+    font-size: 1.6rem;
+    width: 100%;
 
 }
 
-.scientific-career-section,
-.creation-of-radio-section,
-.first-director-section,
-.last-years-section,
-.heritage-section{
+.wrapper-text {
+    color: $secondary;
+    font-family: Lora;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 141.4%;
+    text-align: justify;
+    hyphens: auto;
+}
+
+
+.section {
     padding: 8rem 0 0 0;
 }
 
@@ -247,11 +235,11 @@ $left-photo-height: 292px;
 //             width: 100%;
 //             align-items: center;
 //         }
-    
+
 //         &__sponsors {
 //             text-align: center;
 //         }
-    
+
 //         &__title, &__text {
 //             text-align: center;
 //             width: 100%;
