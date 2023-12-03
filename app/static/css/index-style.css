@@ -355,7 +355,11 @@ body::-webkit-scrollbar-thumb {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.links-block__links > .link {
+.links-block__links:last-child {
+  margin-bottom: 0;
+}
+
+.link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,9 +379,6 @@ body::-webkit-scrollbar-thumb {
   font-style: normal;
   font-weight: 400;
   line-height: 171.99%;
-}
-.links-block__links:last-child {
-  margin-bottom: 0;
 }
 
 .fa-link {
@@ -407,6 +408,8 @@ body::-webkit-scrollbar-thumb {
 .main-picture {
   display: inline;
   height: 286px;
+  border: #acacac 1px solid;
+  border-radius: 0 0 5px 5px;
 }
 
 .photo-description {
