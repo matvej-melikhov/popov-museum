@@ -55,6 +55,7 @@ body::-webkit-scrollbar-thumb {
     line-height: 140%;
     color: $secondary;
     margin-bottom: 1.5rem;
+    text-align: justify;
     
     > span {
         font-family: inherit;
@@ -70,6 +71,10 @@ body::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background: $gold-gr;
     color: #fff;
+    font-family: Styrene, sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
 }
 
 .btn {
@@ -77,6 +82,9 @@ body::-webkit-scrollbar-thumb {
     border-radius: 5px;
     border: 1px solid $secondary;
     color: $secondary;
+    font-family: Styrene, sans-serif;
+    font-weight: 400;
+    text-align: center;
 }
 
 .img { border-radius: 5px; }
@@ -88,7 +96,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .container {
-    max-width: 1600px;
+    max-width: 1660px;
     margin: 0 auto;
     padding: 0px $padding;
 }
@@ -118,6 +126,14 @@ body::-webkit-scrollbar-thumb {
     margin-top: calc($header-height + 8rem);
     margin-bottom: 8rem;
     min-height: calc(100vh - 16rem - $header-height - $footer-height);
+}
+
+.section {
+    padding: 6.5rem 0;
+}
+
+.minisection {
+    padding: 8rem 0;
 }
 
 .footer {
