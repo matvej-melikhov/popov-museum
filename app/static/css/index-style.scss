@@ -1,7 +1,6 @@
 @import "fonts.scss";
 @import "vars.scss";
 @import "sizes.scss";
-@import "main.scss";
 
 $right-photo-height: 286px;
 
@@ -20,6 +19,11 @@ $left-photo-height: 292px;
 
 .pr-gold-text {
     color: $pr-dark;
+}
+
+.text,
+.section{
+    text-align: justify;
 }
 
 .text-block {
@@ -173,7 +177,7 @@ $left-photo-height: 292px;
 .image-container {
     position: relative;
     height: $right-photo-height;
-    
+    border-radius: 5px 5px 5px 5px;
 }
 
 .image-right {
@@ -190,7 +194,7 @@ $left-photo-height: 292px;
     display: inline;
     height: $right-photo-height;
     border: #acacac 1px solid;
-    border-radius: 0 0 5px 5px;
+    border-radius: 5px 5px 5px 5px;
     
 }
 
@@ -211,7 +215,7 @@ $left-photo-height: 292px;
 
 }
 
-.wrapper-text {
+p {
     color: $secondary;
     font-family: Lora;
     font-size: 24px;
@@ -224,7 +228,7 @@ $left-photo-height: 292px;
 
 
 .section {
-    padding: 8rem 0 0 0;
+    padding: 6rem 0 0 0;
 }
 
 // @media(max-width: 1440px){
