@@ -51,7 +51,7 @@
   font-weight: 400;
 }
 
-.apartment-museum__contactsblocks {
+.apartment-museum__contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,7 +61,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.apartment-museum__contactsblocks-element {
+.apartment-museum__contacts-contact {
   padding: 2rem 3rem;
   width: 49.5%;
   border-radius: 5px;
