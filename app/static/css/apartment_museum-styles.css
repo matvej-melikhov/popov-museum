@@ -88,3 +88,14 @@
     float: left;
   }
 }
+@media (max-width: 768px) {
+  .apartment-museum__img-flat {
+    width: 100%;
+    padding-bottom: 2rem;
+    height: 100%;
+    padding-right: 0rem;
+  }
+  .apartment-museum__contacts-contact {
+    width: 100%;
+  }
+}
