@@ -1,25 +1,31 @@
 @import "fonts.scss";
 @import "vars.scss";
 
-.apartment-museum__img-flat{
-    float: left;
-    padding-right: 3.4rem;
-}
-
-.apartment-museum__registration-button{
-    display: flex;
-    padding: 2rem 9rem;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: 400;
-}
-
-.apartment-museum__contacts{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    &-contact{
+.museum {
+    &__img {
+        float: left;
+        padding-right: 3.4rem;
+    }
+    
+    &__reg-btn {
+        width: 100%;
+        margin-top: 3rem;
+    }
+    
+    &__map {
+        height: 70rem;
+        margin-top: 2rem;
+        background-color: #fff9ed;
+        border-radius: 5px;
+    }
+    
+    &__contacts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    &__contact {
         padding: 2rem 3rem;
         width: 49.5%;
         border-radius: 5px;
@@ -27,37 +33,22 @@
     }
 }
 
-.fa-solid{
+
+i {
     padding-right: 1.5rem;
 }
 
-.minisection{
-    padding-top: 6.5rem;
-}
-
-@media(max-width: 480px){
-    .apartment-museum__contacts-blocks-element{
+@media(max-width: 768px) {
+    .museum {
+        
+        &__img{
             width: 100%;
-    }
-    .apartment-museum__img-flat{
-            width: 30rem;
-            height: 20rem;
-    }
-    .fa-solid{
-        float: left;
-    }
+            height: 100%;
+            padding-bottom: 3rem;
+            padding-right: 0;
+        }
 
-}
-
-@media(max-width:768px){
-    .apartment-museum__img-flat{
-        width: 100%;
-        padding-bottom: 2rem;
-        height: 100%;
-        padding-right: 0rem;
-    }
-    .apartment-museum__contacts{
-        &-contact{
+        &__contact {
             width: 100%;
         }
     }
