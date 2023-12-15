@@ -1,19 +1,18 @@
 @import "fonts.scss"; // шрифт Styrene
 @import "sizes.scss";
 @import "vars.scss";
-@import "main.scss";
 
 .form {
 
 		// .form__section
 
 		&__section {
-            margin-bottom: 2.2rem;
+            margin-bottom: 3.5rem;
             // background-color: red;
 		}
 
         &__section:nth-child(4) {
-            margin-bottom: 5rem;
+            margin-bottom: 4rem;
         }
 
 		// .form__section-fields
@@ -66,7 +65,7 @@
     font-size: 2rem;
     font-weight: 400;
     line-height: 141%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .date {
@@ -79,6 +78,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    width: 100%;
     border: none;
     border-radius: 5px;
     background: rgba(0, 52, 119, 0);
@@ -242,8 +242,9 @@
 
 #textarea{
     padding: 3rem 2.5rem;
-    height: 8.8rem;
-    overflow-y: scroll;
+    height: 30rem;
+    overflow-y: auto;
+    resize: none;
 }
 
 #textarea::-webkit-scrollbar { width: 5px; }
