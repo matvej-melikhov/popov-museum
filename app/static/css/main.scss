@@ -13,6 +13,10 @@
 
 html { font-size: 10px; } // для работы rem
 
+body {
+    overflow-x: hidden;
+}
+
 //скроллбар
 body::-webkit-scrollbar { width: 8px; }
 body::-webkit-scrollbar-track { background: #efe3ff; }
@@ -22,10 +26,14 @@ body::-webkit-scrollbar-thumb {
     border: 2px solid #efe3ff;
 }
 
+img {
+    border-radius: 5px;
+}
+
 
 .title {
     font-family: Styrene, sans-serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 500;
     text-transform: uppercase;
     color: $secondary;
@@ -52,7 +60,7 @@ body::-webkit-scrollbar-thumb {
     font-family: Lora, serif;
     font-size: 2.4rem;
     font-weight: 400;
-    line-height: 140%;
+    line-height: 160%;
     color: $secondary;
     margin-bottom: 1.5rem;
     text-align: justify;
@@ -67,7 +75,8 @@ body::-webkit-scrollbar-thumb {
 .pr-dark { color: $pr-dark; }
 
 .pr-btn {
-    padding: 3rem 9rem;
+    display: block;
+    padding: 3rem 6rem;
     border-radius: 5px;
     background: $gold-gr;
     color: #fff;
@@ -78,10 +87,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .btn {
-    padding: 2rem 4rem;
+    display: block;
+    padding: 3rem 6rem;
     border-radius: 5px;
     border: 1px solid $secondary;
     color: $secondary;
+    font-size: 2rem;
     font-family: Styrene, sans-serif;
     font-weight: 400;
     text-align: center;
@@ -129,11 +140,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .section {
-    padding: 6.5rem 0;
+    padding: 15rem 0 0 0;
 }
 
 .minisection {
-    padding: 8rem 0;
+    padding: 8rem 0 0 0!important;
 }
 
 .footer {
@@ -150,6 +161,50 @@ body::-webkit-scrollbar-thumb {
     
     &__img {
         height: 100%;
+    }
+}
+
+@media (max-width: 1400px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 768px) {    
+    html {
+        font-size: 7px;
+    }
+    
+    .image-container {
+        max-width: none !important;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .header {
+        height: $header-mobile-height;
+    }
+    
+    .main {
+        margin-top: calc($header-mobile-height + 6rem);
+        margin-bottom: 8rem;
+        min-height: calc(100vh - 14rem - $header-mobile-height - $footer-mobile-height);
+    }
+    
+    .footer {
+        height: $footer-mobile-height;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 6px;
     }
 }
 
