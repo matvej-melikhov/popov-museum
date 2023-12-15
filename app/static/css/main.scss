@@ -75,6 +75,7 @@ img {
 .pr-dark { color: $pr-dark; }
 
 .pr-btn {
+    display: block;
     padding: 3rem 6rem;
     border-radius: 5px;
     background: $gold-gr;
@@ -86,10 +87,12 @@ img {
 }
 
 .btn {
+    display: block;
     padding: 3rem 6rem;
     border-radius: 5px;
     border: 1px solid $secondary;
     color: $secondary;
+    font-size: 2rem;
     font-family: Styrene, sans-serif;
     font-weight: 400;
     text-align: center;
@@ -189,9 +192,9 @@ img {
     }
     
     .main {
-        margin-top: calc($header-mobile-height + 8rem);
+        margin-top: calc($header-mobile-height + 6rem);
         margin-bottom: 8rem;
-        min-height: calc(100vh - 16rem - $header-mobile-height - $footer-mobile-height);
+        min-height: calc(100vh - 14rem - $header-mobile-height - $footer-mobile-height);
     }
     
     .footer {
