@@ -116,6 +116,7 @@ img {
 }
 
 .pr-btn {
+  display: block;
   padding: 3rem 6rem;
   border-radius: 5px;
   background: linear-gradient(97deg, #F1B33C 0%, #F1A13C 100%);
@@ -127,10 +128,12 @@ img {
 }
 
 .btn {
+  display: block;
   padding: 3rem 6rem;
   border-radius: 5px;
   border: 1px solid #0E2441;
   color: #0E2441;
+  font-size: 2rem;
   font-family: Styrene, sans-serif;
   font-weight: 400;
   text-align: center;
@@ -222,9 +225,9 @@ img {
     height: 70px;
   }
   .main {
-    margin-top: calc(70px + 8rem);
+    margin-top: calc(70px + 6rem);
     margin-bottom: 8rem;
-    min-height: calc(100vh - 16rem - 70px - 60px);
+    min-height: calc(100vh - 14rem - 70px - 60px);
   }
   .footer {
     height: 60px;
