@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Сайт Попова — {% block title %}{% endblock %}</title>
+    <title>Музей Попова — {% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:title" content="Музей А. С. Попова">
@@ -11,7 +11,7 @@
     <meta property="og:url" content="https://popov-museum.ru">
     <meta property="og:description" content="Первоисточник информации о музее Александра Степановича Попова в СПбГЭТУ ЛЭТИ.">
 
-    <link rel="icon" href="{{ url_for('index') }}static/img/icon.png">
+    <link rel="icon" href="{{ url_for('index') }}static/img/icon.jpg">
     <link rel="stylesheet" href="{{ url_for('index') }}static/css/main.css"> <!-- общие стили -->
     {% block style %}{% endblock style %}
     <script src="https://kit.fontawesome.com/0ad5947fc3.js" crossorigin="anonymous"></script>
@@ -22,7 +22,7 @@
     
     <header class="header">
        <div class="header__inner container">
-           <img src="{{url_for('index')}}static/img/popov-logo.png" alt="" class="header__img">
+           <a class="header__logo" href="{{url_for('index')}}"><img src="{{url_for('index')}}static/img/popov-logo.png" alt=""></a>
            
            <ul class="navbar">
                <li class="navbar__item"><a href="">Биография</a></li>

@@ -166,14 +166,16 @@ img {
 
 .header {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: 10;
   height: 90px;
-  width: 100%;
+  width: 95%;
   background: #fff;
-  border-bottom: 1px solid #DBDEE2;
-  border-radius: 0px 0px 10px 10px;
+  border: 1px solid #DBDEE2;
+  border-radius: 10px 10px 10px 10px;
   font-family: Styrene, sans-serif;
   overflow-x: auto;
   overflow-y: hidden;
@@ -191,9 +193,12 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.header__img {
+.header__logo {
   height: 100%;
-  padding: 10px 0px;
+  padding: 0px 0px;
+}
+.header__logo img {
+  height: 100%;
 }
 .header__mobile-burger {
   display: none;
