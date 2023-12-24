@@ -7,11 +7,11 @@ def index():
 
 @application.route("/apartment-museum")
 def apartment_museum():
-    return render_template("apartment_museum.html")
+    return render_template("apartment.html")
 
 @application.route("/laboratory-museum")
 def laboratory_museum():
-    return render_template("laboratory_museum.html")
+    return render_template("laboratory.html")
 
 @application.route("/registration")
 def registration():

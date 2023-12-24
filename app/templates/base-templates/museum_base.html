@@ -1,0 +1,65 @@
+{% extends "base-templates/base.html" %}
+
+
+{% block title %}Квартира в ЛЭТИ{% endblock title %}
+
+
+{% block style %}
+<link rel="stylesheet" href="{{url_for('index')}}static/css/apartment-styles.css">
+{% endblock style %}
+
+
+{% block content %}
+
+<div class="museum">
+    <h2 class="title museum__title">
+        {% block museum_title %}{% endblock %}
+    </h2>
+    
+    {% block museum_image %}{% endblock %}
+    
+    <div class="museum__info">
+        {% block museum_info %}{% endblock %}
+    </div>
+    
+    <a href="" class="pr-btn museum__reg-btn">
+        Записаться на экскурсию
+    </a>
+    
+    <div class="minisection">
+        <h3 class="minititle">
+            Расположение
+        </h3>
+        
+        {% block geo_info %}{% endblock %}
+        
+        {% block map %}{% endblock %}
+        
+    </div>
+    
+    <div class="minisection">
+        <h3 class="minititle">
+            Контакты
+        </h3>
+        
+        <div class="museum__contacts">
+            <div class="text museum__contact">
+                <i class="fa-solid fa-user"></i>Золотинкина Лариса Игоревна
+            </div>
+            
+            <div class="text museum__contact">
+                <i class="fa-solid fa-clock"></i>Пн. - пт. с 11:00 до 16:30
+            </div>
+            
+            <div class="text museum__contact">
+                <i class="fa-solid fa-phone"></i> +7 812 234-59-00
+            </div>
+            
+            <div class="text museum__contact">
+                <i class="fa-solid fa-envelope"></i>radioemc@yandex.ru
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}
