@@ -68,6 +68,10 @@
   padding-right: 1.5rem;
 }
 
+.text-block {
+  fill: #F9F6F1;
+}
+
 @media (max-width: 768px) {
   .museum__img {
     width: 100%;
