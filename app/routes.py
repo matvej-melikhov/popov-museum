@@ -17,6 +17,10 @@ def laboratory_museum():
 def registration():
     return render_template("registration.html")
 
+@application.route("/archive")
+def archive():
+    return render_template("archive.html");
+
 @application.route("/success")
 def success():
     return render_template("success.html")
