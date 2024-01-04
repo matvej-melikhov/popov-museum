@@ -1,6 +1,10 @@
 from flask import render_template
 from app import application
 
+@application.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
 @application.route("/")
 def index():
     return render_template("index.html")
@@ -25,3 +29,6 @@ def archive():
 def success():
     return render_template("success.html")
 
+@application.route("/failure")
+def failure():
+    return render_template("failure.html")
