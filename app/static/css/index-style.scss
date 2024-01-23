@@ -1,0 +1,241 @@
+@import "fonts.scss";
+@import "vars.scss";
+@import "sizes.scss";
+
+.main {
+    margin-top: $header-height !important;
+}
+
+.main-section {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.gold-text {
+    color: $gold;
+}
+
+.section .text {
+    text-align: justify;
+}
+
+.text-block {
+    margin-top: -5rem;
+    padding-right: 2rem;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+
+    &__sponsors {
+        font-family: Styrene, sans-serif;
+        display: flex;
+        padding: 1.4rem 2.7rem;
+        align-items: center;
+        font-size: 2rem;
+        color: $pr-dark;
+        line-height: 160%;
+        border-radius: 35px;
+        border: 1px solid rgba(152, 103, 43, 0.38);
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        font-size: 4.5rem;
+        font-weight: 700;
+        width: 100%;
+        margin-bottom: 4.5rem;
+    }
+
+    &__text {
+        width: 100%;
+        font-size: 2.4rem;
+        color: $secondary;
+        font-style: normal;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 160%;
+        margin-bottom: 4.5rem;
+    }
+
+    &__buttons {
+        display: flex;
+    }
+    
+    &__button {
+        font-size: 2rem;
+        font-family: Styrene, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+    
+    &__history {
+            background: linear-gradient(97deg, #F1B33C 0%, #F1A13C 100%);
+            color: white;
+            margin-right: 35px;
+            align-items: center;
+        }
+
+    &__museum {
+        border: 1px solid #0E2441;
+        color: $secondary;
+    }
+}
+
+.image-block {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+//--------------------------------------------//
+
+.links-block {
+
+    &__text {
+        color: #343434;
+        font-family: Styrene, sans-serif;
+        font-weight: 500;
+        font-size: 2.4rem;
+        margin-bottom: 2.5rem;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    &__links:last-child {
+        margin-bottom: 0;
+    }
+    
+}
+
+.link {
+    display: flex;
+    padding: 2.5rem 3rem;
+    align-items: center;
+    border-radius: 5px;
+    background: #F9F6F1;
+    margin-bottom: 1.5rem;
+    color: $pr-dark;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.fa-link {
+    margin-right: 1.5rem;
+}
+
+//-------------------------------------//
+
+.main-text-block {}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 7px;
+    overflow: hidden;
+    
+    &_right {
+        float: right;
+        margin-left: 2rem;
+    }
+    
+    &_left {
+        float: left;
+        margin-right: 2rem;
+    }
+}
+
+.image {
+    display: block;
+    width: 100%;
+}
+
+.image-description {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0.7rem 2rem;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.67);
+    color: white;
+    font-family: Styrene, sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    width: 100%;
+}
+
+@media(max-width: 1024px) {
+    .main-section {
+        flex-direction: column-reverse;
+        margin-bottom: 5rem;
+    }
+    
+    .image-block {
+        position: relative;
+        width: 80%;
+        opacity: .7;
+        
+        img {
+            width: 100%;
+        }
+        
+        
+        &::after {
+            content: "";
+            height: 40%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0.04%, rgba(255, 255, 255, 0.34) 44.59%, #FFF 78.52%);
+        }
+    }
+    
+    .text-block {
+        text-align: center;
+        margin-top: -10rem;
+        padding-right: 0;
+        
+        &__title {
+            font-weight: 700;
+            font-size: 4rem;
+        }
+        
+        &__text {
+            text-align: center;
+        }
+        
+        &__sponsors {
+            margin: 0 auto;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(152, 103, 43, 0.5);
+            font-weight: 500;
+            z-index: 1;
+        }
+        
+        &__buttons {
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        &__button {
+            width: 100%;
+        }
+        
+        &__history {
+            margin-bottom: 2rem;
+        }
+    }
+
+}
