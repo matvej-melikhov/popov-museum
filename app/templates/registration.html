@@ -1,17 +1,108 @@
-{% extends "base-templates/base.html" %}
+{% extends "base.html" %} {% block title %}Запись в музей{% endblock title %} {%
+block style %}
+<!-- Подключаем стили: your_file нужно изменить -->
+<link rel="stylesheet" href="{{url_for('index')}}static/css/registration.css" />
+{% endblock style %} {% block content %}
+<h2 class="title">
+  запись в <span class="pr">музей-комната</span> А. С. попова
+</h2>
+<form action="#" method="get" enctype="multipart/form-data" class="form">
+  <div class="form__section">
+    <p class="form-text">Дата и время посещения</p>
+    <div class="form__section-fields">
+      <div class="form__input form__input_2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="1em"
+          viewBox="0 0 448 512"
+          class="calendar"
+        >
+          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"
+          />
+        </svg>
+        <input type="date" name="date" class="date" />
+      </div>
+      <div class="dropdown">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="1em"
+          viewBox="0 0 320 512"
+          class="caret"
+        >
+          <path
+            d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"
+          />
+        </svg>
+        <button class="dropdown__button">16:00-16:30</button>
+        <ul class="dropdown__list">
+          <li class="dropdown__list-item" data-value="">11:00-11:30</li>
+          <li class="dropdown__list-item" data-value="">11:30-12:00</li>
+          <li class="dropdown__list-item" data-value="">12:00-12:30</li>
+          <li class="dropdown__list-item" data-value="">12:30-13:00</li>
+          <li class="dropdown__list-item" data-value="">13:00-13:30</li>
+          <li class="dropdown__list-item" data-value="">13:30-14:00</li>
+          <li class="dropdown__list-item" data-value="">14:00-14:30</li>
+          <li class="dropdown__list-item" data-value="">14:30-15:00</li>
+          <li class="dropdown__list-item" data-value="">15:00-15:30</li>
+          <li class="dropdown__list-item" data-value="">15:30-16:00</li>
+          <li class="dropdown__list-item" data-value="">16:00-16:30</li>
+        </ul>
+        <input
+          type="text"
+          name="select-time"
+          value=""
+          class="dropdown__input-hidden"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="form__section">
+    <p class="form-text">Фамилия, имя и отчество</p>
+    <div class="form__section-fields">
+      <input
+        type="text"
+        name="name"
+        placeholder="Иванов Иван Иванович"
+        class="form__input form__input_1"
+      />
+    </div>
+  </div>
+  <div class="form__section">
+    <p class="form-text">Номер телефона и эл. почта (для получения билета)</p>
+    <div class="form__section-fields">
+      <input
+        type="tel"
+        name="number"
+        placeholder="Номер телефона"
+        class="form__input form__input_2"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="example@yandex.ru"
+        class="form__input form__input_2"
+      />
+    </div>
+  </div>
+  <div class="form__section">
+    <p class="form-text">Откуда узнали про музей</p>
+    <div class="form__section-fields">
+      <textarea
+        name="name"
+        placeholder="Например, от одногруппников в общем чате"
+        class="form__input form__input_1"
+        id="textarea"
+      ></textarea>
+    </div>
+  </div>
+  <p class="form-text">
+    Нажимая кнопку «Записаться», Вы даете согласие на хранение и обработку ваших
+    персональных данных.
+  </p>
+  <button class="form__button pr-btn">Записаться</button>
+</form>
 
-
-{% block title %}Запись в музей{% endblock title %}
-
-
-{% block style %}
-    <!-- Подключаем стили: your_file нужно изменить -->
-    <link rel="stylesheet" href="{{url_for('index')}}static/css/your_file.css">
-{% endblock style %}
-
-
-{% block content %}
-
-<!-- Контент страницы без <body> -->
-
+<script src="{{url_for('index')}}static/js/registration.js"></script>
 {% endblock %}
