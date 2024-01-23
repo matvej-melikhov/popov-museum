@@ -25,16 +25,16 @@
            <a class="header__logo" href="{{url_for('index')}}"><img src="{{url_for('index')}}static/img/popov-logo.png" alt=""></a>
            
            <ul class="navbar">
-               <li class="navbar__item"><a href="">Биография</a></li>
-               <li class="navbar__item"><a href="">Музей&nbsp;в&nbsp;ЛЭТИ</a></li>
-               <li class="navbar__item"><a href="">Лаборатория&nbsp;в&nbsp;ЛЭТИ</a></li>
-               <li class="navbar__item"><a href="">Архив</a></li>
+               <li class="navbar__item"><a href="{{url_for('index')}}">Биография</a></li>
+               <li class="navbar__item"><a href="{{url_for('index')}}apartment-museum">Музей&nbsp;в&nbsp;ЛЭТИ</a></li>
+               <li class="navbar__item"><a href="{{url_for('index')}}laboratory-museum">Лаборатория&nbsp;в&nbsp;ЛЭТИ</a></li>
+               <li class="navbar__item"><a href="{{url_for('index')}}archive">Архив</a></li>
            </ul>
            
            <a onclick="toggleNavbar()" href="#" class="header__mobile-burger"><i class="fa-solid fa-bars"></i></a>
            
            <div class="mini-btns">
-               <a href="" class="mini-btns__item">
+               <a href="{{url_for('index')}}registration" class="mini-btns__item">
                    <i class="fa-solid fa-pen-to-square"></i>
                </a>
                <a href="" class="mini-btns__item">
