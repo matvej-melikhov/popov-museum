@@ -1,12 +1,11 @@
 {% extends "base-templates/base.html" %} {% block title %}Запись в музей{% endblock title %} {%
 block style %}
-<!-- Подключаем стили: your_file нужно изменить -->
 <link rel="stylesheet" href="{{url_for('index')}}static/css/registration.css" />
 {% endblock style %} {% block content %}
 <h2 class="title">
-  запись в <span class="pr">музей-комната</span> А. С. попова
+  Запись в <span class="pr">музей</span> А. С. Попова
 </h2>
-<form action="#" method="get" enctype="multipart/form-data" class="form">
+<form action="#" method="post" class="form">
   <div class="form__section">
     <p class="form-text">Дата и время посещения</p>
     <div class="form__section-fields">
@@ -37,17 +36,17 @@ block style %}
         </svg>
         <button class="dropdown__button">16:00-16:30</button>
         <ul class="dropdown__list">
-          <li class="dropdown__list-item" data-value="">11:00-11:30</li>
-          <li class="dropdown__list-item" data-value="">11:30-12:00</li>
-          <li class="dropdown__list-item" data-value="">12:00-12:30</li>
-          <li class="dropdown__list-item" data-value="">12:30-13:00</li>
-          <li class="dropdown__list-item" data-value="">13:00-13:30</li>
-          <li class="dropdown__list-item" data-value="">13:30-14:00</li>
-          <li class="dropdown__list-item" data-value="">14:00-14:30</li>
-          <li class="dropdown__list-item" data-value="">14:30-15:00</li>
-          <li class="dropdown__list-item" data-value="">15:00-15:30</li>
-          <li class="dropdown__list-item" data-value="">15:30-16:00</li>
-          <li class="dropdown__list-item" data-value="">16:00-16:30</li>
+          <li class="dropdown__list-item" data-value="11:00-11:30">11:00-11:30</li>
+          <li class="dropdown__list-item" data-value="11:30-12:00">11:30-12:00</li>
+          <li class="dropdown__list-item" data-value="12:00-12:30">12:00-12:30</li>
+          <li class="dropdown__list-item" data-value="12:30-13:00">12:30-13:00</li>
+          <li class="dropdown__list-item" data-value="13:00-13:30">13:00-13:30</li>
+          <li class="dropdown__list-item" data-value="13:30-14:00">13:30-14:00</li>
+          <li class="dropdown__list-item" data-value="14:00-14:30">14:00-14:30</li>
+          <li class="dropdown__list-item" data-value="14:30-15:00">14:30-15:00</li>
+          <li class="dropdown__list-item" data-value="15:00-15:30">15:00-15:30</li>
+          <li class="dropdown__list-item" data-value="15:30-16:00">15:30-16:00</li>
+          <li class="dropdown__list-item" data-value="16:00-16:30">16:00-16:30</li>
         </ul>
         <input
           type="text"

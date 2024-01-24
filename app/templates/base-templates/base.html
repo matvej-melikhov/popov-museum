@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -25,10 +25,10 @@
            <a class="header__logo" href="{{url_for('index')}}"><img src="{{url_for('index')}}static/img/popov-logo.png" alt=""></a>
            
            <ul class="navbar">
-               <li class="navbar__item"><a href="{{url_for('index')}}">Биография</a></li>
-               <li class="navbar__item"><a href="{{url_for('index')}}apartment-museum">Музей&nbsp;в&nbsp;ЛЭТИ</a></li>
-               <li class="navbar__item"><a href="{{url_for('index')}}laboratory-museum">Лаборатория&nbsp;в&nbsp;ЛЭТИ</a></li>
-               <li class="navbar__item"><a href="{{url_for('index')}}archive">Архив</a></li>
+               <li class="navbar__item{% if request.endpoint == 'index' %} navbar__item_active{% endif %}"><a href="{{url_for('index')}}">Биография</a></li>
+               <li class="navbar__item{% if request.endpoint == 'apartment_museum' %} navbar__item_active{% endif %}"><a href="{{url_for('index')}}apartment-museum">Музей&nbsp;в&nbsp;ЛЭТИ</a></li>
+               <li class="navbar__item{% if request.endpoint == 'laboratory_museum' %} navbar__item_active{% endif %}"><a href="{{url_for('index')}}laboratory-museum">Лаборатория&nbsp;в&nbsp;ЛЭТИ</a></li>
+               <li class="navbar__item{% if request.endpoint == 'archive' %} navbar__item_active{% endif %}"><a href="{{url_for('index')}}archive">Архив</a></li>
            </ul>
            
            <a onclick="toggleNavbar()" href="#" class="header__mobile-burger"><i class="fa-solid fa-bars"></i></a>
@@ -46,10 +46,10 @@
     
     <div class="mobile-navbar">
         <ul class="mobile-navbar__wrapper">
-            <li class="mobile-navbar__item"><a href="{{url_for('index')}}">Биография</a></li>
-            <li class="mobile-navbar__item"><a href="{{url_for('index')}}apartment-museum">Музей&nbsp;в&nbsp;ЛЭТИ</a></li>
-            <li class="mobile-navbar__item"><a href="{{url_for('index')}}laboratory-museum">Лаборатория&nbsp;в&nbsp;ЛЭТИ</a></li>
-            <li class="mobile-navbar__item"><a href="{{url_for('index')}}archive">Архив</a></li>
+            <li class="mobile-navbar__item{% if request.endpoint == 'index' %} mobile-navbar__item_active{% endif %}"><a href="{{url_for('index')}}">Биография</a></li>
+            <li class="mobile-navbar__item{% if request.endpoint == 'apartment_museum' %} mobile-navbar__item_active{% endif %}"><a href="{{url_for('index')}}apartment-museum">Музей&nbsp;в&nbsp;ЛЭТИ</a></li>
+            <li class="mobile-navbar__item{% if request.endpoint == 'laboratory_museum' %} mobile-navbar__item_active{% endif %}"><a href="{{url_for('index')}}laboratory-museum">Лаборатория&nbsp;в&nbsp;ЛЭТИ</a></li>
+            <li class="mobile-navbar__item{% if request.endpoint == 'archive' %} mobile-navbar__item_active{% endif %}"><a href="{{url_for('index')}}archive">Архив</a></li>
         </ul>
         
         <div class="mobile-navbar__mini-btns">
@@ -78,11 +78,11 @@
          </div>
          
          <div class="footer__logo-wrapper">
-            <img class="footer__logo" src="{{url_for('index')}}static/img/popov-logo.png" alt="" class="footer__img">
-            <img class="footer__logo" src="{{url_for('index')}}static/img/etu-logo.svg" alt="" class="footer__img">
-            <img class="footer__logo" src="{{url_for('index')}}static/img/profcom-logo.png" alt="" class="footer__img">
-            <img class="footer__logo" src="{{url_for('index')}}static/img/sokt-logo.png" alt="" class="footer__img">
-            <img class="footer__logo" src="{{url_for('index')}}static/img/it-sokt-logo.png" alt="" class="footer__img">
+            <img class="footer__logo" src="{{url_for('index')}}static/img/popov-logo.png" alt="">
+            <img class="footer__logo" src="{{url_for('index')}}static/img/etu-logo.svg" alt="">
+            <img class="footer__logo" src="{{url_for('index')}}static/img/profcom-logo.png" alt="">
+            <img class="footer__logo" src="{{url_for('index')}}static/img/sokt-logo.png" alt="">
+            <img class="footer__logo" src="{{url_for('index')}}static/img/it-sokt-logo.png" alt="">
           </div>
          
          <div class="footer__text-links">
