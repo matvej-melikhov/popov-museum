@@ -2,10 +2,243 @@
 
 {% block title %}Архив{% endblock %}
 
+{% block style %}
+<link rel="stylesheet" href="{{url_for('index')}}static/css/archive-styles.css">
+{% endblock %}
 
 {% block content %}
 
-    <h2 class="title">Архив</h2>
-    <p class="text"><i class="fa-brands fa-connectdevelop"></i>&nbsp;&nbsp;В разработке...</p>
+<div class="archive__hero" style="background-image: url('{{url_for('index')}}static/img/univer.jpg')">
+    <div class="archive__hero-content">
+        <h2 class="title archive__hero-title">Архив <span class="pr">А.&nbsp;С.&nbsp;Попова</span></h2>
+        <p class="archive__hero-subtitle">Исторические материалы о жизни и деятельности изобретателя радио</p>
+    </div>
+</div>
+
+<div class="minisection">
+    <h3 class="minititle">Хронология</h3>
+    <div class="timeline">
+
+        <div class="timeline__item">
+            <div class="timeline__year">1859</div>
+            <p class="timeline__text">Родился <span class="timeline__accent">16 марта</span> в посёлке Турьинские Рудники Пермской губернии в семье священника Степана Петровича Попова.</p>
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1877</div>
+            <p class="timeline__text">Окончил с отличием Пермскую духовную семинарию. Поступил на <span class="timeline__accent">физико-математический факультет</span> Петербургского университета.</p>
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1882</div>
+            <p class="timeline__text">Окончил университет, защитил диссертацию. Принял должность преподавателя в <span class="timeline__accent">Минном офицерском классе</span> в Кронштадте — начало 18-летней службы во флоте.</p>
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1895</div>
+            <p class="timeline__text"><span class="timeline__accent">7 мая</span> — на заседании Физического отделения РФХО в Петербурге впервые продемонстрирован радиоприёмник. Эта дата стала <span class="timeline__accent">Днём радио</span>.</p>
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1896</div>
+            <p class="timeline__text"><span class="timeline__accent">24 марта</span> — между корпусами Петербургского университета на 250 метров передана первая в мире радиограмма: <span class="timeline__accent">«Генрих Герц»</span>.</p>
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1900</div>
+            <p class="timeline__text">Введена первая практическая линия радиосвязи <span class="timeline__accent">Гогланд — Котка</span>. Первая же радиограмма спасла 27 рыбаков на льдине. На Всемирной выставке в Париже — <span class="timeline__accent">золотая медаль</span>.</p>
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1901</div>
+            <p class="timeline__text">Принял должность <span class="timeline__accent">ординарного профессора физики</span> в Электротехническом институте (ЭТИ). Основал физическую лабораторию и поставил 42 лабораторные работы.</p>
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1903</div>
+            <p class="timeline__text">Участвовал в <span class="timeline__accent">Берлинской международной конференции</span> по радиосвязи как представитель России. Министр почт Германии: «Попову мы обязаны возникновением первого радиографического аппарата».</p>
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1905</div>
+            <p class="timeline__text">Совет ЭТИ избрал Попова <span class="timeline__accent">директором института</span> после введения университетской автономии. Подписал протокол в поддержку демократических свобод студентов.</p>
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1906</div>
+            <p class="timeline__text">Скончался <span class="timeline__accent">13 января</span> в Санкт-Петербурге от кровоизлияния в мозг. Похоронен на Литераторских мостках Волковского кладбища.</p>
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1945</div>
+            <p class="timeline__text">Постановлением Правительства СССР 7 мая объявлен ежегодным праздником — <span class="timeline__accent">Днём радио</span>. Учреждена Золотая медаль имени А.С. Попова Академии наук СССР.</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="minisection">
+    <h3 class="minititle">Фотоархив</h3>
+    <div class="photo-grid">
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/rudn.jpg" alt="Турьинские рудники">
+            <div class="photo-grid__caption">Турьинские рудники — родина А.С. Попова</div>
+        </div>
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/parents.jpg" alt="Родители А.С. Попова">
+            <div class="photo-grid__caption">Родители А.С. Попова — Степан Петрович и Анна Степановна</div>
+        </div>
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/seminary.jpg" alt="Пермская духовная семинария">
+            <div class="photo-grid__caption">Пермская духовная семинария, где учился А.С. Попов (1873–1877)</div>
+        </div>
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/univer.jpg" alt="Петербургский университет">
+            <div class="photo-grid__caption">Петербургский университет — alma mater А.С. Попова</div>
+        </div>
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/tech_school.jpg" alt="Техническое училище Морского ведомства">
+            <div class="photo-grid__caption">Техническое училище Морского ведомства в Кронштадте</div>
+        </div>
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/power_station.jpg" alt="Нижегородская электростанция">
+            <div class="photo-grid__caption">Нижегородская электростанция — Попов руководил ею каждое лето с 1889 по 1898 год</div>
+        </div>
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/students.jpg" alt="Слушатели Минного офицерского класса">
+            <div class="photo-grid__caption">Слушатели Минного офицерского класса в Кронштадте</div>
+        </div>
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/gerz.jpg" alt="Вибратор Герца">
+            <div class="photo-grid__caption">Вибратор Герца — прибор, опыты с которым вдохновили Попова на создание радио</div>
+        </div>
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/flat.jpg" alt="Мемориальная квартира А.С. Попова">
+            <div class="photo-grid__caption">Мемориальная квартира А.С. Попова в жилом доме ЭТИ</div>
+        </div>
+
+    </div>
+</div>
+
+<div class="minisection">
+    <h3 class="minititle">Публикации</h3>
+
+    <p class="archive-label">Труды А.С. Попова</p>
+    <div class="publications">
+
+        <div class="publication">
+            <div class="publication__year">1883</div>
+            <div class="publication__info">
+                <p class="publication__author">Попов А.С.</p>
+                <p class="publication__title">«О принципах динамоэлектрических машин постоянного тока»</p>
+                <p class="publication__source">Диссертация. Петербургский университет</p>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="publication__year">1896</div>
+            <div class="publication__info">
+                <p class="publication__author">Попов А.С.</p>
+                <p class="publication__title">«Прибор для обнаружения и регистрирования электрических колебаний»</p>
+                <p class="publication__source">Журнал РФХО, т. 28, вып. 1, с. 1–14</p>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="publication__year">1897</div>
+            <div class="publication__info">
+                <p class="publication__author">Попов А.С.</p>
+                <p class="publication__title">«Телеграфирование без проводов»</p>
+                <p class="publication__source">Газета «Котлин», Кронштадт, 13 апреля 1897</p>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="publication__year">1897</div>
+            <div class="publication__info">
+                <p class="publication__author">Попов А.С.</p>
+                <p class="publication__title">«Электрические машины постоянного тока»</p>
+                <p class="publication__source">Учебник. Издание Морского ведомства</p>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="archive-label archive-label_mt">Книги об А.С. Попове</p>
+    <div class="publications">
+
+        <div class="publication">
+            <div class="publication__year">1945</div>
+            <div class="publication__info">
+                <p class="publication__author">Шулейкин М.В.</p>
+                <p class="publication__title">«А.С. Попов — изобретатель радио»</p>
+                <p class="publication__source">АН СССР, Москва</p>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="publication__year">1963</div>
+            <div class="publication__info">
+                <p class="publication__author">Радовский М.И.</p>
+                <p class="publication__title">«Александр Степанович Попов. 1859–1906»</p>
+                <p class="publication__source">Изд-во «Наука», Москва — Ленинград</p>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="publication__year">1990</div>
+            <div class="publication__info">
+                <p class="publication__author">Шошков Е.Н.</p>
+                <p class="publication__title">«А.С. Попов: Биография»</p>
+                <p class="publication__source">Лениздат, Ленинград</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="minisection">
+    <h3 class="minititle">Музеи А.&nbsp;С.&nbsp;Попова в России</h3>
+    <div class="museums">
+
+        <div class="museum-card">
+            <div class="museum-card__icon"><i class="fa-solid fa-building-columns"></i></div>
+            <p class="museum-card__name">Мемориальный музей А.С. Попова СПбГЭТУ «ЛЭТИ»</p>
+            <p class="museum-card__city"><i class="fa-solid fa-location-dot"></i>&nbsp; Санкт-Петербург</p>
+            <p class="museum-card__desc">Объединяет музей-лабораторию в учебном корпусе и мемориальную квартиру в жилом доме ЭТИ. Открыт в 1948 году.</p>
+        </div>
+
+        <div class="museum-card">
+            <div class="museum-card__icon"><i class="fa-solid fa-building-columns"></i></div>
+            <p class="museum-card__name">Мемориальный музей-кабинет А.С. Попова</p>
+            <p class="museum-card__city"><i class="fa-solid fa-location-dot"></i>&nbsp; Кронштадт</p>
+            <p class="museum-card__desc">Расположен в бывшем Техническом училище Морского ведомства, где Попов преподавал с 1890 по 1899 год. Ныне — часть Центрального Военно-морского музея.</p>
+        </div>
+
+        <div class="museum-card">
+            <div class="museum-card__icon"><i class="fa-solid fa-tower-broadcast"></i></div>
+            <p class="museum-card__name">Центральный музей связи им. А.С. Попова</p>
+            <p class="museum-card__city"><i class="fa-solid fa-location-dot"></i>&nbsp; Санкт-Петербург</p>
+            <p class="museum-card__desc">Один из старейших технических музеев России. Хранит первые экземпляры радиоприёмника и грозоотметчика, а также обширный документальный фонд А.С. Попова.</p>
+        </div>
+
+        <div class="museum-card">
+            <div class="museum-card__icon"><i class="fa-solid fa-house"></i></div>
+            <p class="museum-card__name">Мемориальный дом-музей А.С. Попова</p>
+            <p class="museum-card__city"><i class="fa-solid fa-location-dot"></i>&nbsp; Краснотурьинск</p>
+            <p class="museum-card__desc">Открыт в доме семьи Поповых-Словцовых — родственников изобретателя. Экспозиция воссоздаёт атмосферу его детских лет на Северном Урале.</p>
+        </div>
+
+    </div>
+</div>
 
 {% endblock %}
