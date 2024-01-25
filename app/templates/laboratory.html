@@ -7,9 +7,7 @@
     Лаборатория <span class="pr">А.&nbsp;С.&nbsp;Попова</span> в ЛЭТИ
 {% endblock %}
 
-{% block museum_image %}
-    <img src="{{url_for('index')}}static/img/lab.jpg" alt="" class="museum__img">
-{% endblock %}
+{% block hero_bg %}{{url_for('index')}}static/img/lab.jpg{% endblock %}
 
 {% block museum_info %}
     <p class="text">
@@ -32,14 +30,14 @@
 
 {% block geo_info %}
     <p class="text">
-        Музей-лаборатория А.С. Попова находится в жилом доме Электротехнического института, построенном одновременно с учебным корпусом. В этом доме жили многие крупные ученые-профессора ЭТИ.
+        Музей-лаборатория А.С. Попова расположена в главном учебном корпусе СПбГЭТУ «ЛЭТИ».
     </p>
 
     <p class="text">
-        Адрес: <span class="pr-dark">ул. Профессора Попова, дом 5, корп. Д, 3-й этаж, кв. 33 (вход со стороны памятника А.С. Попову).</span>
-    </p>       
+        Адрес: <span class="pr-dark">ул. Профессора Попова, дом 5, корп. 1, ауд. 4218.</span>
+    </p>
 {% endblock %}
         
 {% block map %}
-    <iframe class="museum__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A2f2cc6c31454fba49c5a035d7e82c247c7ebff19d6ebfaaec0aaba087c91f870&amp;source=constructor" width="100%" height="720" frameborder="0"></iframe>
+    <iframe class="museum__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A2f2cc6c31454fba49c5a035d7e82c247c7ebff19d6ebfaaec0aaba087c91f870&amp;source=constructor" frameborder="0"></iframe>
 {% endblock %}

@@ -12,12 +12,12 @@
 {% block content %}
 
 <div class="museum">
-    <h2 class="title museum__title">
-        {% block museum_title %}{% endblock %}
-    </h2>
-    
-    {% block museum_image %}{% endblock %}
-    
+    <div class="museum__hero" style="background-image: url('{% block hero_bg %}{% endblock %}')">
+        <div class="museum__hero-content">
+            <h2 class="title museum__hero-title">{% block museum_title %}{% endblock %}</h2>
+        </div>
+    </div>
+
     <div class="museum__info">
         {% block museum_info %}{% endblock %}
     </div>
@@ -30,11 +30,15 @@
         <h3 class="minititle">
             Расположение
         </h3>
-        
-        {% block geo_info %}{% endblock %}
-        
-        {% block map %}{% endblock %}
-        
+
+        <div class="museum__location">
+            <div class="museum__location-info">
+                {% block geo_info %}{% endblock %}
+            </div>
+            <div class="museum__location-map">
+                {% block map %}{% endblock %}
+            </div>
+        </div>
     </div>
     
     <div class="minisection">
