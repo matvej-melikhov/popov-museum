@@ -5,9 +5,7 @@
 
 
 {% block style %}
-<!-- Подключаем стили: your_file нужно изменить -->
 <link rel="stylesheet" href="{{url_for('index')}}static/css/index-style.css">
-<link rel="stylesheet" href="{{url_for('index')}}static/css/animations.css">
 {% endblock style %}
 
 
@@ -41,23 +39,36 @@
 
 </section>
 
+<div class="stats-block">
+    <div class="stat-item">
+        <div class="stat-item__number">1895</div>
+        <div class="stat-item__label">год изобретения радио</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-item__number">45</div>
+        <div class="stat-item__label">вёрст — дальность первой связи</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-item__number">440</div>
+        <div class="stat-item__label">радиограмм за 84 дня работы</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-item__number">27</div>
+        <div class="stat-item__label">спасённых рыбаков первым сигналом</div>
+    </div>
+</div>
+
 <section class="links-section section">
     <h2 class="links-block__title title">А.&nbspС.&nbspПопов <span class="pr">Биография</span></h2>
     <p class="links-block__text">
         Навигация по разделам:
     </p>
     <div class="links-block__links">
-        <a class="link" href="#bio"><i class="fa-solid fa-link" style="color: #252525;"></i> Детство и юность</a>
-        <a class="link" href="#career"><i class="fa-solid fa-link" style="color: #252525;"></i> Начало научной
-            карьеры</a>
-        <a class="link" href="#radio"><i class="fa-solid fa-link" style="color: #252525;"></i> Создание радио</a>
-        <a class="link" href="#director"><i class="fa-solid fa-link" style="color: #252525;"></i> Первый директор
-            Электротехнического института</a>
-        <a class="link" href="#last-years"><i class="fa-solid fa-link" style="color: #252525;"></i> Последние годы
-            жизни в
-            ЛЭТИ</a>
-        <a class="link" href="#last-years"><i class="fa-solid fa-link" style="color: #252525;"></i> Наследие</a>
-
+        <a class="link" href="#bio"><span><i class="fa-solid fa-link"></i> Детство и юность</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a class="link" href="#career"><span><i class="fa-solid fa-link"></i> Начало научной карьеры</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a class="link" href="#radio"><span><i class="fa-solid fa-link"></i> Создание радио</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a class="link" href="#director"><span><i class="fa-solid fa-link"></i> Первый директор Электротехнического института</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a class="link" href="#last-years"><span><i class="fa-solid fa-link"></i> Последние годы жизни и наследие</span><i class="fa-solid fa-arrow-right"></i></a>
     </div>
 </section>
 
@@ -65,6 +76,7 @@
 
 
     <div class="main-text-block">
+        <span class="section-year">1859 — 1877</span>
         <h2 class="main-text-block__title title">Детство и юность</h2>
 
         <div class="main-text-block__text text">
@@ -113,6 +125,8 @@
             <p class="text">Общеобразовательные классы семинарии, дававшие знания в объеме классической гимназии с
                 правом поступления в университет, Попов <span class="pr-dark">окончил с отличием</span> в 1877
                 году.</p>
+
+            <div class="pullquote">Религиозное воспитание привило Александру Попову высокие моральные качества, неоднократно отмеченные знавшими его людьми.</div>
             <p class="text">В сентябре 1877 года Александр Попов поступил на <span class="pr-dark">
                     физико-математический факультет
                     Петербургского университета
@@ -128,8 +142,9 @@
 
 </section>
 
-<section class="scientific-career section" id="career">
+<section class="scientific-career section section_alt" id="career">
 
+    <span class="section-year">1877 — 1895</span>
     <h2 class="main-text-block__title title">Начало научной карьеры</h2>
 
     <div class="main-text-block__text text">
@@ -184,6 +199,8 @@
         <p class="text">Опыт работы на Нижегородской электростанции дал Попову материал и для составления учебника по
             электрическим машинам, изданного в 1897 году Морским ведомством.</p>
 
+        <div class="pullquote">Работая с морскими офицерами, Александр Степанович понял, что в условиях бурного развития флота решение проблемы обмена информацией становилось всё более актуальным.</div>
+
 
         <p class="text">В декабре 1890 года Попов начал совмещать работу в МОК с работой штатного преподавателя физики и
             электротехники в Техническом училище Морского ведомства, расположенного недалеко от МОК. Должность давала
@@ -214,6 +231,7 @@
 
 <section class="creation-of-radio section" id="radio">
 
+    <span class="section-year">1890 — 1901</span>
     <h2 class="main-text-block__title title">Создание радио</h2>
 
     <div class="main-text-block__text text">
@@ -290,6 +308,8 @@
             Таким образом, весной 1895 года А.С. Попов реализовал почти одновременно два типа радиосвязи, которые до сих
             пор успешно развиваются: от человека к человеку и от природного объекта к человеку.
         </p>
+
+        <div class="pullquote">7 мая 1895 года — день, когда мир впервые услышал сигнал без проводов.</div>
 
         <p class="text">
             Полное описание первой в мире системы радиосвязи было опубликовано в январском номере Журнала РФХО под
@@ -497,8 +517,9 @@
 
 </section>
 
-<section class="first-director section" id="director">
+<section class="first-director section section_alt" id="director">
 
+    <span class="section-year">1901 — 1905</span>
     <h2 class="main-text-block__title title">Первый директор Электротехнического института</h2>
 
     <div class="main-text-block__text text">
@@ -617,6 +638,7 @@
 
 <section class="last-years section" id="last-years">
 
+    <span class="section-year">1905 — 1906 и наследие</span>
     <h2 class="main-text-block__title title">Последние годы жизни и наследие</h2>
 
     <div class="main-text-block__text text">
@@ -724,6 +746,8 @@
             имени А.С. Попова с 31 января 1986 года размещается в доме, где во время учебы в духовном училище Саша Попов
             жил у своей старшей сестры Марии.
         </p>
+
+        <div class="pullquote">«Бессмертен научный подвиг Александра Степановича Попова, неисчерпаемо наследие, оставленное им человечеству» — академик С.А. Векшинский</div>
 
         <p class="text">
             «Бессмертен научный подвиг Александра Степановича Попова, неисчерпаемо наследие, оставленное им

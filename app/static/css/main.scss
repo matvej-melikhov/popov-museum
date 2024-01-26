@@ -93,6 +93,11 @@ img {
     font-size: 2rem;
     font-weight: 400;
     text-align: center;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(241, 161, 60, 0.35);
+    }
 }
 
 .btn {
@@ -105,6 +110,11 @@ img {
     font-family: Styrene, sans-serif;
     font-weight: 400;
     text-align: center;
+
+    &:hover {
+        transform: translateY(-2px);
+        background: rgba(14, 36, 65, 0.04);
+    }
 }
 
 .img { border-radius: 5px; }
@@ -179,11 +189,16 @@ img {
             line-height: $header-height;
             color: $secondary;
             font-size: 1.8rem;
-            
+
             &:hover {
                 color: $primary;
                 border-bottom: 2px solid $primary;
             }
+        }
+
+        &_active a {
+            color: $primary;
+            border-bottom: 2px solid $primary;
         }
     }
 }
@@ -246,12 +261,16 @@ img {
     }
     
     &__item {
-        
+
         a {
             color: inherit;
             display: block;
             font-size: 3.2rem;
             margin-bottom: 8rem;
+        }
+
+        &_active a {
+            color: $primary;
         }
     }
     
@@ -287,6 +306,18 @@ img {
 
 .minisection {
     padding: 8rem 0 0 0!important;
+}
+
+.section_alt {
+    background-color: #fdf9f3;
+    padding-left: $padding;
+    padding-right: $padding;
+    margin-left: -$padding;
+    margin-right: -$padding;
+    margin-top: 6rem;
+    padding-top: 4rem !important;
+    padding-bottom: 6rem;
+    border-radius: 12px;
 }
 
 .footer {

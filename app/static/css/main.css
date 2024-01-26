@@ -136,6 +136,10 @@ img {
   font-weight: 400;
   text-align: center;
 }
+.pr-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(241, 161, 60, 0.35);
+}
 
 .btn {
   display: block;
@@ -147,6 +151,10 @@ img {
   font-family: Styrene, sans-serif;
   font-weight: 400;
   text-align: center;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  background: rgba(14, 36, 65, 0.04);
 }
 
 .img {
@@ -233,6 +241,10 @@ img {
   font-size: 1.8rem;
 }
 .navbar__item a:hover {
+  color: #BB8D54;
+  border-bottom: 2px solid #BB8D54;
+}
+.navbar__item_active a {
   color: #BB8D54;
   border-bottom: 2px solid #BB8D54;
 }
@@ -324,6 +336,9 @@ img {
   font-size: 3.2rem;
   margin-bottom: 8rem;
 }
+.mobile-navbar__item_active a {
+  color: #BB8D54;
+}
 .mobile-navbar__mini-btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -354,6 +369,18 @@ img {
 
 .minisection {
   padding: 8rem 0 0 0 !important;
+}
+
+.section_alt {
+  background-color: #fdf9f3;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  margin-left: -3.5rem;
+  margin-right: -3.5rem;
+  margin-top: 6rem;
+  padding-top: 4rem !important;
+  padding-bottom: 6rem;
+  border-radius: 12px;
 }
 
 .footer {
