@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="{{ get_locale() }}">
 
 <head>
     <meta charset="UTF-8">
@@ -25,10 +25,10 @@
            <a class="header__logo" href="{{url_for('index')}}"><img src="{{url_for('index')}}static/img/popov-logo.png" alt=""></a>
            
            <ul class="navbar">
-               <li class="navbar__item{% if request.endpoint == 'index' %} navbar__item_active{% endif %}"><a href="{{url_for('index')}}">Биография</a></li>
-               <li class="navbar__item{% if request.endpoint == 'apartment_museum' %} navbar__item_active{% endif %}"><a href="{{url_for('index')}}apartment-museum">Музей&nbsp;в&nbsp;ЛЭТИ</a></li>
-               <li class="navbar__item{% if request.endpoint == 'laboratory_museum' %} navbar__item_active{% endif %}"><a href="{{url_for('index')}}laboratory-museum">Лаборатория&nbsp;в&nbsp;ЛЭТИ</a></li>
-               <li class="navbar__item{% if request.endpoint == 'archive' %} navbar__item_active{% endif %}"><a href="{{url_for('index')}}archive">Архив</a></li>
+               <li class="navbar__item{% if request.endpoint == 'index' %} navbar__item_active{% endif %}"><a href="{{url_for('index')}}">{{ _('Биография') }}</a></li>
+               <li class="navbar__item{% if request.endpoint == 'apartment_museum' %} navbar__item_active{% endif %}"><a href="{{url_for('index')}}apartment-museum">{{ _('Музей в ЛЭТИ') }}</a></li>
+               <li class="navbar__item{% if request.endpoint == 'laboratory_museum' %} navbar__item_active{% endif %}"><a href="{{url_for('index')}}laboratory-museum">{{ _('Лаборатория в ЛЭТИ') }}</a></li>
+               <li class="navbar__item{% if request.endpoint == 'archive' %} navbar__item_active{% endif %}"><a href="{{url_for('index')}}archive">{{ _('Архив') }}</a></li>
            </ul>
            
            <a onclick="toggleNavbar()" href="#" class="header__mobile-burger"><i class="fa-solid fa-bars"></i></a>
@@ -37,28 +37,40 @@
                <a href="{{url_for('index')}}registration" class="mini-btns__item">
                    <i class="fa-solid fa-pen-to-square"></i>
                </a>
-               <a href="" class="mini-btns__item">
-                   <i class="fa-solid fa-language"></i>
+               {% if get_locale() == 'ru' %}
+               <a href="{{ url_for('set_lang', lang='en') }}" class="mini-btns__item">
+                   <i class="fa-solid fa-language"></i>&nbsp;EN
                </a>
+               {% else %}
+               <a href="{{ url_for('set_lang', lang='ru') }}" class="mini-btns__item">
+                   <i class="fa-solid fa-language"></i>&nbsp;RU
+               </a>
+               {% endif %}
            </div>
        </div>
     </header>
     
     <div class="mobile-navbar">
         <ul class="mobile-navbar__wrapper">
-            <li class="mobile-navbar__item{% if request.endpoint == 'index' %} mobile-navbar__item_active{% endif %}"><a href="{{url_for('index')}}">Биография</a></li>
-            <li class="mobile-navbar__item{% if request.endpoint == 'apartment_museum' %} mobile-navbar__item_active{% endif %}"><a href="{{url_for('index')}}apartment-museum">Музей&nbsp;в&nbsp;ЛЭТИ</a></li>
-            <li class="mobile-navbar__item{% if request.endpoint == 'laboratory_museum' %} mobile-navbar__item_active{% endif %}"><a href="{{url_for('index')}}laboratory-museum">Лаборатория&nbsp;в&nbsp;ЛЭТИ</a></li>
-            <li class="mobile-navbar__item{% if request.endpoint == 'archive' %} mobile-navbar__item_active{% endif %}"><a href="{{url_for('index')}}archive">Архив</a></li>
+            <li class="mobile-navbar__item{% if request.endpoint == 'index' %} mobile-navbar__item_active{% endif %}"><a href="{{url_for('index')}}">{{ _('Биография') }}</a></li>
+            <li class="mobile-navbar__item{% if request.endpoint == 'apartment_museum' %} mobile-navbar__item_active{% endif %}"><a href="{{url_for('index')}}apartment-museum">{{ _('Музей в ЛЭТИ') }}</a></li>
+            <li class="mobile-navbar__item{% if request.endpoint == 'laboratory_museum' %} mobile-navbar__item_active{% endif %}"><a href="{{url_for('index')}}laboratory-museum">{{ _('Лаборатория в ЛЭТИ') }}</a></li>
+            <li class="mobile-navbar__item{% if request.endpoint == 'archive' %} mobile-navbar__item_active{% endif %}"><a href="{{url_for('index')}}archive">{{ _('Архив') }}</a></li>
         </ul>
-        
+
         <div class="mobile-navbar__mini-btns">
            <a href="{{url_for('index')}}registration">
                <i class="fa-solid fa-pen-to-square"></i>
            </a>
-           <a href="">
-               <i class="fa-solid fa-language"></i>
+           {% if get_locale() == 'ru' %}
+           <a href="{{ url_for('set_lang', lang='en') }}">
+               <i class="fa-solid fa-language"></i>&nbsp;EN
            </a>
+           {% else %}
+           <a href="{{ url_for('set_lang', lang='ru') }}">
+               <i class="fa-solid fa-language"></i>&nbsp;RU
+           </a>
+           {% endif %}
        </div>
     </div>
     

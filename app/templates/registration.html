@@ -1,11 +1,11 @@
 {% extends "base-templates/base.html" %} {% block title %}Запись в музей{% endblock title %} {%
 block style %}
-<link rel="stylesheet" href="{{url_for('index')}}static/css/registration.css" />
+<link rel="stylesheet" href="{{url_for('static', filename='css/registration.css')}}" />
 {% endblock style %} {% block content %}
 <h2 class="title">
   Запись в <span class="pr">музей</span> А. С. Попова
 </h2>
-<form action="#" method="post" class="form">
+<form action="{{ url_for('registration') }}" method="post" class="form">
   <div class="form__section">
     <p class="form-text">Дата и время посещения</p>
     <div class="form__section-fields">
@@ -89,7 +89,7 @@ block style %}
     <p class="form-text">Откуда узнали про музей</p>
     <div class="form__section-fields">
       <textarea
-        name="name"
+        name="source"
         placeholder="Например, от одногруппников в общем чате"
         class="form__input form__input_1"
         id="textarea"
@@ -103,5 +103,5 @@ block style %}
   <button class="form__button pr-btn">Записаться</button>
 </form>
 
-<script src="{{url_for('index')}}static/js/registration.js"></script>
+<script src="{{url_for('static', filename='js/registration.js')}}"></script>
 {% endblock %}
