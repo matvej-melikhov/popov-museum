@@ -13,3 +13,4 @@ def get_locale():
     return request.accept_languages.best_match(['ru', 'en']) or 'ru'
 
 babel = Babel(application, locale_selector=get_locale)
+application.jinja_env.globals['get_locale'] = get_locale
