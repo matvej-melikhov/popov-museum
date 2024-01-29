@@ -1,7 +1,7 @@
 {% extends "base-templates/base.html" %}
 
 
-{% block title %}Страница не найдена{% endblock title %}
+{% block title %}{{ _('Страница не найдена') }}{% endblock title %}
 
 
 {% block style %}
@@ -11,8 +11,14 @@
 
 {% block content %}
 
+{% if get_locale() == 'en' %}
+<h2 class="title">Error <span class="pr">404</span></h2>
+<p class="text">Page not found. It may have been moved or deleted.</p>
+<a href="{{url_for('index')}}" class="btn" style="display: inline-block; margin-top: 2rem;">← Back to main</a>
+{% else %}
 <h2 class="title">Ошибка <span class="pr">404</span></h2>
 <p class="text">Страница не найдена. Возможно, она была перемещена или удалена.</p>
 <a href="{{url_for('index')}}" class="btn" style="display: inline-block; margin-top: 2rem;">← На главную</a>
+{% endif %}
 
 {% endblock %}

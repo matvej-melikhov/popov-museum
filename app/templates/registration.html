@@ -1,13 +1,13 @@
-{% extends "base-templates/base.html" %} {% block title %}Запись в музей{% endblock title %} {%
+{% extends "base-templates/base.html" %} {% block title %}{{ _('Запись в музей') }}{% endblock title %} {%
 block style %}
 <link rel="stylesheet" href="{{url_for('static', filename='css/registration.css')}}" />
 {% endblock style %} {% block content %}
 <h2 class="title">
-  Запись в <span class="pr">музей</span> А. С. Попова
+  {% if get_locale() == 'en' %}Sign up for the <span class="pr">museum</span> of A.S. Popov{% else %}Запись в <span class="pr">музей</span> А. С. Попова{% endif %}
 </h2>
 <form action="{{ url_for('registration') }}" method="post" class="form">
   <div class="form__section">
-    <p class="form-text">Дата и время посещения</p>
+    <p class="form-text">{{ _('Дата и время посещения') }}</p>
     <div class="form__section-fields">
       <div class="form__input form__input_2">
         <svg
@@ -58,23 +58,23 @@ block style %}
     </div>
   </div>
   <div class="form__section">
-    <p class="form-text">Фамилия, имя и отчество</p>
+    <p class="form-text">{{ _('Фамилия, имя и отчество') }}</p>
     <div class="form__section-fields">
       <input
         type="text"
         name="name"
-        placeholder="Иванов Иван Иванович"
+        placeholder="{{ _('Иванов Иван Иванович') }}"
         class="form__input form__input_1"
       />
     </div>
   </div>
   <div class="form__section">
-    <p class="form-text">Номер телефона и эл. почта (для получения билета)</p>
+    <p class="form-text">{{ _('Номер телефона и эл. почта (для получения билета)') }}</p>
     <div class="form__section-fields">
       <input
         type="tel"
         name="number"
-        placeholder="Номер телефона"
+        placeholder="{{ _('Номер телефона') }}"
         class="form__input form__input_2"
       />
       <input
@@ -86,21 +86,20 @@ block style %}
     </div>
   </div>
   <div class="form__section">
-    <p class="form-text">Откуда узнали про музей</p>
+    <p class="form-text">{{ _('Откуда узнали про музей') }}</p>
     <div class="form__section-fields">
       <textarea
         name="source"
-        placeholder="Например, от одногруппников в общем чате"
+        placeholder="{{ _('Например, от одногруппников в общем чате') }}"
         class="form__input form__input_1"
         id="textarea"
       ></textarea>
     </div>
   </div>
   <p class="form-text">
-    Нажимая кнопку «Записаться», Вы даете согласие на хранение и обработку ваших
-    персональных данных.
+    {{ _('Нажимая кнопку «Записаться», Вы даете согласие на хранение и обработку ваших персональных данных.') }}
   </p>
-  <button class="form__button pr-btn">Записаться</button>
+  <button class="form__button pr-btn">{{ _('Записаться') }}</button>
 </form>
 
 <script src="{{url_for('static', filename='js/registration.js')}}"></script>
