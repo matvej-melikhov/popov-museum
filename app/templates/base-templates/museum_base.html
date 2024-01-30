@@ -1,7 +1,7 @@
 {% extends "base-templates/base.html" %}
 
 
-{% block title %}Квартира в ЛЭТИ{% endblock title %}
+{% block title %}{% if get_locale() == 'en' %}Apartment at LETI{% else %}Квартира в ЛЭТИ{% endif %}{% endblock title %}
 
 
 {% block style %}

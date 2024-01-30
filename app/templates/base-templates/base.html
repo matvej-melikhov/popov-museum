@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Музей Попова — {% block title %}{% endblock %}</title>
+    <title>{% if get_locale() == 'en' %}Popov Museum — {% else %}Музей Попова — {% endif %}{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:title" content="Музей А. С. Попова">

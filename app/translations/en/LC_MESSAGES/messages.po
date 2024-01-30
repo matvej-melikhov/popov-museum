@@ -138,7 +138,7 @@ msgid "Книги об А.С. Попове"
 msgstr "Books about A.S. Popov"
 
 #: app/templates/archive.html:259
-msgid "Музеи А. С. Попова в России"
+msgid "Музеи А. С. Попова в России"
 msgstr "A.S. Popov Museums in Russia"
 
 #: app/templates/archive.html:264
