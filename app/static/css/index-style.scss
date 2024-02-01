@@ -10,6 +10,33 @@
     display: flex;
     position: relative;
     align-items: center;
+
+    background-color: #fffcf7;
+    background-image:
+        radial-gradient(ellipse at 82% 45%, rgba(241, 161, 60, 0.16) 0%, transparent 52%),
+        radial-gradient(ellipse at 5% 85%, rgba(14, 36, 65, 0.05) 0%, transparent 42%),
+        radial-gradient(circle, rgba(187, 141, 84, 0.09) 1.5px, transparent 1.5px);
+    background-size: auto, auto, 28px 28px;
+
+    margin-left: -$padding;
+    margin-right: -$padding;
+    padding-left: $padding;
+    padding-right: $padding;
+    padding-bottom: 4rem;
+    border-radius: 12px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 8%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 52rem;
+        height: 52rem;
+        border-radius: 50%;
+        border: 1.5px solid rgba(223, 159, 79, 0.18);
+        pointer-events: none;
+    }
 }
 
 .gold-text {
@@ -96,51 +123,49 @@
 .links-block {
 
     &__text {
-        color: #343434;
+        color: rgba(52, 52, 52, 0.55);
         font-family: Styrene, sans-serif;
-        font-weight: 500;
-        font-size: 2.4rem;
-        margin-bottom: 2.5rem;
+        font-weight: 400;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
     }
 
     &__links {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
     }
-    
-    &__links:last-child {
-        margin-bottom: 0;
-    }
-    
 }
 
 .link {
     display: flex;
-    padding: 2.5rem 3rem;
+    padding: 1.8rem 2.2rem;
     align-items: center;
-    border-radius: 5px;
-    background: #F9F6F1;
-    margin-bottom: 1.5rem;
-    color: $pr-dark;
-    font-size: 2.4rem;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid rgba(187, 141, 84, 0.22);
+    color: $secondary;
+    font-size: 2rem;
     font-weight: 400;
-    line-height: 150%;
-    border: 1px solid transparent;
+    line-height: 140%;
     justify-content: space-between;
+    gap: 1rem;
 
-    .fa-link { color: $gold; }
-    .fa-arrow-right { color: rgba(187, 141, 84, 0.5); font-size: 1.8rem; }
+    .fa-link { color: $gold; font-size: 1.5rem; flex-shrink: 0; }
+    .fa-arrow-right { color: rgba(187, 141, 84, 0.38); font-size: 1.5rem; flex-shrink: 0; }
 
     &:hover {
-        border-color: rgba(187, 141, 84, 0.4);
-        background: #f0e6d5;
-        transform: translateX(6px);
+        border-color: rgba(187, 141, 84, 0.5);
+        background: rgba(249, 246, 241, 0.9);
+        color: $pr-dark;
+        transform: translateX(4px);
     }
 }
 
 .fa-link {
-    margin-right: 1.5rem;
+    margin-right: 1.2rem;
 }
 
 //-------------------------------------//
@@ -250,6 +275,14 @@
     font-weight: 400;
     font-size: 1.6rem;
     width: 100%;
+}
+
+@media(max-width: 768px) {
+    .links-block {
+        &__links {
+            grid-template-columns: 1fr;
+        }
+    }
 }
 
 @media(max-width: 1024px) {

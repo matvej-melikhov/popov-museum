@@ -28,11 +28,11 @@ body {
 
 //скроллбар
 body::-webkit-scrollbar { width: 8px; }
-body::-webkit-scrollbar-track { background: #efe3ff; }
+body::-webkit-scrollbar-track { background: #f5ede0; }
 body::-webkit-scrollbar-thumb {
     background-color: $gold;
     width: 4px;
-    border: 2px solid #efe3ff;
+    border: 2px solid #f5ede0;
 }
 
 img {
@@ -139,8 +139,10 @@ img {
     z-index: 10;
     height: $header-height;
     width: 95%;
-    background: #fff;
-    border: 1px solid #DBDEE2;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(219, 222, 226, 0.55);
     border-radius: 10px 10px 10px 10px;
     font-family: Styrene, sans-serif;
     overflow-x: auto;
@@ -321,102 +323,64 @@ img {
 }
 
 .footer {
-    min-height: $footer-height;
     width: 100%;
-    padding: 1rem 0px;
+    padding: 3.5rem 0 4rem;
     background: #fff;
-    border-top: 1px solid #DBDEE2;
-    border-radius: 0px 0px 10px 10px;
+    border-top: 1px solid rgba(219, 222, 226, 0.7);
     font-family: Styrene, sans-serif;
-    font-size: 2.2rem;
-    
-    
+
     &__inner {
-        height: 100%;
-    }
-    
-    &__text {
-         padding: 3rem 0 0 0;
-        
-        p {
-            margin-bottom: 1rem;
-        }
-    }
-    
-    &__text-links {
-        padding: 3rem 0 1rem 0;
-        border-top: 1px solid rgba(0, 45, 105, 0.1);
-        border-bottom: 1px solid rgba(0, 45, 105, 0.1);
-        
-        a {
-            display: inline-block;
-            margin-right: 2rem;
-            margin-bottom: 2rem;
-            color: #002d69;
-            padding-bottom: 5px;
-            padding: 1rem;
-            background: rgba(0, 45, 105, 0.04);
-            border-radius: 5px;
-            border: 1px solid transparent;
-            
-            &:hover {
-                border: 1px solid rgba(0, 45, 105, 0.5);
-            }
-        }
-    }
-    
-    &__btn-links {
         display: flex;
-        flex-wrap: wrap;
-        padding: 3rem 0 5rem 0;
-        gap: 2rem;
-        
-        a {
-            border-radius: 5px;
-            height: 8rem;
-            padding: 1.5rem 3rem;
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            
-            img {
-                height: 90%;
-                border-radius: 0;
-            }
-        }
+        flex-direction: column;
+        gap: 2.5rem;
     }
-    
-    &__profcom-link {
-        border: 1px solid #00bc9f;
-        color: #00a087;
-        
-        &:hover {
-            background: rgba(0, 160, 135, 0.1);
-        }
-    }
-    
-    &__sokt-link {
-        border: 1px solid #4800bc;
-        color: #4800bc;
-        
-        &:hover {
-            background: rgba(72, 0, 188, 0.1);
-        }
-    }
-    
-    &__logo-wrapper {
+
+    &__main {
         display: flex;
         align-items: center;
-        gap: 5rem;
-        overflow-x: auto;
-        padding: 3rem 0;
-        
-        &::-webkit-scrollbar { width: 0px; }
+        justify-content: space-between;
+        gap: 3rem;
+        flex-wrap: wrap;
     }
-    
+
+    &__logos {
+        display: flex;
+        align-items: center;
+        gap: 3.5rem;
+        flex-shrink: 0;
+        flex-wrap: wrap;
+    }
+
     &__logo {
-        height: 7rem;
+        height: 5rem;
         border-radius: 0;
+        opacity: 0.7;
+        transition: opacity 0.2s ease;
+
+        &:hover { opacity: 1; }
+    }
+
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem 2.5rem;
+        justify-content: flex-end;
+
+        a {
+            color: rgba(14, 36, 65, 0.5);
+            font-size: 1.6rem;
+            transition: color 0.15s ease;
+
+            &:hover { color: $pr-dark; }
+        }
+    }
+
+    &__copy {
+        font-size: 1.4rem;
+        color: rgba(14, 36, 65, 0.38);
+        border-top: 1px solid rgba(219, 222, 226, 0.5);
+        padding-top: 2rem;
+        line-height: 170%;
     }
 }
 
@@ -477,12 +441,16 @@ img {
     }
     
     .footer {
-        height: $footer-mobile-height;
-        
-        &__btn-links {
-            a {
-                width: 100%;
-            }
+        padding: 2.5rem 0 3rem;
+
+        &__main {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        &__nav {
+            justify-content: flex-start;
         }
     }
 }
