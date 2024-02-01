@@ -139,10 +139,10 @@ img {
     z-index: 10;
     height: $header-height;
     width: 95%;
-    background: rgba(255, 255, 255, 0.82);
+    background: rgba(255, 255, 255, 0.55);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-    border: 1px solid rgba(219, 222, 226, 0.55);
+    border: 1px solid rgba(219, 222, 226, 0.4);
     border-radius: 10px 10px 10px 10px;
     font-family: Styrene, sans-serif;
     overflow-x: auto;

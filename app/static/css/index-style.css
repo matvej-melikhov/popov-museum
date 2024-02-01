@@ -43,27 +43,6 @@
   display: flex;
   position: relative;
   align-items: center;
-  background-color: #fffcf7;
-  background-image: radial-gradient(ellipse at 82% 45%, rgba(241, 161, 60, 0.16) 0%, transparent 52%), radial-gradient(ellipse at 5% 85%, rgba(14, 36, 65, 0.05) 0%, transparent 42%), radial-gradient(circle, rgba(187, 141, 84, 0.09) 1.5px, transparent 1.5px);
-  background-size: auto, auto, 28px 28px;
-  margin-left: -3.5rem;
-  margin-right: -3.5rem;
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-  padding-bottom: 4rem;
-  border-radius: 12px;
-}
-.main-section::after {
-  content: "";
-  position: absolute;
-  right: 8%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 52rem;
-  height: 52rem;
-  border-radius: 50%;
-  border: 1.5px solid rgba(223, 159, 79, 0.18);
-  pointer-events: none;
 }
 
 .gold-text {
