@@ -18,21 +18,41 @@
         <div class="text-block__sponsors">{{ _('При поддержке кафедры истории ЛЭТИ') }}</div>
 
         <div class="text-block__title title">
-            {% if get_locale() == 'en' %}History of <span class="gold-text">a great physicist</span> — A.&nbspS.&nbspPopov{% else %}История <span class="gold-text">великого физика</span> — А.&nbspС.&nbspПопова{% endif %}
-        </div>
-
-        <div class="text-block__text text">
             {% if get_locale() == 'en' %}
-            "I am a Russian man and have the right to give all my knowledge, all my work, all my achievements only to my Motherland. &lt...&gt How happy I am that it is not abroad, but in Russia that a new means of communication has been discovered."
+            History of <span class="gold-text">a great physicist</span> —<br>A.&nbspS.&nbspPopov
             {% else %}
-            Я — русский человек и все свои знания, весь свой труд, все свои достижения имею право отдавать только моей Родине. &lt...&gt Как счастлив я, что не за рубежом, а в России открыто новое средство связи.
+            История <span class="gold-text">великого физика</span> —<br>А.&nbspС.&nbspПопова
             {% endif %}
         </div>
 
-        <div class="text-block__buttons">
-            <a class="text-block__button text-block__history pr-btn" href="#">{{ _('История') }}</a>
-            <a class="text-block__button text-block__museum btn" href="#">{% if get_locale() == 'en' %}Museum «Popov's Apartment» →{% else %}Музей «Квартира А.&nbspС.&nbspПопова» →{% endif %}</a>
+        <blockquote class="text-block__quote">
+            {% if get_locale() == 'en' %}
+            "I am a Russian man and have the right to give all my knowledge, all my work, all my achievements only to my Motherland."
+            {% else %}
+            «Я — русский человек и все свои знания, весь свой труд, все свои достижения имею право отдавать только моей Родине.»
+            {% endif %}
+        </blockquote>
+
+        <div class="text-block__stats">
+            <div class="hero-stat">
+                <span class="hero-stat__number">1895</span>
+                <span class="hero-stat__label">{{ _('год изобретения радио') }}</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat__number">45</span>
+                <span class="hero-stat__label">{{ _('вёрст — дальность первой связи') }}</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat__number">440</span>
+                <span class="hero-stat__label">{{ _('радиограмм за 84 дня работы') }}</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat__number">27</span>
+                <span class="hero-stat__label">{{ _('спасённых рыбаков первым сигналом') }}</span>
+            </div>
         </div>
+
+        <a class="text-block__button text-block__history pr-btn" href="#bio">{{ _('История') }}</a>
 
     </div>
 
@@ -41,25 +61,6 @@
     </div>
 
 </section>
-
-<div class="stats-block">
-    <div class="stat-item">
-        <div class="stat-item__number">1895</div>
-        <div class="stat-item__label">{{ _('год изобретения радио') }}</div>
-    </div>
-    <div class="stat-item">
-        <div class="stat-item__number">45</div>
-        <div class="stat-item__label">{{ _('вёрст — дальность первой связи') }}</div>
-    </div>
-    <div class="stat-item">
-        <div class="stat-item__number">440</div>
-        <div class="stat-item__label">{{ _('радиограмм за 84 дня работы') }}</div>
-    </div>
-    <div class="stat-item">
-        <div class="stat-item__number">27</div>
-        <div class="stat-item__label">{{ _('спасённых рыбаков первым сигналом') }}</div>
-    </div>
-</div>
 
 <section class="links-section section">
     <h2 class="links-block__title title">{% if get_locale() == 'en' %}A.&nbspS.&nbspPopov <span class="pr">Biography</span>{% else %}А.&nbspС.&nbspПопов <span class="pr">Биография</span>{% endif %}</h2>
