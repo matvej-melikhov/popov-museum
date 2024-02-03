@@ -15,7 +15,7 @@
 
     <div class="text-block">
 
-        <div class="text-block__sponsors">{{ _('При поддержке кафедры истории ЛЭТИ') }}</div>
+        <div class="text-block__sponsors">{% if get_locale() == 'en' %}Department of History · SPbGETU LETI{% else %}Кафедра истории · СПбГЭТУ ЛЭТИ{% endif %}</div>
 
         <div class="text-block__title title">
             {% if get_locale() == 'en' %}
@@ -52,7 +52,10 @@
             </div>
         </div>
 
-        <a class="text-block__button text-block__history pr-btn" href="#bio">{{ _('История') }}</a>
+        <a class="text-block__history" href="#bio">
+            <span>{{ _('История') }}</span>
+            <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
     </div>
 
