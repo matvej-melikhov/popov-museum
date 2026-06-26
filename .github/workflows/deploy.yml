@@ -2,7 +2,8 @@ name: Build & Deploy
 
 on:
   push:
-    branches: [master]
+    tags:
+      - 'v*'
 
 jobs:
   build-and-deploy:
@@ -28,7 +29,9 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/matvej-melikhov/popov-museum:latest
+          tags: |
+            ghcr.io/matvej-melikhov/popov-museum:latest
+            ghcr.io/matvej-melikhov/popov-museum:${{ github.ref_name }}
 
       - name: Deploy to server
         uses: appleboy/ssh-action@v1
