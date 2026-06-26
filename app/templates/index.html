@@ -1,17 +1,617 @@
 {% extends "base-templates/base.html" %}
 
 
-{% block title %}Главная страница{% endblock title %}
+{% block title %}{% if get_locale() == 'en' %}Main page{% else %}Главная страница{% endif %}{% endblock title %}
 
 
 {% block style %}
-    <!-- Подключаем стили: your_file нужно изменить -->
-    <link rel="stylesheet" href="{{url_for('index')}}static/css/your_file.css">
+<link rel="stylesheet" href="{{url_for('index')}}static/css/index-style.css">
 {% endblock style %}
 
 
 {% block content %}
 
-<!-- Контент страницы без <body> -->
+<section class="main-section">
+
+    <div class="text-block">
+
+        <div class="text-block__sponsors">{% if get_locale() == 'en' %}Department of History · SPbGETU LETI{% else %}Кафедра истории · СПбГЭТУ ЛЭТИ{% endif %}</div>
+
+        <div class="text-block__title title">
+            {% if get_locale() == 'en' %}
+            History of <span class="gold-text">a great physicist</span> —<br>A.&nbspS.&nbspPopov
+            {% else %}
+            История <span class="gold-text">великого физика</span> —<br>А.&nbspС.&nbspПопова
+            {% endif %}
+        </div>
+
+        <blockquote class="text-block__quote">
+            {% if get_locale() == 'en' %}
+            "I am a Russian man and have the right to give all my knowledge, all my work, all my achievements only to my Motherland."
+            {% else %}
+            «Я — русский человек и все свои знания, весь свой труд, все свои достижения имею право отдавать только моей Родине.»
+            {% endif %}
+        </blockquote>
+
+        <div class="text-block__stats">
+            <div class="hero-stat">
+                <span class="hero-stat__number">1895</span>
+                <span class="hero-stat__label">{{ _('год изобретения радио') }}</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat__number">45</span>
+                <span class="hero-stat__label">{{ _('вёрст — дальность первой связи') }}</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat__number">440</span>
+                <span class="hero-stat__label">{{ _('радиограмм за 84 дня работы') }}</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat__number">27</span>
+                <span class="hero-stat__label">{{ _('спасённых рыбаков первым сигналом') }}</span>
+            </div>
+        </div>
+
+        <a class="text-block__history" href="#bio">
+            <span>{{ _('История') }}</span>
+            <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+    </div>
+
+    <div class="image-block">
+        <img class="image-block__image__popov-image img" src="{{url_for('index')}}static/img/popov-main.png" alt="{% if get_locale() == 'en' %}photograph of A.S. Popov{% else %}фотография А. С. Попова{% endif %}">
+    </div>
+
+</section>
+
+<section class="links-section section">
+    <h2 class="links-block__title title">{% if get_locale() == 'en' %}A.&nbspS.&nbspPopov <span class="pr">Biography</span>{% else %}А.&nbspС.&nbspПопов <span class="pr">Биография</span>{% endif %}</h2>
+    <p class="links-block__text">
+        {{ _('Навигация по разделам:') }}
+    </p>
+    <div class="links-block__links">
+        <a class="link" href="#bio"><span><i class="fa-solid fa-link"></i> {{ _('Детство и юность') }}</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a class="link" href="#career"><span><i class="fa-solid fa-link"></i> {{ _('Начало научной карьеры') }}</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a class="link" href="#radio"><span><i class="fa-solid fa-link"></i> {{ _('Создание радио') }}</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a class="link" href="#director"><span><i class="fa-solid fa-link"></i> {{ _('Первый директор Электротехнического института') }}</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a class="link" href="#last-years"><span><i class="fa-solid fa-link"></i> {{ _('Последние годы жизни и наследие') }}</span><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+</section>
+
+<section class="bio section" id="bio">
+
+    <div class="main-text-block">
+        <span class="section-year">1859 — 1877</span>
+        <h2 class="main-text-block__title title">{{ _('Детство и юность') }}</h2>
+
+        <div class="main-text-block__text text">
+            <div class="image-container image-container_right">
+                <img class="image" src="{{url_for('index')}}static/img/parents.jpg" alt="{{ _('Родители А. С. Попова') }}">
+                <div class="image-description">{{ _('Родители А. С. Попова') }}</div>
+            </div>
+
+            {% if get_locale() == 'en' %}
+            <p class="text"><span class="pr-dark">Alexander Stepanovich Popov</span> was born on March 16, 1859 (all dates given in the new style) in the Northern Urals, in the mining settlement of Turyinskie Rudniki, into the family of priest and rector of the Maksimovskaya Church, <span class="pr-dark">Stepan Petrovich Popov</span> (1827–1897), and his wife <span class="pr-dark">Anna Stepanovna</span> (1830–1903). He was the middle of seven children. The family was very close-knit. The eldest — brother Rafael (1849–1913) and sisters Ekaterina (1850–1903) and Maria (1852–1871) — always helped the younger ones. Alexander, in turn, cared for his younger sisters — Anna (1860–1930), Augusta (1863–1941) and Kapitolina (1870–1942). In addition to his main clerical duties, Stepan Petrovich devoted virtually his entire life to free "literacy and religious instruction" at the mining school and at a private school for girls, which he maintained at his own expense. For his diligent service he was awarded many commendations, bronze (1857) and gold pectoral crosses (1877), and the <span class="pr-dark">Order of St. Vladimir, 4th degree</span> (1896). Anna Stepanovna also gave free needlework lessons to schoolgirls, earning a commendation from the Ecclesiastical Consistory.</p>
+            {% else %}
+            <p class="text"><span class="pr-dark">Александр Степанович Попов</span> родился 16 марта 1859 года
+                (все даты указываются по новому
+                стилю) на Северном Урале, в горняцком селении Турьинские Рудники, в семье священника, настоятеля
+                Максимовской церкви <span class="pr-dark">Степана Петровича Попова</span> (1827–1897) и его
+                жены <span class="pr-dark">Анны Степановны</span> (1830-1903),
+                средним из семи детей. Семья была очень дружная. Старшие – брат Рафаил (1849–1913) и сестры
+                Екатерина (1850-1903) и Мария (1852-1871) всегда помогали младшим. Александр, в свою очередь,
+                заботился о младших сестрах – Анне (1860–1930), Августе (1863–1941) и Капитолине (1870–1942). Кроме
+                основной службы С.П. Попов практически всю жизнь безвозмездно занимался «обучением детей грамоте и
+                закону Божию» в <span class="pr-dark">горно-заводской школе</span> и в домашней школе для
+                девочек, которую содержал за свой счет.
+                За свою усердную и полезную службу он был награжден многими благодарностями, бронзовым (1857) и
+                золотым наперсными крестами (1877) и <span class="pr-dark">орденом св. Владимира 4-й
+                    степени</span> (1986). Анна Степановна также
+                бесплатно обучала девочек-школьниц рукоделию, за что получила благодарность духовной консистории.
+            </p>
+            {% endif %}
+
+            <div class="image-container image-container_left">
+                <img class="image" src="{{url_for('index')}}static/img/seminary.jpg" alt="{{ _('Пермская духовная семинария') }}">
+                <div class="image-description">{{ _('Пермская духовная семинария') }}</div>
+            </div>
+
+            {% if get_locale() == 'en' %}
+            <p class="text">Alexander's interest in technology was fostered by the fact that among the Popov family's acquaintances were many engineers and graduates of the <span class="pr-dark">St. Petersburg Mining Institute</span>. He eagerly visited mines and workshops and attempted to build various mechanisms himself. Throughout his life Popov was grateful to the husband of his sister Ekaterina, <span class="pr-dark">V.P. Slovtsov</span> (1844–1934) — a priest like his father — who taught him carpentry, locksmithing and lathe work. Alexander received his elementary education at the <span class="pr-dark">Dalmatov</span> (1869–1871) and <span class="pr-dark">Yekaterinburg</span> (1871–1873) theological schools. In 1873 Popov enrolled in the Perm Theological Seminary. In these institutions, education for children of the clergy was free of charge, which was of considerable importance for the large Popov family. His religious upbringing instilled in Alexander Popov <span class="pr-dark">high moral qualities</span>, repeatedly noted by those who knew him.</p>
+            {% else %}
+            <p class="text">Проявлению интереса Александра к технике способствовало то обстоятельство, что в кругу
+                знакомых семьи Поповых было много инженеров, выпускников <span class="pr-dark">Петербургского
+                    горного института</span>. С
+                интересом посещал он рудники и мастерские, сам пытался мастерить разнообразные механизмы. Всю жизнь
+                Попов был благодарен мужу сестры Екатерины <span class="pr-dark">В.П. Словцову</span> (1844 –
+                1934), священнику, как и его отец,
+                научившему его столярному, слесарному и токарному делу. Начальное образование Александр получил в
+                <span class="pr-dark">Далматовском</span> (1869−1871) и <span class="pr-dark">Екатеринбургском</span> (1871−1873) духовных училищах. В 1873 году Попов
+                поступил в Пермскую духовную семинарию. В этих учебных заведениях обучение для детей духовного
+                сословия было бесплатным, что для большой семьи Поповых имело существенное значение. Религиозное
+                воспитание привило Александру Попову <span class="pr-dark">высокие моральные качества</span>,
+                неоднократно отмеченные знавшими его людьми.</p>
+            {% endif %}
+
+            {% if get_locale() == 'en' %}
+            <p class="text">Popov completed the seminary's general-education classes — which covered the equivalent of a classical gymnasium curriculum and gave graduates the right to enter university — with <span class="pr-dark">distinction</span> in 1877.</p>
+            {% else %}
+            <p class="text">Общеобразовательные классы семинарии, дававшие знания в объеме классической гимназии с
+                правом поступления в университет, Попов <span class="pr-dark">окончил с отличием</span> в 1877
+                году.</p>
+            {% endif %}
+
+            {% if get_locale() == 'en' %}
+            <div class="pullquote">His religious upbringing instilled in Alexander Popov high moral qualities, repeatedly noted by those who knew him.</div>
+            {% else %}
+            <div class="pullquote">Религиозное воспитание привило Александру Попову высокие моральные качества, неоднократно отмеченные знавшими его людьми.</div>
+            {% endif %}
+
+            {% if get_locale() == 'en' %}
+            <p class="text">In September 1877 Alexander Popov enrolled in the <span class="pr-dark">physics and mathematics faculty of St. Petersburg University</span>. He came to St. Petersburg, where his brother Rafael — a graduate of the history and philology faculty — was then living, accompanied by his sisters Anna and Augusta. (Anna went on to receive secondary medical training, and Augusta graduated from the <span class="pr-dark">Academy of Arts</span>.) Popov received a scholarship only in his first and third years and covered his <span class="pr-dark">financial needs</span> through tutoring.</p>
+            {% else %}
+            <p class="text">В сентябре 1877 года Александр Попов поступил на <span class="pr-dark">
+                    физико-математический факультет
+                    Петербургского университета
+                </span>. В Петербург, где в это время жил Рафаил, закончивший
+                историко-филологический факультет Петербургского университета, он приехал с сестрами Анной и Августой.
+                (Анна получила среднее медицинское образование, а Августа окончила <span class="pr-dark">Академию
+                    художеств</span>.) Стипендию
+                Александр Попов получал только на первом и третьем курсах и свои <span class="pr-dark">финансовые
+                    проблемы</span> решал
+                репетиторством.</p>
+            {% endif %}
+        </div>
+    </div>
+
+</section>
+
+<section class="scientific-career section section_alt" id="career">
+
+    <span class="section-year">1877 — 1895</span>
+    <h2 class="main-text-block__title title">{{ _('Начало научной карьеры') }}</h2>
+
+    <div class="main-text-block__text text">
+        <div class="image-container image-container_right">
+            <img class="image" src="{{url_for('index')}}static/img/univer.jpg" alt="{{ _('Петербургский университет') }}">
+            <div class="image-description">{{ _('Петербургский университет') }}</div>
+        </div>
+
+        {% if get_locale() == 'en' %}
+        <p class="text">In November 1882 A.S. Popov graduated from the university and, after defending his dissertation "On the Principles of Direct-Current Dynamo-Electric Machines" (January 1883), which received high praise, was awarded a candidate's degree. His first academic paper, based on the dissertation, was published in the September 1883 issue of the journal Elektrichestvo.</p>
+
+        <p class="text">By resolution of the academic council, Popov was retained at the university to prepare for a professorship. In the summer of 1883 he accepted an invitation to become a teacher and head of the physics laboratory at the Mine Officer Class in Kronstadt, which had an excellently equipped physics cabinet and a good library. Popov began work as a freelance employee at a salary of about 100 rubles per month, supervised practical classes in galvanism, and lectured in higher mathematics. Working with naval officers, Alexander Stepanovich came to understand that, in the context of rapid naval expansion, solving the problem of information exchange was becoming increasingly urgent.</p>
+        {% else %}
+        <p class="text">В ноябре 1882 года А.С. Попов окончил университет и после представления диссертации на тему «О
+            принципах динамоэлектрических машин постоянного тока» (январь 1883 г.), заслужившей высокую оценку, получил
+            диплом кандидата. Его первая научная статья по материалам диссертации была опубликована в сентябрьском
+            номере журнала «Электричество» за 1883 год.</p>
+
+        <p class="text">По решению ученого совета А. Попов был оставлен в университете для подготовки к профессорскому
+            званию. Летом
+            1883 года он принял приглашение занять место преподавателя и
+            заведующего физическим кабинетом в Минном офицерском классе в Кронштадте, который имел прекрасно
+            оборудованный физический кабинет и хорошую библиотеку. Работу Попов начинал по вольному найму с окладом
+            около 100 рублей в месяц, руководил практическими занятиями по гальванизму, читал лекции по высшей
+            математике. Работая с морскими офицерами, Александр Степанович понял, что в условиях бурного развития флота
+            решение проблемы обмена информацией становилось все более актуальным.</p>
+        {% endif %}
+
+        <div class="image-container image-container_left">
+            <img class="image" src="{{url_for('index')}}static/img/students.jpg" alt="{{ _('Студенты') }}">
+            <div class="image-description">{{ _('Студенты') }}</div>
+        </div>
+
+        {% if get_locale() == 'en' %}
+        <p class="text">In July–August 1887 A.S. Popov took part in a Russian Physical and Chemical Society expedition to Krasnoyarsk to observe a total solar eclipse. He developed a methodology for photometric research, designed and built a photometer for photographing the solar corona.</p>
+
+        <p class="text">By tradition, instructors at the Officer Classes gave public lectures at the Naval Officers' Assembly on the latest advances in science. Popov's lectures were distinguished by their topical content and superb demonstrations of physical experiments, which left an unforgettable impression on his audiences.</p>
+
+        <p class="text">Thanks to his broad expertise in technical matters, A.S. Popov soon became one of the leading specialists in the Naval Department, a member of the Naval Technical Committee, and was regularly called upon to resolve complex practical problems.</p>
+        {% else %}
+        <p class="text">В июле-августе 1887 года А.С. Попов участвовал в экспедиции РФХО в Красноярске для наблюдения
+            полного солнечного затмения. Он разработал методику фотометрических исследований, сконструировал и изготовил
+            фотометр для фотосъемки солнечной короны.</p>
+
+        <p class="text">По традиции преподаватели Офицерских классов читали в Морском офицерском собрании публичные
+            лекции о
+            последних достижениях науки. Лекции А.С. Попова отличались актуальным содержанием и прекрасной демонстрацией
+            физических опытов, производивших на слушателей незабываемое впечатление.</p>
+
+        <p class="text">Благодаря высокой эрудиции в решении технических вопросов А.С. Попов вскоре стал одним из
+            ведущих
+            специалистов Морского ведомства, членом Морского технического комитета и регулярно привлекался к решению
+            сложных практических вопросов.</p>
+        {% endif %}
+
+        <div class="image-container image-container_right">
+            <img class="image" src="{{url_for('index')}}static/img/power_station.jpg" alt="{{ _('Нижегородская электростанция') }}">
+            <div class="image-description">{{ _('Нижегородская электростанция') }}</div>
+        </div>
+
+        {% if get_locale() == 'en' %}
+        <p class="text">From 1889 to 1898, during the summer months free from classes at the MOC, A.S. Popov managed the power station serving the Nizhny Novgorod Fair. For the season he received 2,500 rubles — twice the annual salary of a MOC instructor. Under his management the station's performance improved noticeably.</p>
+        <p class="text">Popov's experience at the Nizhny Novgorod power station also provided him with material for a textbook on electrical machines, published in 1897 by the Naval Department.</p>
+
+        <div class="pullquote">Working with naval officers, Alexander Stepanovich came to understand that, in the context of the rapid development of the navy, solving the problem of information exchange was becoming ever more urgent.</div>
+
+        <p class="text">In December 1890 Popov began to combine his work at the MOC with work as a full-time lecturer in physics and electrical engineering at the Technical School of the Naval Department, located nearby. The position carried the right to promotion in rank and a pension for years of service. Upon enrolling at the school he signed a Sworn Obligation — in other words, took an oath "to serve faithfully and sincerely and to keep firmly every secret entrusted to me."</p>
+        {% else %}
+        <p class="text">С 1889 по 1898 годы в летние месяцы, свободные от занятий в МОК, А.С. Попов заведовал
+            электростанцией, обслуживавшей Нижегородскую ярмарку. За сезон он получал 2500 рублей − вдвое больше годовой
+            ставки преподавателя МОК. С его приходом работа станции заметно улучшилась.</p>
+        <p class="text">Опыт работы на Нижегородской электростанции дал Попову материал и для составления учебника по
+            электрическим машинам, изданного в 1897 году Морским ведомством.</p>
+
+        <div class="pullquote">Работая с морскими офицерами, Александр Степанович понял, что в условиях бурного развития флота решение проблемы обмена информацией становилось всё более актуальным.</div>
+
+        <p class="text">В декабре 1890 года Попов начал совмещать работу в МОК с работой штатного преподавателя физики и
+            электротехники в Техническом училище Морского ведомства, расположенного недалеко от МОК. Должность давала
+            право на чинопроизводство и на пенсию по выслуге лет. При зачислении на службу в училище он подписал
+            Клятвенное обязательство, иначе говоря, принял присягу «верно и нелицемерно служить и всякую вверенную
+            тайность крепко хранить».</p>
+        {% endif %}
+
+        <div class="image-container image-container_right">
+            <img class="image" src="{{url_for('index')}}static/img/tech_school.jpg" alt="{{ _('Техническое училище') }}">
+            <div class="image-description">{{ _('Техническое училище') }}</div>
+        </div>
+
+        {% if get_locale() == 'en' %}
+        <p class="text">A.S. Popov's research in the field of wireless communication dates to 1889. In 1887, two articles by German physicist H. Hertz on his experimental work — confirming the validity of J.C. Maxwell's theory — were published. In 1890 A.S. Popov delivered a series of lectures on the propagation of electromagnetic waves, with demonstrations of Hertz's experiments, under the collective title "Latest Research on the Relationship between Light and Electrical Phenomena."</p>
+
+        <p class="text">The demonstrations were so vivid and compelling that his command tasked him with giving a lecture in St. Petersburg at the Admiralty to a wider audience of naval officers. According to contemporaries, Popov was already at that time speaking of using "Hertz rays" or "rays of electric force" for signalling over a distance without wires.</p>
+        {% else %}
+        <p class="text">Начало работ А.С. Попова в области беспроводной связи относится к 1889 году. В 1887 году были
+            опубликованы
+            две статьи немецкого физика Г. Герца о результатах его экспериментальных работ, подтвердивших справедливость
+            теории Д.К. Максвелла. В 1890 году А.С. Попов прочитал цикл лекций о распространении электромагнитных волн с
+            демонстрацией опытов Герца, объединенных общим названием «Новейшие исследования о соотношении между
+            световыми и электрическими явлениями».</p>
+
+        <p class="text">Демонстрация опытов была настолько яркой и убедительной, что командование поручило ему
+            прочитать лекцию в
+            Петербурге в Адмиралтействе для более широкого круга слушателей – морских офицеров. По воспоминаниям
+            современников Попов уже в то время говорил об использовании «лучей Герца» или «лучей электрической силы» для
+            сигнализации на расстоянии без проводов.</p>
+        {% endif %}
+    </div>
+
+</section>
+
+<section class="creation-of-radio section" id="radio">
+
+    <span class="section-year">1890 — 1901</span>
+    <h2 class="main-text-block__title title">{{ _('Создание радио') }}</h2>
+
+    <div class="main-text-block__text text">
+        <div class="image-container image-container_right">
+            <img class="image" src="{{url_for('index')}}static/img/gerz.jpg" alt="{{ _('Вибратор Герца') }}">
+            <div class="image-description">{{ _('Вибратор Герца') }}</div>
+        </div>
+
+        {% if get_locale() == 'en' %}
+        <p class="text">Yet Popov's greatest interest at this time was the task of creating a wireless signal-transmission system for the navy. As the transmitter — source of high-frequency damped electromagnetic oscillations — he used a modified Hertz vibrator with a spark gap powered by a Ruhmkorff coil. A special interrupter supplied the coil with current pulses at the frequency needed to generate series of oscillations of varying duration (short and long). Many scientists worldwide, including A.S. Popov, were working on the problem of creating an instrument capable of detecting high-frequency electromagnetic radiation.</p>
+
+        <p class="text">In 1890 French scientist Branly created the "radioconductor" — a tube of metal filings whose resistance changed under high-frequency oscillations. Its drawback was loss of sensitivity after a single exposure.</p>
+
+        <p class="text">English physicist O. Lodge improved Branly's device (1894) by attaching a mechanical shaker to periodically restore the filings, naming it a coherer (from "cohesion").</p>
+
+        <p class="text">However, the shaking occurred independently of incoming signal pulses, so this solution did not allow reliable reception of a sequence of transmitted signals.</p>
+        {% else %}
+        <p class="text">Но наибольший интерес для Попова в это время представляет задача создания системы передачи
+            сигналов без проводов для флота. Источником высокочастотных затухающих электромагнитных колебаний -
+            передатчиком - в опытах Попова служил модернизированный им вибратор Герца с искровым разрядником, питаемым
+            от катушки Румкорфа (высокочастотного трансформатора). Специальное устройство – прерыватель – обеспечивало
+            подачу на катушку последовательности импульсов тока с частотой, необходимой для генерирования серий
+            высокочастотных затухающих колебаний разной длительности (короткой и длинной). Над проблемой создания
+            прибора, способного выявлять наличие высокочастотного электромагнитного излучения, работали многие ученые в
+            мире, в том числе и А.С. Попов.</p>
+
+        <p class="text">
+            В 1890 года французский ученый Бранли создал «радиокондуктор» - прибор, который представлял собой трубочку с
+            металлическими опилками, сопротивление которых изменялось под воздействием высокочастотных колебаний.
+            Недостатком этого прибора являлась потеря чувствительности после одноразового облучения.</p>
+
+        <p class="text">
+            Английский физик О. Лодж усовершенствовал прибор Бранли (1894 г.), подсоединив к нему механическое
+            устройство для периодического встряхивания опилок, назвав его когерер (от слова «когезия» −
+            сцепление).</p>
+
+        <p class="text">
+            Однако эти встряхивания производились вне какой-либо связи с посылками электромагнитных излучений, поэтому
+            такое решение не обеспечивало возможности достоверного приема последовательности сигналов, передаваемых с
+            помощью электромагнитных волн.</p>
+        {% endif %}
+
+        <div class="image-container image-container_left">
+            <img class="image" src="{{url_for('index')}}static/img/seminary.jpg" alt="{{ _('Пермская духовная семинария') }}">
+            <div class="image-description">{{ _('Пермская духовная семинария') }}</div>
+        </div>
+
+        {% if get_locale() == 'en' %}
+        <p class="text">Popov invented a new circuit for automatically restoring coherer sensitivity. In series with the coherer was connected a relay that activated an electric bell whose hammer struck the tube, restoring the coherer's resistance after each received burst of damped oscillations. Depending on the telegraph key position, the burst could be short or long. The problem of wireless communication was in principle solved.</p>
+
+        <p class="text">In spring 1895 A.S. Popov and his assistant P.N. Rybkin (1868–1948) conducted experiments on signal transmission over 30 fathoms (64 metres) in the MOC garden. A wire raised by balloons to 2.5 metres served as the receiving antenna.</p>
+
+        <p class="text">On 7 May 1895, at a meeting of the Physics Section of the RPCS, Popov presented a paper "On the Relationship of Metal Powders to Electrical Oscillations", demonstrating his device's ability to receive a sequence of "short and prolonged signals" — in effect, the elements of Morse code.</p>
+
+        <p class="text">In essence, the system created and tested by A.S. Popov contained all the essential elements of the modern concept of a "radio signal-transmission line".</p>
+
+        <p class="text">During early tests the receiver's sensitivity to atmospheric discharges was noted. A.S. Popov designed a lightning recorder for round-the-clock reception of naturally occurring electromagnetic oscillations with automatic recording on paper tape. From July 1895 it was used in practice: for meteorological observations at the Forestry Institute and for studying atmospheric interference at the MOC laboratory.</p>
+
+        <p class="text">Thus, in spring 1895 A.S. Popov simultaneously realised two types of radio communication that continue to develop successfully to this day: person-to-person, and from a natural object to a person.</p>
+
+        <div class="pullquote">7 May 1895 — the day the world first heard a signal without wires.</div>
+
+        <p class="text">A complete description of the world's first radio communication system was published in the January 1896 issue of the Journal of the RPCS under the title "An Instrument for Detecting and Recording Electrical Oscillations" (1896, vol. 28, issue 1, pp. 1–14).</p>
+
+        <p class="text">In winter 1895–1896 Popov worked on improving his radio apparatus. On 24 March 1896 at an RPCS meeting, between the buildings of St. Petersburg University, the words "Heinrich Hertz" were transmitted in Morse code over 250 metres — the world's first radiogram.</p>
+
+        <p class="text">In the second half of 1896, reports appeared in the Western and Russian press about demonstrations in London of wireless telegraphy by Italian inventor G. Marconi. The design of his apparatus was kept secret. Popov responded by intensifying his own work. He pointed out in articles that Marconi's receiver had no essential differences from his own receiver and lightning recorder, the design of which had been published 1.5 years earlier.</p>
+
+        <p class="text">By spring 1897 experiments in wireless signalling in Kronstadt harbour achieved a range of 300 fathoms (about 600 m). During the 1897 summer campaign, between ships of the Training Mine Squadron in the Gulf of Finland, a range of up to 5 kilometres was achieved. An important discovery was made: the reflection of radio waves by a foreign metal body (cruiser "Lieutenant Ilin") that had entered the direct line between the transmitter and receiver ships. Popov proposed using this property for radio beacons and direction finders.</p>
+
+        <p class="text">In 1898–1899, in cooperation with French engineer E. Ducretet, serial production of radio stations was launched. By summer 1899 Popov had discovered the "detector effect" of the coherer and developed an improved crystal detector and telephone detector receiver, tripling the range of communication.</p>
+
+        <p class="text">In early 1900 A.S. Popov and P.N. Rybkin built the first practical radio link between Gogland Island and the Finnish city of Kotka, 45 versts (48 km) away. On 5 February 1900 radio communication was established. The very first radiogram, sent by Popov from Kotka, ordered the icebreaker Ermak to go to sea to rescue fishermen adrift on an ice floe. By the evening of 6 February the Ermak had returned with 27 fishermen aboard. Thus Popov's invention, at its very first practical application, served a humanitarian purpose.</p>
+
+        <p class="text">The radio link operated for 84 days until the end of rescue operations, during which 440 radiograms (over 10,000 words) were transmitted. In April 1900 the battleship was successfully refloated. At the World Exhibition in Paris that summer, Popov was awarded a gold medal for his lightning recorder, and Ducretet's apparatus with Popov's detector receiver won the grand prize.</p>
+        {% else %}
+        <p class="text">Попов изобрел новую схему автоматического восстановления чувствительности когерера. В цепь с
+            когерером было включено реле, обеспечивавшее подключение исполнительного устройства - электрического звонка,
+            молоточек которого бил по трубочке, встряхивая опилки и восстанавливая сопротивление когерера после приема
+            каждой посылки затухающих электромагнитных колебаний. В зависимости от замыкания телеграфного ключа
+            прерывателя посылка могла быть короткой или продолжительной. Задача обеспечения беспроводной связи была
+            принципиально решена.</p>
+
+        <p class="text">
+            Весной 1895 года А.С. Попов и его ассистент П.Н. Рыбкин (1868–1948) проводили опыты по передаче и приему
+            сигналов на расстояние 30 сажен (64 метра) в саду МОК. В качестве антенны приемника использовалась
+            проволока, поднятая воздушными шарами на высоту 2,5 метра.</p>
+
+        <p class="text">
+            7 мая 1895 года на заседании Физического отделения РФХО Попов выступил с докладом «Об отношении
+            металлических порошков к электрическим колебаниям», в котором изложил результаты проведенных им исследований
+            и продемонстрировал способность изобретенного им прибора принимать последовательность «коротких и
+            продолжительных сигналов», то есть, по существу, производить передачу элементов азбуки Морзе.</p>
+
+        <p class="text">
+            Фактически система, созданная и опробованная в действии А.С. Поповым, содержала все существенные элементы и
+            их связи, которые присущи современному понятию «радиолиния передачи сигналов».</p>
+
+        <p class="text">В ходе первых испытаний приемника была замечена его восприимчивость к атмосферным разрядам. А.С.
+            Попов сконструировал специальный прибор, названный позже грозоотметчиком, для круглосуточного приема
+            электромагнитных колебаний естественного происхождения с автоматической записью их на бумажную ленту
+            самопишущего прибора. С июля 1895 года грозоотметчик применялся практически: для метеорологических
+            наблюдений − в Лесном институте и для изучения атмосферных помех радиоприему − в лаборатории МОК.</p>
+
+        <p class="text">
+            Таким образом, весной 1895 года А.С. Попов реализовал почти одновременно два типа радиосвязи, которые до сих
+            пор успешно развиваются: от человека к человеку и от природного объекта к человеку.</p>
+
+        <div class="pullquote">7 мая 1895 года — день, когда мир впервые услышал сигнал без проводов.</div>
+
+        <p class="text">
+            Полное описание первой в мире системы радиосвязи было опубликовано в январском номере Журнала РФХО под
+            названием «Прибор для обнаружения и регистрирования электрических колебаний» (1896, т.28, Вып.1.
+            с.1-14).</p>
+
+        <p class="text">
+            Зимой 1895−1896 годов Попов занимался совершенствованием радиоаппаратуры. 24 марта 1896 года на заседании РФХО между зданиями Петербургского университета на расстояние 250 метров были переданы азбукой Морзе слова «Heinrich Hertz» — первая в мире радиограмма.</p>
+
+        <p class="text">
+            Во второй половине 1896 года в западной, а затем и в российской печати появились сообщения о демонстрации в
+            Лондоне опытов по беспроволочной телеграфии итальянского изобретателя Г. Маркони. Устройство
+            сконструированных им приборов держалось в секрете. Попов указал в своих статьях, что приемник Маркони не имеет существенных отличий от его приемника и грозоотметчика, устройство которых было опубликовано на 1,5 года раньше.</p>
+
+        <p class="text">
+            Уже весной 1897 года в Кронштадтской гавани была достигнута дальность 300 сажен (около 600 м.). В летнюю кампанию 1897 года между кораблями Учебно-минного отряда в Финском заливе была получена дальность связи на расстояниях до 5 километров. По ходу испытаний было обнаружено отражение радиоволн посторонним металлическим телом, что Попов предложил использовать для радиомаяков и радиопеленгаторов.</p>
+
+        <p class="text">
+            В 1898–1899 годах в сотрудничестве с французским инженером Э. Дюкрете было налажено серийное производство радиостанций. Летом 1899 года Попов открыл «детекторный эффект» когерера и разработал усовершенствованный кристаллический детектор и телефонный приёмник, втрое увеличив дальность связи.</p>
+
+        <p class="text">
+            В начале 1900 года А.С. Попов и П.Н. Рыбкин построили первую практическую линию радиосвязи между о. Гогланд и финским городом Котка, на расстоянии 45 верст. 5 февраля 1900 года радиосвязь была установлена. Первая же радиограмма, отправленная Поповым из Котки, содержала приказ ледоколу «Ермак» выйти в открытое море для помощи рыбакам, унесённым на льдине. К вечеру 6 февраля «Ермак» вернулся с 27 рыбаками на борту. Таким образом, изобретение Попова уже при первом применении послужило спасению людей.</p>
+
+        <p class="text">Радиолиния продолжала работать в течение 84 дней до окончания спасательных работ. За эти дни
+            было передано 440 радиограмм (свыше 10000 слов). В апреле 1900 года броненосец был благополучно снят с
+            камней. Летом 1900 года на Всемирной выставке в Париже Попов был удостоен золотой медали за грозоотметчик, а аппаратура фирмы Дюкрете с его детекторным приёмником получила гран-при.</p>
+        {% endif %}
+    </div>
+
+</section>
+
+<section class="first-director section section_alt" id="director">
+
+    <span class="section-year">1901 — 1905</span>
+    <h2 class="main-text-block__title title">{{ _('Первый директор Электротехнического института') }}</h2>
+
+    <div class="main-text-block__text text">
+        {% if get_locale() == 'en' %}
+        <p class="text">In March 1901 A.S. Popov accepted an invitation to become full professor of physics at the Electrotechnical Institute (ETI), on condition of retaining his naval service "for the completion of wireless telegraph installation on the ships of the Russian fleet, which I consider my moral obligation." In September 1901 classes began at the ETI.</p>
+
+        <p class="text">For the tasks he had set, A.S. Popov developed a series of physics courses, established 42 laboratory practicals — in general physics (23) and in electricity and magnetism (19) — and created a scientific laboratory.</p>
+
+        <p class="text">In early 1902 A.S. Popov took part in the 2nd All-Russian Electrotechnical Congress in Moscow, where he was elected an honorary member.</p>
+
+        <p class="text">In 1902 Alexander Stepanovich developed an original method and instrument for measuring "the electric field strength of the atmosphere using the ionising action of radium salts".</p>
+
+        <p class="text">The scope for scientific research expanded with ETI's move to new buildings on Aptekarsky Island: a teaching block equipped to the latest electrotechnical standards, and a residential building, in one of whose apartments the Popov family settled.</p>
+
+        <p class="text">A.S. Popov and his graduate student D.A. Rozhansky conducted research on damped electrical oscillations using a Braun oscilloscope tube (1904–1905). He also invented an optical instrument for detecting floating mines and a remote-control system for fireships (1903–1904). In 1905 he carried out experiments using resonance to increase the sensitivity and selectivity of receiving devices. During these years the A.S. Popov scientific and pedagogical school was formed, represented by such names as A.A. Petrovsky, P.S. Osadchy, D.A. Rozhansky, N.A. Skritsky and S.I. Pokrovsky.</p>
+
+        <p class="text">Remaining a member of the Naval Technical Committee, Popov continued to supervise the arming of the fleet with wireless telegraphy equipment. He attended the Berlin International Radio Conference (1903) as Russia's representative. Opening the conference, German Postmaster General R. Krätke emphasised: "To Popov we owe the emergence of the first radiographic apparatus."</p>
+
+        <p class="text">In connection with the Russo-Japanese War (1904–1905), Popov gave special lectures on wireless telegraphy for mine officers. He was deeply distressed by Russia's defeat in that war.</p>
+
+        <p class="text">In autumn 1905 a wave of revolution swept the country and universities gained autonomy, including the right to elect a director. The ETI Council elected Popov its director. On 15 October 1905, under his chairmanship, the Council met with the full teaching staff and supported the students' demands for democratic freedoms. The minutes were signed first by council chairman A.S. Popov.</p>
+        {% else %}
+        <p class="text">В марте 1901 года А.С. Попов получил приглашение от директора Электротехнического института
+            (ЭТИ) Н.Н. Качалова занять должность ординарного профессора физики. Он ответил согласием, но с условием
+            сохранения службы в Морском ведомстве для выполнения работ «по организации беспроволочного телеграфа на
+            судах русского флота, каковое поручение я считаю своей нравственной обязанностью довести до конца». В
+            сентябре 1901 года начались занятия в ЭТИ.</p>
+
+        <p class="text">Для решения поставленных задач А.С. Попов разработал ряд курсов по физике, поставил 42
+            лабораторные работы: по общему курсу физики (23), по электричеству и магнетизму (19) − создал научную
+            лабораторию.</p>
+
+        <p class="text">
+            В начале 1902 года А.С. Попов участвовал в работе II Всероссийского электротехнического съезда в Москве в
+            здании Политехнического музея, где был избран его почетным участником.</p>
+
+        <p class="text">
+            В 1902 году Александр Степанович разработал оригинальный
+            метод и создал прибор для измерения «напряжения электрического поля атмосферы с помощью ионизационного
+            действия солей радия».</p>
+
+        <p class="text">
+            Возможности проведения научных исследований расширились с переездом ЭТИ в новые здания на Аптекарском
+            острове: учебный корпус, оборудованный с учётом достижений в области электротехники, и жилой дом, в одной из
+            квартир которого поселилась семья профессора Попова.</p>
+
+        <p class="text">Перечень выполненных в это время научно-исследовательских работ свидетельствует о широте научных
+            интересов А.С. Попова. Совместно с аспирантом Д.А. Рожанским были выполнены исследования затухающих
+            электрических колебаний с помощью осциллографической трубки Брауна (1904−1905). Был изобретен оптический
+            прибор для обнаружения плавающих мин и систем телемеханического управления брандерами (1903–1904). В период 1900–1905 годов он проводил эксперименты по использованию явления резонанса для увеличения чувствительности и избирательности приёмных устройств. В эти годы сформировалась научно-педагогическая школа А.С. Попова.</p>
+
+        <p class="text">
+            Оставаясь членом Морского технического комитета, Александр Степанович продолжал курировать вопросы
+            вооружения флота аппаратурой беспроволочной телеграфии. Он участвовал, как представитель Морского ведомства
+            России, в Берлинской конференции по международной регламентации радиосвязи (1903). Открывая эту конференцию,
+            германский министр почт и телеграфов Р. Кретке подчеркнул: «Попову мы обязаны возникновением первого
+            радиографического аппарата».</p>
+
+        <p class="text">
+            В связи с началом Русско-японской войны и подготовкой Второй Тихоокеанской эскадры к походу на Дальний
+            Восток, Попов читал специальные лекции по беспроволочной телеграфии для офицеров-минёров. Попов глубоко
+            переживал поражение России в этой войне.</p>
+
+        <p class="text">
+            Осенью 1905 года по стране прокатилась революционная волна, высшая школа получила автономию, включая право
+            выбора директора. Совет ЭТИ избрал Попова своим директором. 15 октября 1905 года под его председательством
+            прошло заседание Совета с участием всего педагогического состава института, который поддержал студенческие
+            требования демократических свобод. Протокол заседания первым подписал председатель Совета А.С. Попов.</p>
+        {% endif %}
+    </div>
+
+</section>
+
+<section class="last-years section" id="last-years">
+
+    <span class="section-year">1905 — 1906 {% if get_locale() == 'en' %}and legacy{% else %}и наследие{% endif %}</span>
+    <h2 class="main-text-block__title title">{{ _('Последние годы жизни и наследие') }}</h2>
+
+    <div class="main-text-block__text text">
+        {% if get_locale() == 'en' %}
+        <p class="text">On 20 October a red flag appeared in a student dormitory window with the words "Long live the democratic republic." A series of summons to the Ministry of Internal Affairs followed. After one such meeting, on 13 January 1906 — at the age of 47 — Alexander Stepanovich Popov suddenly died of a cerebral haemorrhage. His family, colleagues, professors and ETI students accompanied the "brilliant electrical engineer of Russia" from the Transfiguration Cathedral to the Volkovo Cemetery in St. Petersburg.</p>
+
+        <p class="text">In 1906 a prize in the name of the inventor of radio, A.S. Popov, was established for the best scientific work in electrical engineering.</p>
+
+        <p class="text">In ETI in 1916 training of engineers in radio telegraphy began, and in 1917 Russia's first radio engineering department was organised (N.A. Skritsky, I.G. Freiman).</p>
+
+        <p class="text">Throughout his active creative life the scientist was accompanied by the definition "first": the first coherer radio-telegraphic receiver and the first spark radio-telegraphic system (April 1895); the first lightning recorder (July 1895); the first detector radio receiver with audio reception of telegraph signals (September 1899); the first crystal point-contact diode (June 1900); the first radio-telephone system (December 1903).</p>
+
+        <p class="text">In 1945 the Government decreed that 7 May — the birthday of radio communication — be declared an annual state holiday, Radio Day. The A.S. Popov Gold Medal of the Russian Academy of Sciences was established "For outstanding achievements in the field of radio. A.S. Popov"; an "Honoured Radio Worker" badge was introduced; named scholarships for students and postgraduates in radio engineering and telecommunications were set up.</p>
+
+        <p class="text">The memory of the scientist has been fittingly perpetuated in numerous monuments, memorials and commemorative plaques in many cities where he lived and worked. A.S. Popov's name has been given to scientific institutions, educational establishments, industrial enterprises, radio stations, museums, scientific societies and ships; streets in many cities bear his name. In 1945 the Russian Scientific and Technical Society of Radio Engineering, Electronics and Communications (NTORES) named after A.S. Popov was founded. In the Solar System there is a minor planet "Popov" (No. 3074), and a crater on the far side of the Moon bears his name.</p>
+
+        <p class="text">The A.S. Popov Memorial Museum of SPbETU "LETI" was opened on 27 June 1948. It unites the memorial laboratory-museum in the university's academic building and the scientist's memorial apartment in the ETI residential building. The museum holds collections of original documents and photographs taken by Popov himself — an excellent photographer — personal belongings of family members, and the original furnishings of the apartment.</p>
+
+        <p class="text">Museums in Popov's homeland on the Urals are also open: in Krasnoturyinsk (1959) and in Yekaterinburg, where the Communications Museum named after A.S. Popov has been housed since 31 January 1986 in the building where young Sasha Popov lived with his elder sister Maria during his theological school years.</p>
+
+        <div class="pullquote">"The scientific achievement of Alexander Stepanovich Popov is immortal, inexhaustible the legacy he left to humanity" — Academician S.A. Vekshinskiy</div>
+
+        <p class="text">"The scientific achievement of Alexander Stepanovich Popov is immortal, inexhaustible the legacy he left to humanity" — so Academician of the USSR Academy of Sciences and Gold Medal laureate S.A. Vekshinskiy assessed Popov's contribution. Years will pass, but these words will not lose their profound meaning: the name of A.S. Popov will forever stand among the outstanding representatives of Russian and world science. The 21st century has become the century of telecommunications and informatisation.</p>
+
+        <p class="text">By decision of UNESCO, the 100th anniversary of radio was solemnly celebrated by the entire world community in 1995.</p>
+
+        <div class="image-container image-container_right">
+            <img class="image" src="{{url_for('index')}}static/img/rudn.jpg" alt="Turyinskie Rudniki">
+            <div class="image-description">Turyinskie Rudniki</div>
+        </div>
+
+        <p class="text">A.S. Popov held the high civil rank of State Councillor (from 1901) and was awarded the Orders of St. Anna 3rd and 2nd degrees (1895, 1902), St. Stanislav 2nd degree (1897), received the prize of the Imperial Russian Technical Society "for the receiver of electrical oscillations and instruments for wireless telegraphy" (1898). He was also awarded the title of Honorary Electrical Engineer (1899) and received a reward of 33,000 rubles "for work on the application of wireless telegraphy on the ships of the fleet" (1900). The jury of the World Exhibition in Paris awarded him a large gold medal and diploma for his radio system demonstrated in action.</p>
+
+        <p class="text">In 1902 A.S. Popov was elected honorary member of the Imperial Russian Technical Society (IRTS), and in 1905 — chairman of the Physics Section and president of the Russian Physical and Chemical Society (RPCS), positions he was to take up from 1 January 1906.</p>
+        {% else %}
+        <p class="text">20 октября в окне студенческого общежития института появился красный флаг со словами: «Да
+            здравствует демократическая республика». Последовал целый ряд вызовов в Министерство внутренних дел. После
+            одной из таких бесед на 47-м году жизни 13 января 1906 года Александр Степанович Попов скоропостижно
+            скончался от кровоизлияния в мозг. В последний путь «блистательного электротехника России» после отпевания в
+            храме Преображения Господня его семья, коллеги, профессора и студенты ЭТИ провожали до Волковского кладбища
+            Петербурга.</p>
+
+        <p class="text">
+            В 1906 году была учреждена премия имени изобретателя радио А.С. Попова за лучшую научную работу в области
+            электротехники.</p>
+
+        <p class="text">
+            В ЭТИ в 1916 году по решению Совета ЭТИ была начата подготовка инженеров по специальности радиотелеграфные
+            станции, а в 1917 году организована первая в России кафедра радиотехники (Н.А. Скрицкий, И.Г. Фрейман).</p>
+
+        <p class="text">На протяжении всей активной творческой жизни ученому сопутствовало определение «первый». Это
+            первый когерерный радиотелеграфный приемник и первая искровая радиотелеграфная система (апрель 1895 г.);
+            первый прибор для регистрации электромагнитных излучений атмосферного происхождения - грозоотметчик (июль
+            1895 г.); первый детекторный радиоприемник с приемом телеграфных сигналов на слух (сентябрь 1899 г.); первый
+            кристаллический точечный диод (июнь 1900 г.); первая радиотелефонная система (декабрь 1903 г.).</p>
+
+        <p class="text">
+            В 1945 году постановлением Правительства день рождения радиосвязи 7 мая был объявлен ежегодным
+            государственным праздником − Днем радио. Была учреждена Золотая медаль имени А.С. Попова Российской академии
+            наук — «За выдающиеся заслуги в области радио. А.С. Попов», введен нагрудный знак «Почетный
+            радист», установлены именные стипендии для студентов и аспирантов по профилю радиотехники и
+            электросвязи.</p>
+
+        <p class="text">
+            Память об ученом достойно увековечена в многочисленных монументах, памятниках, мемориальных досках в ряде
+            городов, где он жил и работал. Имя А.С. Попова присуждено научным учреждениям, учебным заведениям, промышленным предприятиям,
+            радиостанциям, музеям, научно-техническим обществам, кораблям. В 1945 году было образовано Российское научно-техническое общество радиотехники, электроники и связи (НТОРЭС) имени А.С. Попова. В Солнечной системе есть малая планета «Попов» (№ 3074), на обратной стороне Луны его именем назван кратер.</p>
+
+        <p class="text">
+            Мемориальный музей А.С. Попова СПбГЭТУ «ЛЭТИ» был открыт 27 июня 1948 года. Он объединяет мемориальный
+            музей-лабораторию профессора физики в учебном корпусе университета и мемориальную квартиру учёного в жилом
+            доме ЭТИ. В музее собраны коллекции подлинных документов и фотографий, сделанных самим Поповым, личные вещи членов семьи, подлинная обстановка квартиры.</p>
+
+        <p class="text">
+            Музеи открыты и на Урале, родине А.С. Попова, в г. Краснотурьинске. Мемориальный музей открыт в доме, где
+            жила семья Поповых-Словцовых (1959), в Екатеринбурге. Музей связи имени А.С. Попова с 31 января 1986 года размещается в доме, где во время учебы в духовном училище Саша Попов жил у своей старшей сестры Марии.</p>
+
+        <div class="pullquote">«Бессмертен научный подвиг Александра Степановича Попова, неисчерпаемо наследие, оставленное им человечеству» — академик С.А. Векшинский</div>
+
+        <p class="text">
+            «Бессмертен научный подвиг Александра Степановича Попова, неисчерпаемо наследие, оставленное им
+            человечеству» - так оценил деятельность А.С. Попова академик АН СССР лауреат Золотой медали имени А.С.
+            Попова С.А. Векшинский. Пройдут годы, эти слова не потеряют своего глубокого смысла, имя А.С. Попова
+            навсегда останется в ряду выдающихся представителей отечественной и мировой науки. XXI век стал веком телекоммуникации и информатизации.</p>
+
+        <p class="text">
+            По решению ЮНЕСКО всем мировым сообществом в 1995 году был торжественно отмечен 100-летний юбилей радио.</p>
+
+        <div class="image-container image-container_right">
+            <img class="image" src="{{url_for('index')}}static/img/rudn.jpg" alt="Турьинские рудники">
+            <div class="image-description">Турьинские рудники</div>
+        </div>
+
+        <p class="text">
+            Заслуги А.С. Попова были отмечены и государством, и научно-общественными организациями. Александр Степанович
+            имел высокий чин статского советника (с 1901 г.), был награжден орденами Св. Анны 3-й и 2-й степеней (1895,
+            1902), Св. Станислава 2-й степени (1897), получил премию Императорского Русского технического общества (ИРТО) «за
+            приемник для электрических колебаний и приборы для телеграфирования на расстоянии без проводов» (1898). Он
+            был также удостоен звания Почетного инженер-электрика (1899) и получил «по Высочайшему соизволению»
+            вознаграждение в сумме 33 тысячи рублей «за труды по применению телеграфирования без проводов на судах
+            флота» (1900). Жюри Всемирной выставки в Париже присудило ему большую золотую медаль и диплом за радиоаппаратуру его системы.</p>
+
+        <p class="text">
+            В 1902 году А.С. Попов был избран почетным членом Императорского Русского технического общества (ИРТО), а в
+            1905 году − председателем Физического отделения и президентом Русского физико-химического общества (РФХО),
+            должности, которые он должен был занять с 1 января 1906 года.</p>
+        {% endif %}
+    </div>
+
+</section>
+
 
 {% endblock %}

@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Styrene";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Styrene"), url("../font/StyreneAWeb-Thin.woff") format("woff"), url("../font/StyreneAWeb-Thin.ttf") format("ttf"), url("../font/StyreneAWeb-Thin.eot") format("eot");
+}
+@font-face {
+  font-family: "Styrene";
+  font-style: normal;
+  font-weight: 200;
+  src: local("Styrene"), url("../font/StyreneAWeb-Light.woff") format("woff"), url("../font/StyreneAWeb-Light.ttf") format("ttf"), url("../font/StyreneAWeb-Light.eot") format("eot");
+}
+@font-face {
+  font-family: "Styrene";
+  font-style: 400;
+  font-weight: regular;
+  src: local("Styrene"), url("../font/StyreneAWeb-Regular.woff") format("woff"), url("../font/StyreneAWeb-Regular.ttf") format("ttf"), url("../font/StyreneAWeb-Regular.eot") format("eot");
+}
+@font-face {
+  font-family: "Styrene";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Styrene"), url("../font/StyreneAWeb-Medium.woff") format("woff"), url("../font/StyreneAWeb-Medium.ttf") format("ttf"), url("../font/StyreneAWeb-Medium.eot") format("eot");
+}
+@font-face {
+  font-family: "Styrene";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Styrene"), url("../font/StyreneAWeb-Bold.woff") format("woff"), url("../font/StyreneAWeb-Bold.ttf") format("ttf"), url("../font/StyreneAWeb-Bold.eot") format("eot");
+}
+@font-face {
+  font-family: "Styrene";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Styrene"), url("../font/StyreneAWeb-Black.woff") format("woff"), url("../font/StyreneAWeb-Black.ttf") format("ttf"), url("../font/StyreneAWeb-Black.eot") format("eot");
+}
+.museum__hero {
+  width: 100%;
+  height: 50rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+.museum__hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 36, 65, 0.25);
+  z-index: 0;
+}
+.museum__hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(14, 36, 65, 0.95) 0%, rgba(14, 36, 65, 0.5) 40%, rgba(14, 36, 65, 0.1) 80%, transparent 100%);
+}
+.museum__hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 4rem;
+}
+.museum__hero-title {
+  color: white;
+  margin-bottom: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.museum__img {
+  float: left;
+  padding-right: 3.4rem;
+}
+.museum__reg-btn {
+  width: 100%;
+  margin-top: 3rem;
+}
+.museum__location {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+.museum__location-info {
+  flex: 1;
+}
+.museum__location-map {
+  flex: 1;
+}
+.museum__map {
+  width: 100%;
+  height: 30rem;
+  background-color: #fff9ed;
+  border-radius: 5px;
+  display: block;
+}
+.museum__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.museum__contact {
+  padding: 2rem 3rem;
+  width: 49.5%;
+  border-radius: 5px;
+  background: rgba(0, 52, 119, 0.05);
+}
+.museum i {
+  padding-right: 1.5rem;
+}
+
+.text-block {
+  fill: #F9F6F1;
+}
+
+@media (max-width: 768px) {
+  .museum__hero {
+    height: 28rem;
+  }
+  .museum__img {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 3rem;
+    padding-right: 0;
+  }
+  .museum__location {
+    flex-direction: column;
+  }
+  .museum__location-map {
+    width: 100%;
+  }
+  .museum__map {
+    height: 40rem;
+  }
+  .museum__contact {
+    width: 100%;
+  }
+}
