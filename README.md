@@ -3,13 +3,13 @@
 
 # Popov Museum — Website
 
-A bilingual website for the Museum of Alexander Stepanovich Popov, the inventor of radio, located at St. Petersburg Electrotechnical University (SPbGETU LETI).
+A bilingual website for the Museum of Alexander Stepanovich Popov, the inventor of radio, located at St. Petersburg Electrotechnical University (ETU LETI).
 
-Built as part of a joint project between the Student Career Office (SOKT) and the Department of History, Culture, State and Law at SPbGETU LETI.
+Built as part of a joint project between the Student Career Office (SOKT) and the Department of History, Culture, State and Law at ETU LETI.
 
 ## Team
 
-Developed by the IT department of the Student Career Office (SOKT) at SPbGETU LETI.
+Developed by the IT department of the Student Career Office (SOKT) at ETU LETI.
 
 | Name | Role |
 |------|------|
