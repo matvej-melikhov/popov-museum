@@ -1,17 +1,40 @@
 {% extends "base-templates/museum_base.html" %}
 
 
-{% block title %}Квартира в ЛЭТИ{% endblock title %}
+{% block title %}{% if get_locale() == 'en' %}Apartment at LETI{% else %}Квартира в ЛЭТИ{% endif %}{% endblock title %}
 
 {% block museum_title %}
-    Музей-квартира <span class="pr">А.&nbsp;С.&nbsp;Попова</span> в ЛЭТИ
+    {% if get_locale() == 'en' %}Memorial Apartment-Museum of <span class="pr">A.&nbsp;S.&nbsp;Popov</span> at LETI{% else %}Музей-квартира <span class="pr">А.&nbsp;С.&nbsp;Попова</span> в ЛЭТИ{% endif %}
 {% endblock %}
 
-{% block museum_image %}
-    <img src="{{url_for('index')}}static/img/flat.jpg" alt="" class="museum__img">
-{% endblock %}
+{% block hero_bg %}{{url_for('index')}}static/img/flat.jpg{% endblock %}
 
 {% block museum_info %}
+{% if get_locale() == 'en' %}
+    <p class="text">
+        The A.S. Popov Memorial Apartment-Museum is located <span class="pr-dark">in the residential building of the Electrotechnical Institute</span>, constructed at the same time as the main academic building. Many prominent scientists and professors of ETI lived in this house.
+    </p>
+
+    <p class="text">
+        Of undoubted interest in the apartment-museum is its <span class="pr-dark">everyday collection</span>, which includes the furnishings of the scientist's home study, living room, dining room and bedroom. Some of the items on display were donated by <span class="pr-dark">members of the Popov family, and others were given by the families of his colleagues and friends.</span>
+    </p>
+
+    <p class="text">
+        Highlights of the collection include paintings by Popov's sister, Academy of Arts graduate A.S. Popova-Kapustina (1863–1941), by his son Alexander (1887–1942) — an architect who also graduated from the Academy of Arts — and paintings and sculptures by other artists donated to the museum. A separate collection preserves <span class="pr-dark">musical compositions by the scientist's eldest son Stepan</span> (1884–1920), a graduate of the St. Petersburg Conservatory. The museum also holds a <span class="pr-dark">set of medical instruments belonging to the scientist's wife Raisa Alekseyevna</span> (1860–1932), one of Russia's first female physicians, and their eldest daughter Raisa (1891–1976), also a doctor.
+    </p>
+
+    <p class="text">
+        The apartment-museum regularly hosts <span class="pr-dark">scholarly sessions devoted to major historical dates</span> connected with the history of our scientific disciplines and the anniversaries of outstanding scientists. These sessions traditionally conclude with performances by artists and cultural figures.
+    </p>
+
+    <p class="text">
+        The museum runs a <span class="pr-dark">collective shortwave amateur radio station.</span> Its call sign RK1B is heard far beyond the borders of our country. More than 15,000 QSL cards received from around the world attest to its active operation. The museum also collects materials on <span class="pr-dark">the history of amateur radio in Russia.</span>
+    </p>
+
+    <p class="text">
+       <span class="pr-dark">Every year on Radio Day, 7 May,</span> the museum jointly with the NTORES named after <span class="pr-dark">A.S. Popov</span> organises a city-wide rally at the monument to A.S. Popov on Kamennoostrovsky Prospekt. On the anniversary of the radio inventor's death, 13 January, flowers are laid at the monument on his grave at the Literatorskie Mostki section of the Volkovo Cemetery.
+    </p>
+{% else %}
     <p class="text">
         Мемориальный музей-квартира А.&nbsp;С.&nbsp;Попова находится <span class="pr-dark">в жилом доме Электротехнического института</span>, построенном одновременно с учебным корпусом. В этом доме жили многие крупные ученые-профессора ЭТИ.
     </p>
@@ -35,19 +58,30 @@
     <p class="text">
        <span class="pr-dark">В День радио 7 мая</span> ежегодно музеем совместно с НТОРЭС им. <span class="pr-dark">А.С. Попова</span> организуется общегородской митинг у памятника А.С. Попову на Каменноостровском проспекте. В день памяти изобретателя радио 13 января возлагаются цветы у памятника на могиле А.С. Попова на Литераторских мостках Волковского кладбища.
     </p>
+{% endif %}
 {% endblock %}
 
 
 {% block geo_info %}
+{% if get_locale() == 'en' %}
+    <p class="text">
+        The A.S. Popov Memorial Apartment-Museum is located in the residential building of the Electrotechnical Institute, built at the same time as the main academic building.
+    </p>
+
+    <p class="text">
+        Address: <span class="pr-dark">5 Professor Popov St., Building D, 3rd floor, Apt. 33 (entrance from the A.S. Popov monument side).</span>
+    </p>
+{% else %}
     <p class="text">
         Мемориальный музей-квартира А.С. Попова находится в жилом доме Электротехнического института, построенном одновременно с учебным корпусом. В этом доме жили многие крупные ученые-профессора ЭТИ.
     </p>
 
     <p class="text">
         Адрес: <span class="pr-dark">ул. Профессора Попова, дом 5, корп. Д, 3-й этаж, кв. 33 (вход со стороны памятника А.С. Попову).</span>
-    </p>       
+    </p>
+{% endif %}
 {% endblock %}
-        
+
 {% block map %}
-    <iframe class="museum__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A2f2cc6c31454fba49c5a035d7e82c247c7ebff19d6ebfaaec0aaba087c91f870&amp;source=constructor" width="100%" height="720" frameborder="0"></iframe>
+    <iframe class="museum__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A2f2cc6c31454fba49c5a035d7e82c247c7ebff19d6ebfaaec0aaba087c91f870&amp;source=constructor" frameborder="0"></iframe>
 {% endblock %}

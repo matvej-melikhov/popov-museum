@@ -10,3 +10,4 @@ __pycache__/
 vars.css
 sizes.css
 fonts.css
+.venv/

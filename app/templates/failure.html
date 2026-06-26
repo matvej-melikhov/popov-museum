@@ -1,7 +1,7 @@
 {% extends "base-templates/base.html" %}
 
 
-{% block title %}Неудача{% endblock title %}
+{% block title %}{{ _('Ошибка отправки') }}{% endblock title %}
 
 
 {% block style %}
@@ -11,6 +11,14 @@
 
 {% block content %}
 
-<h2 class="title">неудача</h2>
+{% if get_locale() == 'en' %}
+<h2 class="title">Something <span class="pr">went wrong</span></h2>
+<p class="text">We couldn't submit your request. Please try again or contact us at <span class="pr-dark">+7 812 234-59-00</span>.</p>
+<a href="{{url_for('registration')}}" class="pr-btn" style="display: inline-block; margin-top: 2rem;">Try again</a>
+{% else %}
+<h2 class="title">Что-то <span class="pr">пошло не так</span></h2>
+<p class="text">Не удалось отправить заявку. Попробуйте ещё раз или свяжитесь с нами по телефону <span class="pr-dark">+7 812 234-59-00</span>.</p>
+<a href="{{url_for('registration')}}" class="pr-btn" style="display: inline-block; margin-top: 2rem;">Попробовать снова</a>
+{% endif %}
 
 {% endblock %}

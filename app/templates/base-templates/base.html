@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ get_locale() }}">
 
 <head>
     <meta charset="UTF-8">
-    <title>Музей Попова — {% block title %}{% endblock %}</title>
+    <title>{% if get_locale() == 'en' %}Popov Museum — {% else %}Музей Попова — {% endif %}{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:title" content="Музей А. С. Попова">
@@ -25,10 +25,10 @@
            <a class="header__logo" href="{{url_for('index')}}"><img src="{{url_for('index')}}static/img/popov-logo.png" alt=""></a>
            
            <ul class="navbar">
-               <li class="navbar__item"><a href="{{url_for('index')}}">Биография</a></li>
-               <li class="navbar__item"><a href="{{url_for('index')}}apartment-museum">Музей&nbsp;в&nbsp;ЛЭТИ</a></li>
-               <li class="navbar__item"><a href="{{url_for('index')}}laboratory-museum">Лаборатория&nbsp;в&nbsp;ЛЭТИ</a></li>
-               <li class="navbar__item"><a href="{{url_for('index')}}archive">Архив</a></li>
+               <li class="navbar__item{% if request.endpoint == 'index' %} navbar__item_active{% endif %}"><a href="{{url_for('index')}}">{{ _('Биография') }}</a></li>
+               <li class="navbar__item{% if request.endpoint == 'apartment_museum' %} navbar__item_active{% endif %}"><a href="{{url_for('index')}}apartment-museum">{{ _('Музей в ЛЭТИ') }}</a></li>
+               <li class="navbar__item{% if request.endpoint == 'laboratory_museum' %} navbar__item_active{% endif %}"><a href="{{url_for('index')}}laboratory-museum">{{ _('Лаборатория в ЛЭТИ') }}</a></li>
+               <li class="navbar__item{% if request.endpoint == 'archive' %} navbar__item_active{% endif %}"><a href="{{url_for('index')}}archive">{{ _('Архив') }}</a></li>
            </ul>
            
            <a onclick="toggleNavbar()" href="#" class="header__mobile-burger"><i class="fa-solid fa-bars"></i></a>
@@ -37,28 +37,40 @@
                <a href="{{url_for('index')}}registration" class="mini-btns__item">
                    <i class="fa-solid fa-pen-to-square"></i>
                </a>
-               <a href="" class="mini-btns__item">
-                   <i class="fa-solid fa-language"></i>
+               {% if get_locale() == 'ru' %}
+               <a href="{{ url_for('set_lang', lang='en') }}" class="mini-btns__item">
+                   <i class="fa-solid fa-language"></i>&nbsp;EN
                </a>
+               {% else %}
+               <a href="{{ url_for('set_lang', lang='ru') }}" class="mini-btns__item">
+                   <i class="fa-solid fa-language"></i>&nbsp;RU
+               </a>
+               {% endif %}
            </div>
        </div>
     </header>
     
     <div class="mobile-navbar">
         <ul class="mobile-navbar__wrapper">
-            <li class="mobile-navbar__item"><a href="{{url_for('index')}}">Биография</a></li>
-            <li class="mobile-navbar__item"><a href="{{url_for('index')}}apartment-museum">Музей&nbsp;в&nbsp;ЛЭТИ</a></li>
-            <li class="mobile-navbar__item"><a href="{{url_for('index')}}laboratory-museum">Лаборатория&nbsp;в&nbsp;ЛЭТИ</a></li>
-            <li class="mobile-navbar__item"><a href="{{url_for('index')}}archive">Архив</a></li>
+            <li class="mobile-navbar__item{% if request.endpoint == 'index' %} mobile-navbar__item_active{% endif %}"><a href="{{url_for('index')}}">{{ _('Биография') }}</a></li>
+            <li class="mobile-navbar__item{% if request.endpoint == 'apartment_museum' %} mobile-navbar__item_active{% endif %}"><a href="{{url_for('index')}}apartment-museum">{{ _('Музей в ЛЭТИ') }}</a></li>
+            <li class="mobile-navbar__item{% if request.endpoint == 'laboratory_museum' %} mobile-navbar__item_active{% endif %}"><a href="{{url_for('index')}}laboratory-museum">{{ _('Лаборатория в ЛЭТИ') }}</a></li>
+            <li class="mobile-navbar__item{% if request.endpoint == 'archive' %} mobile-navbar__item_active{% endif %}"><a href="{{url_for('index')}}archive">{{ _('Архив') }}</a></li>
         </ul>
-        
+
         <div class="mobile-navbar__mini-btns">
            <a href="{{url_for('index')}}registration">
                <i class="fa-solid fa-pen-to-square"></i>
            </a>
-           <a href="">
-               <i class="fa-solid fa-language"></i>
+           {% if get_locale() == 'ru' %}
+           <a href="{{ url_for('set_lang', lang='en') }}">
+               <i class="fa-solid fa-language"></i>&nbsp;EN
            </a>
+           {% else %}
+           <a href="{{ url_for('set_lang', lang='ru') }}">
+               <i class="fa-solid fa-language"></i>&nbsp;RU
+           </a>
+           {% endif %}
        </div>
     </div>
     
@@ -71,31 +83,27 @@
     
     <footer class="footer">
         <div class="footer__inner container">
-         
-         <div class="footer__text">
-             <p>Проект подготовлен Студенческим офисом карьеры и трудоустройства (СОКТ) Профкома студентов и аспирантов СПбГЭТУ ЛЭТИ совместно с кафедрой истории культуры, государства и права.</p>
-             <p>Информация взята с открытых источников. Все права защищены. Сайт «Музей Попова» 2023-2024.</p>
-         </div>
-         
-         <div class="footer__logo-wrapper">
-            <img class="footer__logo" src="{{url_for('index')}}static/img/popov-logo.png" alt="" class="footer__img">
-            <img class="footer__logo" src="{{url_for('index')}}static/img/etu-logo.svg" alt="" class="footer__img">
-            <img class="footer__logo" src="{{url_for('index')}}static/img/profcom-logo.png" alt="" class="footer__img">
-            <img class="footer__logo" src="{{url_for('index')}}static/img/sokt-logo.png" alt="" class="footer__img">
-            <img class="footer__logo" src="{{url_for('index')}}static/img/it-sokt-logo.png" alt="" class="footer__img">
-          </div>
-         
-         <div class="footer__text-links">
-             <a href="">Кафедра истории культуры, государства и права СПбГЭТУ ЛЭТИ</a>
-             <a href="">Официальный сайт СПбГЭТУ ЛЭТИ</a>
-         </div>
-         
-         <div class="footer__btn-links">
-             <a class="footer__profcom-link" href=""><img src="{{url_for('index')}}static/img/profcom-mini-logo.png" alt="">Профком ВКонтакте</a>
-             <a class="footer__sokt-link" href=""><img src="{{url_for('index')}}static/img/sokt-logo.png" alt="">СОКТ ВКонтакте</a>
-         </div>
 
-       </div>
+            <div class="footer__main">
+                <div class="footer__logos">
+                    <img class="footer__logo" src="{{url_for('index')}}static/img/popov-logo.png" alt="Музей Попова">
+                    <img class="footer__logo" src="{{url_for('index')}}static/img/etu-logo.svg" alt="СПбГЭТУ ЛЭТИ">
+                    <img class="footer__logo" src="{{url_for('index')}}static/img/profcom-logo.png" alt="Профком">
+                </div>
+                <nav class="footer__nav">
+                    <a href="">{{ _('Кафедра истории культуры, государства и права СПбГЭТУ ЛЭТИ') }}</a>
+                    <a href="">{{ _('Официальный сайт СПбГЭТУ ЛЭТИ') }}</a>
+                    <a href="">{{ _('Профком ВКонтакте') }}</a>
+                    <a href="">{{ _('СОКТ ВКонтакте') }}</a>
+                </nav>
+            </div>
+
+            <p class="footer__copy">
+                {{ _('Проект подготовлен Студенческим офисом карьеры и трудоустройства (СОКТ) Профкома студентов и аспирантов СПбГЭТУ ЛЭТИ совместно с кафедрой истории культуры, государства и права.') }}
+                {{ _('Информация взята с открытых источников. Все права защищены. Сайт «Музей Попова» 2023-2024.') }}
+            </p>
+
+        </div>
     </footer>
 
 </body>

@@ -1,11 +1,309 @@
 {% extends "base-templates/base.html" %}
 
-{% block title %}Архив{% endblock %}
+{% block title %}{{ _('Архив') }}{% endblock %}
 
+{% block style %}
+<link rel="stylesheet" href="{{url_for('index')}}static/css/archive-styles.css">
+{% endblock %}
 
 {% block content %}
 
-    <h2 class="title">Архив</h2>
-    <p class="text"><i class="fa-brands fa-connectdevelop"></i>&nbsp;&nbsp;В разработке...</p>
+<div class="archive__hero" style="background-image: url('{{url_for('index')}}static/img/univer.jpg')">
+    <div class="archive__hero-content">
+        {% if get_locale() == 'en' %}
+        <h2 class="title archive__hero-title">Archive of <span class="pr">A.&nbsp;S.&nbsp;Popov</span></h2>
+        <p class="archive__hero-subtitle">Historical materials on the life and work of the inventor of radio</p>
+        {% else %}
+        <h2 class="title archive__hero-title">Архив <span class="pr">А.&nbsp;С.&nbsp;Попова</span></h2>
+        <p class="archive__hero-subtitle">Исторические материалы о жизни и деятельности изобретателя радио</p>
+        {% endif %}
+    </div>
+</div>
+
+<div class="minisection">
+    <h3 class="minititle">{{ _('Хронология') }}</h3>
+    <div class="timeline">
+
+        <div class="timeline__item">
+            <div class="timeline__year">1859</div>
+            {% if get_locale() == 'en' %}
+            <p class="timeline__text">Born <span class="timeline__accent">16 March</span> in the settlement of Turyinskie Rudniki, Perm Province, into the family of priest Stepan Petrovich Popov.</p>
+            {% else %}
+            <p class="timeline__text">Родился <span class="timeline__accent">16 марта</span> в посёлке Турьинские Рудники Пермской губернии в семье священника Степана Петровича Попова.</p>
+            {% endif %}
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1877</div>
+            {% if get_locale() == 'en' %}
+            <p class="timeline__text">Graduated with distinction from the Perm Theological Seminary. Enrolled in the <span class="timeline__accent">physics and mathematics faculty</span> of St. Petersburg University.</p>
+            {% else %}
+            <p class="timeline__text">Окончил с отличием Пермскую духовную семинарию. Поступил на <span class="timeline__accent">физико-математический факультет</span> Петербургского университета.</p>
+            {% endif %}
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1882</div>
+            {% if get_locale() == 'en' %}
+            <p class="timeline__text">Graduated from the university and defended his dissertation. Accepted a teaching post at the <span class="timeline__accent">Mine Officer Class</span> in Kronstadt — the beginning of 18 years of naval service.</p>
+            {% else %}
+            <p class="timeline__text">Окончил университет, защитил диссертацию. Принял должность преподавателя в <span class="timeline__accent">Минном офицерском классе</span> в Кронштадте — начало 18-летней службы во флоте.</p>
+            {% endif %}
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1895</div>
+            {% if get_locale() == 'en' %}
+            <p class="timeline__text"><span class="timeline__accent">7 May</span> — at a meeting of the Physics Section of the RPCS in St. Petersburg the radio receiver was demonstrated for the first time. This date became <span class="timeline__accent">Radio Day</span>.</p>
+            {% else %}
+            <p class="timeline__text"><span class="timeline__accent">7 мая</span> — на заседании Физического отделения РФХО в Петербурге впервые продемонстрирован радиоприёмник. Эта дата стала <span class="timeline__accent">Днём радио</span>.</p>
+            {% endif %}
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1896</div>
+            {% if get_locale() == 'en' %}
+            <p class="timeline__text"><span class="timeline__accent">24 March</span> — between the buildings of St. Petersburg University, over a distance of 250 metres, the world's first radiogram was transmitted: <span class="timeline__accent">"Heinrich Hertz"</span>.</p>
+            {% else %}
+            <p class="timeline__text"><span class="timeline__accent">24 марта</span> — между корпусами Петербургского университета на 250 метров передана первая в мире радиограмма: <span class="timeline__accent">«Генрих Герц»</span>.</p>
+            {% endif %}
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1900</div>
+            {% if get_locale() == 'en' %}
+            <p class="timeline__text">The first practical radio link <span class="timeline__accent">Gogland — Kotka</span> was opened. The very first radiogram saved 27 fishermen on an ice floe. At the World Exhibition in Paris — <span class="timeline__accent">gold medal</span>.</p>
+            {% else %}
+            <p class="timeline__text">Введена первая практическая линия радиосвязи <span class="timeline__accent">Гогланд — Котка</span>. Первая же радиограмма спасла 27 рыбаков на льдине. На Всемирной выставке в Париже — <span class="timeline__accent">золотая медаль</span>.</p>
+            {% endif %}
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1901</div>
+            {% if get_locale() == 'en' %}
+            <p class="timeline__text">Appointed <span class="timeline__accent">full professor of physics</span> at the Electrotechnical Institute (ETI). Founded the physics laboratory and established 42 laboratory practicals.</p>
+            {% else %}
+            <p class="timeline__text">Принял должность <span class="timeline__accent">ординарного профессора физики</span> в Электротехническом институте (ЭТИ). Основал физическую лабораторию и поставил 42 лабораторные работы.</p>
+            {% endif %}
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1903</div>
+            {% if get_locale() == 'en' %}
+            <p class="timeline__text">Attended the <span class="timeline__accent">Berlin International Radio Conference</span> as Russia's representative. German Postmaster General: "To Popov we owe the emergence of the first radiographic apparatus."</p>
+            {% else %}
+            <p class="timeline__text">Участвовал в <span class="timeline__accent">Берлинской международной конференции</span> по радиосвязи как представитель России. Министр почт Германии: «Попову мы обязаны возникновением первого радиографического аппарата».</p>
+            {% endif %}
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1905</div>
+            {% if get_locale() == 'en' %}
+            <p class="timeline__text">The ETI Council elected Popov <span class="timeline__accent">director of the institute</span> following the introduction of university autonomy. He signed a protocol supporting democratic freedoms for students.</p>
+            {% else %}
+            <p class="timeline__text">Совет ЭТИ избрал Попова <span class="timeline__accent">директором института</span> после введения университетской автономии. Подписал протокол в поддержку демократических свобод студентов.</p>
+            {% endif %}
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1906</div>
+            {% if get_locale() == 'en' %}
+            <p class="timeline__text">Died <span class="timeline__accent">13 January</span> in St. Petersburg from a cerebral haemorrhage. Buried at the Literatorskie Mostki section of the Volkovo Cemetery.</p>
+            {% else %}
+            <p class="timeline__text">Скончался <span class="timeline__accent">13 января</span> в Санкт-Петербурге от кровоизлияния в мозг. Похоронен на Литераторских мостках Волковского кладбища.</p>
+            {% endif %}
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__year">1945</div>
+            {% if get_locale() == 'en' %}
+            <p class="timeline__text">By decree of the Soviet Government, 7 May was declared an annual holiday — <span class="timeline__accent">Radio Day</span>. The A.S. Popov Gold Medal of the USSR Academy of Sciences was established.</p>
+            {% else %}
+            <p class="timeline__text">Постановлением Правительства СССР 7 мая объявлен ежегодным праздником — <span class="timeline__accent">Днём радио</span>. Учреждена Золотая медаль имени А.С. Попова Академии наук СССР.</p>
+            {% endif %}
+        </div>
+
+    </div>
+</div>
+
+<div class="minisection">
+    <h3 class="minititle">{{ _('Фотоархив') }}</h3>
+    <div class="photo-grid">
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/rudn.jpg" alt="{{ _('Турьинские рудники') }}">
+            <div class="photo-grid__caption">{{ _('Турьинские рудники — родина А.С. Попова') }}</div>
+        </div>
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/parents.jpg" alt="{{ _('Родители А.С. Попова') }}">
+            <div class="photo-grid__caption">{{ _('Родители А.С. Попова — Степан Петрович и Анна Степановна') }}</div>
+        </div>
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/seminary.jpg" alt="{{ _('Пермская духовная семинария') }}">
+            <div class="photo-grid__caption">{{ _('Пермская духовная семинария, где учился А.С. Попов (1873–1877)') }}</div>
+        </div>
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/univer.jpg" alt="{{ _('Петербургский университет') }}">
+            <div class="photo-grid__caption">{{ _('Петербургский университет — alma mater А.С. Попова') }}</div>
+        </div>
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/tech_school.jpg" alt="{{ _('Техническое училище Морского ведомства') }}">
+            <div class="photo-grid__caption">{{ _('Техническое училище Морского ведомства в Кронштадте') }}</div>
+        </div>
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/power_station.jpg" alt="{{ _('Нижегородская электростанция') }}">
+            <div class="photo-grid__caption">{{ _('Нижегородская электростанция — Попов руководил ею каждое лето с 1889 по 1898 год') }}</div>
+        </div>
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/students.jpg" alt="{{ _('Слушатели Минного офицерского класса') }}">
+            <div class="photo-grid__caption">{{ _('Слушатели Минного офицерского класса в Кронштадте') }}</div>
+        </div>
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/gerz.jpg" alt="{{ _('Вибратор Герца') }}">
+            <div class="photo-grid__caption">{{ _('Вибратор Герца — прибор, опыты с которым вдохновили Попова на создание радио') }}</div>
+        </div>
+
+        <div class="photo-grid__item">
+            <img src="{{url_for('index')}}static/img/flat.jpg" alt="{{ _('Мемориальная квартира А.С. Попова') }}">
+            <div class="photo-grid__caption">{{ _('Мемориальная квартира А.С. Попова в жилом доме ЭТИ') }}</div>
+        </div>
+
+    </div>
+</div>
+
+<div class="minisection">
+    <h3 class="minititle">{{ _('Публикации') }}</h3>
+
+    <p class="archive-label">{{ _('Труды А.С. Попова') }}</p>
+    <div class="publications">
+
+        <div class="publication">
+            <div class="publication__year">1883</div>
+            <div class="publication__info">
+                <p class="publication__author">{{ _('Попов А.С.') }}</p>
+                <p class="publication__title">{% if get_locale() == 'en' %}"On the Principles of Direct-Current Dynamo-Electric Machines"{% else %}«О принципах динамоэлектрических машин постоянного тока»{% endif %}</p>
+                <p class="publication__source">{% if get_locale() == 'en' %}Dissertation. St. Petersburg University{% else %}Диссертация. Петербургский университет{% endif %}</p>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="publication__year">1896</div>
+            <div class="publication__info">
+                <p class="publication__author">{{ _('Попов А.С.') }}</p>
+                <p class="publication__title">{% if get_locale() == 'en' %}"An Instrument for Detecting and Recording Electrical Oscillations"{% else %}«Прибор для обнаружения и регистрирования электрических колебаний»{% endif %}</p>
+                <p class="publication__source">{% if get_locale() == 'en' %}Journal of RPCS, vol. 28, issue 1, pp. 1–14{% else %}Журнал РФХО, т. 28, вып. 1, с. 1–14{% endif %}</p>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="publication__year">1897</div>
+            <div class="publication__info">
+                <p class="publication__author">{{ _('Попов А.С.') }}</p>
+                <p class="publication__title">{% if get_locale() == 'en' %}"Telegraphy without Wires"{% else %}«Телеграфирование без проводов»{% endif %}</p>
+                <p class="publication__source">{% if get_locale() == 'en' %}Newspaper "Kotlin", Kronstadt, 13 April 1897{% else %}Газета «Котлин», Кронштадт, 13 апреля 1897{% endif %}</p>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="publication__year">1897</div>
+            <div class="publication__info">
+                <p class="publication__author">{{ _('Попов А.С.') }}</p>
+                <p class="publication__title">{% if get_locale() == 'en' %}"Direct-Current Electrical Machines"{% else %}«Электрические машины постоянного тока»{% endif %}</p>
+                <p class="publication__source">{% if get_locale() == 'en' %}Textbook. Naval Department Publishing{% else %}Учебник. Издание Морского ведомства{% endif %}</p>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="archive-label archive-label_mt">{{ _('Книги об А.С. Попове') }}</p>
+    <div class="publications">
+
+        <div class="publication">
+            <div class="publication__year">1945</div>
+            <div class="publication__info">
+                <p class="publication__author">{% if get_locale() == 'en' %}Shuleykin M.V.{% else %}Шулейкин М.В.{% endif %}</p>
+                <p class="publication__title">{% if get_locale() == 'en' %}"A.S. Popov — Inventor of Radio"{% else %}«А.С. Попов — изобретатель радио»{% endif %}</p>
+                <p class="publication__source">{% if get_locale() == 'en' %}USSR Academy of Sciences, Moscow{% else %}АН СССР, Москва{% endif %}</p>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="publication__year">1963</div>
+            <div class="publication__info">
+                <p class="publication__author">{% if get_locale() == 'en' %}Radovsky M.I.{% else %}Радовский М.И.{% endif %}</p>
+                <p class="publication__title">{% if get_locale() == 'en' %}"Alexander Stepanovich Popov. 1859–1906"{% else %}«Александр Степанович Попов. 1859–1906»{% endif %}</p>
+                <p class="publication__source">{% if get_locale() == 'en' %}Nauka Publishing, Moscow — Leningrad{% else %}Изд-во «Наука», Москва — Ленинград{% endif %}</p>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="publication__year">1990</div>
+            <div class="publication__info">
+                <p class="publication__author">{% if get_locale() == 'en' %}Shoshkov E.N.{% else %}Шошков Е.Н.{% endif %}</p>
+                <p class="publication__title">{% if get_locale() == 'en' %}"A.S. Popov: Biography"{% else %}«А.С. Попов: Биография»{% endif %}</p>
+                <p class="publication__source">{% if get_locale() == 'en' %}Lenizdat, Leningrad{% else %}Лениздат, Ленинград{% endif %}</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="minisection">
+    <h3 class="minititle">{{ _('Музеи А. С. Попова в России') }}</h3>
+    <div class="museums">
+
+        <div class="museum-card">
+            <div class="museum-card__icon"><i class="fa-solid fa-building-columns"></i></div>
+            <p class="museum-card__name">{{ _('Мемориальный музей А.С. Попова СПбГЭТУ «ЛЭТИ»') }}</p>
+            <p class="museum-card__city"><i class="fa-solid fa-location-dot"></i>&nbsp; {{ _('Санкт-Петербург') }}</p>
+            {% if get_locale() == 'en' %}
+            <p class="museum-card__desc">Combines the laboratory-museum in the academic building and the memorial apartment in the ETI residential building. Opened in 1948.</p>
+            {% else %}
+            <p class="museum-card__desc">Объединяет музей-лабораторию в учебном корпусе и мемориальную квартиру в жилом доме ЭТИ. Открыт в 1948 году.</p>
+            {% endif %}
+        </div>
+
+        <div class="museum-card">
+            <div class="museum-card__icon"><i class="fa-solid fa-building-columns"></i></div>
+            <p class="museum-card__name">{{ _('Мемориальный музей-кабинет А.С. Попова') }}</p>
+            <p class="museum-card__city"><i class="fa-solid fa-location-dot"></i>&nbsp; {{ _('Кронштадт') }}</p>
+            {% if get_locale() == 'en' %}
+            <p class="museum-card__desc">Located in the former Technical School of the Naval Department, where Popov taught from 1890 to 1899. Now part of the Central Naval Museum.</p>
+            {% else %}
+            <p class="museum-card__desc">Расположен в бывшем Техническом училище Морского ведомства, где Попов преподавал с 1890 по 1899 год. Ныне — часть Центрального Военно-морского музея.</p>
+            {% endif %}
+        </div>
+
+        <div class="museum-card">
+            <div class="museum-card__icon"><i class="fa-solid fa-tower-broadcast"></i></div>
+            <p class="museum-card__name">{{ _('Центральный музей связи им. А.С. Попова') }}</p>
+            <p class="museum-card__city"><i class="fa-solid fa-location-dot"></i>&nbsp; {{ _('Санкт-Петербург') }}</p>
+            {% if get_locale() == 'en' %}
+            <p class="museum-card__desc">One of Russia's oldest technical museums. Holds original examples of the radio receiver and lightning recorder, as well as an extensive documentary collection on A.S. Popov.</p>
+            {% else %}
+            <p class="museum-card__desc">Один из старейших технических музеев России. Хранит первые экземпляры радиоприёмника и грозоотметчика, а также обширный документальный фонд А.С. Попова.</p>
+            {% endif %}
+        </div>
+
+        <div class="museum-card">
+            <div class="museum-card__icon"><i class="fa-solid fa-house"></i></div>
+            <p class="museum-card__name">{{ _('Мемориальный дом-музей А.С. Попова') }}</p>
+            <p class="museum-card__city"><i class="fa-solid fa-location-dot"></i>&nbsp; {{ _('Краснотурьинск') }}</p>
+            {% if get_locale() == 'en' %}
+            <p class="museum-card__desc">Opened in the house of the Popov-Slovtsov family — relatives of the inventor. The exhibition recreates the atmosphere of his childhood years in the Northern Urals.</p>
+            {% else %}
+            <p class="museum-card__desc">Открыт в доме семьи Поповых-Словцовых — родственников изобретателя. Экспозиция воссоздаёт атмосферу его детских лет на Северном Урале.</p>
+            {% endif %}
+        </div>
+
+    </div>
+</div>
 
 {% endblock %}

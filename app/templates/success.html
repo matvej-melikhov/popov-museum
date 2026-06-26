@@ -1,7 +1,7 @@
 {% extends "base-templates/base.html" %}
 
 
-{% block title %}Успех{% endblock title %}
+{% block title %}{{ _('Запись подтверждена') }}{% endblock title %}
 
 
 {% block style %}
@@ -11,7 +11,14 @@
 
 {% block content %}
 
-<!-- Контент страницы без <body> -->
-<h2 class="title">Успех</h2>
+{% if get_locale() == 'en' %}
+<h2 class="title">Booking <span class="pr">confirmed</span></h2>
+<p class="text">Your museum visit request has been accepted. We look forward to seeing you!</p>
+<a href="{{url_for('index')}}" class="btn" style="display: inline-block; margin-top: 2rem;">← Back to main</a>
+{% else %}
+<h2 class="title">Запись <span class="pr">подтверждена</span></h2>
+<p class="text">Ваша заявка на посещение музея принята. Ждём вас!</p>
+<a href="{{url_for('index')}}" class="btn" style="display: inline-block; margin-top: 2rem;">← На главную</a>
+{% endif %}
 
 {% endblock %}

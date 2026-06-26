@@ -1,0 +1,336 @@
+# Translations template for PROJECT.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-06-26 18:29+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: app/templates/404.html:4
+msgid "Страница не найдена"
+msgstr ""
+
+#: app/templates/archive.html:3 app/templates/base-templates/base.html:31
+#: app/templates/base-templates/base.html:58
+msgid "Архив"
+msgstr ""
+
+#: app/templates/archive.html:24
+msgid "Хронология"
+msgstr ""
+
+#: app/templates/archive.html:130
+msgid "Фотоархив"
+msgstr ""
+
+#: app/templates/archive.html:134
+msgid "Турьинские рудники"
+msgstr ""
+
+#: app/templates/archive.html:135
+msgid "Турьинские рудники — родина А.С. Попова"
+msgstr ""
+
+#: app/templates/archive.html:139
+msgid "Родители А.С. Попова"
+msgstr ""
+
+#: app/templates/archive.html:140
+msgid "Родители А.С. Попова — Степан Петрович и Анна Степановна"
+msgstr ""
+
+#: app/templates/archive.html:144 app/templates/index.html:112
+#: app/templates/index.html:113 app/templates/index.html:325
+#: app/templates/index.html:326
+msgid "Пермская духовная семинария"
+msgstr ""
+
+#: app/templates/archive.html:145
+msgid "Пермская духовная семинария, где учился А.С. Попов (1873–1877)"
+msgstr ""
+
+#: app/templates/archive.html:149 app/templates/index.html:173
+#: app/templates/index.html:174
+msgid "Петербургский университет"
+msgstr ""
+
+#: app/templates/archive.html:150
+msgid "Петербургский университет — alma mater А.С. Попова"
+msgstr ""
+
+#: app/templates/archive.html:154
+msgid "Техническое училище Морского ведомства"
+msgstr ""
+
+#: app/templates/archive.html:155
+msgid "Техническое училище Морского ведомства в Кронштадте"
+msgstr ""
+
+#: app/templates/archive.html:159 app/templates/index.html:225
+#: app/templates/index.html:226
+msgid "Нижегородская электростанция"
+msgstr ""
+
+#: app/templates/archive.html:160
+msgid ""
+"Нижегородская электростанция — Попов руководил ею каждое лето с 1889 по "
+"1898 год"
+msgstr ""
+
+#: app/templates/archive.html:164
+msgid "Слушатели Минного офицерского класса"
+msgstr ""
+
+#: app/templates/archive.html:165
+msgid "Слушатели Минного офицерского класса в Кронштадте"
+msgstr ""
+
+#: app/templates/archive.html:169 app/templates/index.html:286
+#: app/templates/index.html:287
+msgid "Вибратор Герца"
+msgstr ""
+
+#: app/templates/archive.html:170
+msgid ""
+"Вибратор Герца — прибор, опыты с которым вдохновили Попова на создание "
+"радио"
+msgstr ""
+
+#: app/templates/archive.html:174
+msgid "Мемориальная квартира А.С. Попова"
+msgstr ""
+
+#: app/templates/archive.html:175
+msgid "Мемориальная квартира А.С. Попова в жилом доме ЭТИ"
+msgstr ""
+
+#: app/templates/archive.html:182
+msgid "Публикации"
+msgstr ""
+
+#: app/templates/archive.html:184
+msgid "Труды А.С. Попова"
+msgstr ""
+
+#: app/templates/archive.html:190 app/templates/archive.html:199
+#: app/templates/archive.html:208 app/templates/archive.html:217
+msgid "Попов А.С."
+msgstr ""
+
+#: app/templates/archive.html:225
+msgid "Книги об А.С. Попове"
+msgstr ""
+
+#: app/templates/archive.html:259
+msgid "Музеи А. С. Попова в России"
+msgstr ""
+
+#: app/templates/archive.html:264
+msgid "Мемориальный музей А.С. Попова СПбГЭТУ «ЛЭТИ»"
+msgstr ""
+
+#: app/templates/archive.html:265 app/templates/archive.html:287
+msgid "Санкт-Петербург"
+msgstr ""
+
+#: app/templates/archive.html:275
+msgid "Мемориальный музей-кабинет А.С. Попова"
+msgstr ""
+
+#: app/templates/archive.html:276
+msgid "Кронштадт"
+msgstr ""
+
+#: app/templates/archive.html:286
+msgid "Центральный музей связи им. А.С. Попова"
+msgstr ""
+
+#: app/templates/archive.html:297
+msgid "Мемориальный дом-музей А.С. Попова"
+msgstr ""
+
+#: app/templates/archive.html:298
+msgid "Краснотурьинск"
+msgstr ""
+
+#: app/templates/failure.html:4
+msgid "Ошибка отправки"
+msgstr ""
+
+#: app/templates/index.html:18
+msgid "При поддержке кафедры истории ЛЭТИ"
+msgstr ""
+
+#: app/templates/index.html:33
+msgid "История"
+msgstr ""
+
+#: app/templates/index.html:48
+msgid "год изобретения радио"
+msgstr ""
+
+#: app/templates/index.html:52
+msgid "вёрст — дальность первой связи"
+msgstr ""
+
+#: app/templates/index.html:56
+msgid "радиограмм за 84 дня работы"
+msgstr ""
+
+#: app/templates/index.html:60
+msgid "спасённых рыбаков первым сигналом"
+msgstr ""
+
+#: app/templates/index.html:67
+msgid "Навигация по разделам:"
+msgstr ""
+
+#: app/templates/index.html:70 app/templates/index.html:82
+msgid "Детство и юность"
+msgstr ""
+
+#: app/templates/index.html:71 app/templates/index.html:169
+msgid "Начало научной карьеры"
+msgstr ""
+
+#: app/templates/index.html:72 app/templates/index.html:282
+msgid "Создание радио"
+msgstr ""
+
+#: app/templates/index.html:73 app/templates/index.html:425
+msgid "Первый директор Электротехнического института"
+msgstr ""
+
+#: app/templates/index.html:74 app/templates/index.html:501
+msgid "Последние годы жизни и наследие"
+msgstr ""
+
+#: app/templates/index.html:86 app/templates/index.html:87
+msgid "Родители А. С. Попова"
+msgstr ""
+
+#: app/templates/index.html:198 app/templates/index.html:199
+msgid "Студенты"
+msgstr ""
+
+#: app/templates/index.html:253 app/templates/index.html:254
+msgid "Техническое училище"
+msgstr ""
+
+#: app/templates/registration.html:1
+msgid "Запись в музей"
+msgstr ""
+
+#: app/templates/registration.html:10
+msgid "Дата и время посещения"
+msgstr ""
+
+#: app/templates/registration.html:61
+msgid "Фамилия, имя и отчество"
+msgstr ""
+
+#: app/templates/registration.html:66
+msgid "Иванов Иван Иванович"
+msgstr ""
+
+#: app/templates/registration.html:72
+msgid "Номер телефона и эл. почта (для получения билета)"
+msgstr ""
+
+#: app/templates/registration.html:77
+msgid "Номер телефона"
+msgstr ""
+
+#: app/templates/registration.html:89
+msgid "Откуда узнали про музей"
+msgstr ""
+
+#: app/templates/registration.html:93
+msgid "Например, от одногруппников в общем чате"
+msgstr ""
+
+#: app/templates/registration.html:100
+msgid ""
+"Нажимая кнопку «Записаться», Вы даете согласие на хранение и обработку "
+"ваших персональных данных."
+msgstr ""
+
+#: app/templates/registration.html:102
+msgid "Записаться"
+msgstr ""
+
+#: app/templates/success.html:4
+msgid "Запись подтверждена"
+msgstr ""
+
+#: app/templates/base-templates/base.html:28
+#: app/templates/base-templates/base.html:55
+msgid "Биография"
+msgstr ""
+
+#: app/templates/base-templates/base.html:29
+#: app/templates/base-templates/base.html:56
+msgid "Музей в ЛЭТИ"
+msgstr ""
+
+#: app/templates/base-templates/base.html:30
+#: app/templates/base-templates/base.html:57
+msgid "Лаборатория в ЛЭТИ"
+msgstr ""
+
+#: app/templates/base-templates/base.html:88
+msgid ""
+"Проект подготовлен Студенческим офисом карьеры и трудоустройства (СОКТ) "
+"Профкома студентов и аспирантов СПбГЭТУ ЛЭТИ совместно с кафедрой истории"
+" культуры, государства и права."
+msgstr ""
+
+#: app/templates/base-templates/base.html:89
+msgid ""
+"Информация взята с открытых источников. Все права защищены. Сайт «Музей "
+"Попова» 2023-2024."
+msgstr ""
+
+#: app/templates/base-templates/base.html:101
+msgid "Кафедра истории культуры, государства и права СПбГЭТУ ЛЭТИ"
+msgstr ""
+
+#: app/templates/base-templates/base.html:102
+msgid "Официальный сайт СПбГЭТУ ЛЭТИ"
+msgstr ""
+
+#: app/templates/base-templates/base.html:106
+msgid "Профком ВКонтакте"
+msgstr ""
+
+#: app/templates/base-templates/base.html:107
+msgid "СОКТ ВКонтакте"
+msgstr ""
+
+#: app/templates/base-templates/museum_base.html:26
+msgid "Записаться на экскурсию"
+msgstr ""
+
+#: app/templates/base-templates/museum_base.html:31
+msgid "Расположение"
+msgstr ""
+
+#: app/templates/base-templates/museum_base.html:46
+msgid "Контакты"
+msgstr ""
+
+#: app/templates/base-templates/museum_base.html:55
+msgid "Пн. - пт. с 11:00 до 16:30"
+msgstr ""
+
